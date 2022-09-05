@@ -1,0 +1,416 @@
+
+
+.list-group-item-icon{
+    padding-left: 1.3em;
+}
+
+.list-group-item-icon::before{
+    content: "\f03d"; 
+  font-family: "FontAwesome";
+  display: inline-block;
+  margin-left: -1.3em; 
+  width: 1.3em; 
+}
+.accordion-item-outline{
+    /* border: none;
+    border-bottom: 1px solid black; */
+    border-radius: 0!important
+}
+.accordion-item h2{
+    line-height: 1;
+    margin: 0
+}
+.accordion-item-outline .accordion-button{
+    background-color: #f7f9fa !important;
+    font-weight: bold;
+    /* border-bottom: 1px solid var(--bs-accordion-border-color); */
+}
+
+.accordion-button:not(.collapsed) {
+    color: unset;
+    background-color: #f7f9fa;;
+    box-shadow: unset;
+    /* border: 1px solid var(--bs-accordion-border-color); */
+
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
+    border: none
+}
+
+.accordion-item-outline .accordion-button::after{
+  content: none;
+}
+
+.accordion-item-outline .accordion-button::before {
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    /* margin-left: auto; */
+    margin-right:1rem;
+    content: "";
+    background-image: var(--bs-accordion-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+
+
+
+.accordion-item-outline .accordion-button:not(.collapsed)::before {
+    background-image: var(--bs-accordion-btn-icon);
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+
+
+
+.doctor-icon{
+    border: 1px solid var(--main);
+    border-radius: 50%;
+}
+/* ----course card */
+
+.btn-sign-up{
+  width: 100%; 
+  border-radius: 0;
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--contrast);
+}
+
+.btn-sign-up:hover{
+  box-shadow: inset 16.5em 0 0 0 var(--contrast)!important;
+  color: var(--main);
+  transition-duration: .3s;
+}
+.btn-sign-up span{
+  display: inline-block;
+  position: relative;
+  transition: .3s;
+}
+.btn-sign-up:hover span{
+  padding-right: 25px
+}
+
+.btn-sign-up span:after {
+    content: "\00bb";
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transition: .3s;
+    opacity: 0;
+    font-size: 30px;
+    transform: translate(-20%,-50%);
+}
+.btn-sign-up:hover span:after {
+    opacity: 1;
+}
+
+.course-card-item{
+    border:0;
+    margin-bottom: 0!important;
+    padding-bottom: 0;
+}
+.course-card{
+    width: 18rem;
+    position: sticky;
+    top: 1.5rem;
+    border-radius: 0px;
+    border: none;
+    box-shadow: 0px 0px 12px 1px #00000078;
+    transform: translateX(15%);
+}
+
+
+
+/* -----faded */
+.text-display {
+  /* font-size: 16px; */
+  line-height: 1.5;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+.btn-toggle {
+  margin-top: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--main)
+}
+
+.text-display.collapsed {
+  animation: mask-collapsing 0.5s;
+  mask-image: linear-gradient(black 50%, transparent);
+}
+
+.text-display.expanded {
+  animation: mask-expanding 0.5s;
+  mask-image: linear-gradient(black 100%, transparent);
+}
+
+@keyframes mask-collapsing {
+  from { mask-image: linear-gradient(black 100%, transparent); }
+  to { mask-image: linear-gradient(black 50%, transparent); }
+}
+
+@keyframes mask-expanding {
+  from { mask-image: linear-gradient(black 50%, transparent); }
+  to { mask-image: linear-gradient(black 100%, transparent); }
+}
+
+
+/* ------counter */
+.show-counter {
+  padding: 0.5rem;
+}
+
+.show-counter .countdown-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 0.5rem;
+  border: 1px solid #ebebeb;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.show-counter .countdown {
+  line-height: 1.25rem;
+  padding: 0 0.75rem 0 0.75rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-counter .countdown.danger {
+  color: #ff0000;
+}
+
+.show-counter .countdown > p {
+  margin: 0;
+}
+
+.show-counter .countdown > span {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  line-height: 1rem;
+}
+
+/* ---faq */
+
+.nav-tabs .nav-item.show.faq-nav-item .nav-link, .nav-tabs .nav-link.active {
+  border: none;
+  color: var(--main)!important
+}
+.nav-tabs .faq-nav-item .nav-link{
+  color: black;
+  border: none
+}
+
+/* ----- selling point */
+.selling-point-ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    background-color: var(--main);
+    /* padding: 0 10rem 0 */
+}
+
+.selling-point-ul .fa-li svg{
+  border: 2px solid var(--contrast);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  padding: 8px;
+}
+
+.selling-point-ul li {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+    font-size: 18px;
+    line-height: 1.8em;
+    border-bottom-style: none;
+    border-right-style: none;
+    height: 40%;
+    height: 100%;
+    justify-content: center;
+    color:white
+  }
+.selling-point-ul .fa-li{
+  transform: translateX(-10px);
+}
+.selling-point-ul li strong{
+    font-size: 28px;
+}
+.selling-point-shadow-top{
+  height: 17rem;
+  box-shadow: 0px -5px 10px 1px #0000004f;
+}
+
+@media only screen and (max-width: 600px) {
+  .selling-point-shadow-top{
+    height: 9rem;
+  }
+  .carousel-btn-wrapper{
+    right: 4% !important;
+    bottom: 1rem!important;
+  }
+  #about-bar .carousel-btn-wrapper{
+    display: none;
+  }
+  #student-feedback .slideshow-container .mySlides .not-expand{
+    height: 11rem!important;
+  }
+}
+
+.selling-point-shadow-bottom{
+  box-shadow: 0px 5px 10px 1px #0000004f;
+}
+/* ------carousel */
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  font-size: 0.8rem;
+}
+/* #about-bar .row > div:last-child{
+  font-size: 0.8rem;
+} */
+
+/* Hide the images by default */
+.slideshow-container .mySlides {
+  display: none;
+  position: relative;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .mySlides {
+    background-color: lightblue;
+  }
+} */
+
+.slide-quote{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 5rem;
+    transform: translate(-45%,-55%);
+    z-index: -1;
+}
+.slide-quote img{
+  filter: invert(87%) sepia(60%) saturate(4209%) hue-rotate(80deg) brightness(100%) contrast(102%);
+  opacity: 0.5;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  /* margin-top: -22px; */
+  padding: 16px;
+  color: var(--contrast);
+  background-color: var(--main);
+  font-weight: bold;
+  font-size: 0.5rem;
+  transition: 0.6s ease;
+  border: none;
+  /* border-radius: 0 3px 3px 0; */
+  user-select: none;
+}
+
+.slide-active{
+  display: block!important;
+}
+
+/* Position the "next button" to the right */
+.carousel-btn-wrapper{
+    position: absolute;
+}
+#about-bar .carousel-btn-wrapper{
+    right: 3.5rem;
+    bottom: 0.3rem;
+}
+#about-bar .prev, #about-bar .next{
+  /* padding: 11px; */
+}
+
+#student-feedback .carousel-btn-wrapper{
+    right: 3rem;
+    bottom: 1.5rem;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.stop-slide{
+  background-color: var(--contrast-light);
+    color: var(--main);
+}
+/* ----- about */
+#about-bar .slideshow-container{
+    background-color: white;
+    margin-top: 1rem ;
+  }
+#about-bar .mySlides{
+  box-shadow: 0px 0px 10px 2px #00000042;
+}
+#about-bar .mySlides ul{
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+}
+.about-bar span{
+    background-color: white;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    color: var(--main-dark);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border: 1px solid var(--main);
+    border-left: none;
+    border-right: none;
+
+}
+.about-bar span.active {
+    background-color: var(--main);
+    color: var(--contrast);
+    transition-duration: 0.3s;
+    font-weight: 600;
+}
+.about-bar > span.active:hover{
+  background-color: var(--main)!important;
+  color: var(--main-text)!important;
+}
+
+#about-bar .about-bar.row{
+  margin:0
+}
+
+.about-bar span:hover {
+    background-color: var(--contrast-light);
+    color: var(--main);
+}
+
+/* -----cta */
+#cta{
+  background-image: url("http://localhost:3000/images/cta.png");
+  background-size: cover;
+  height: 514px;
+}
+#cta .btn-sign-up{
+  width: 15rem;
+}

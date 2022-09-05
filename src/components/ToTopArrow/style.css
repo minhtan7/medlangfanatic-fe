@@ -1,0 +1,13 @@
+.arrow-up{
+    right: 5%;
+    bottom: 30%;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-color: var(--main-dark)!important;
+    transition-duration: 0.3s;
+    color: var(--main-dark);
+}
+.arrow-up:hover{
+    color: (--main);
+    transition-duration: 0.3s;
+}

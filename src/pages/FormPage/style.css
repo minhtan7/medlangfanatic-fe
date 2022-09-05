@@ -1,0 +1,6 @@
+#form-page .spinner-border{
+    --bs-spinner-border-width: 0.5em;
+    color: var(--main);
+    width: 5rem;
+    height: 5rem;
+}
