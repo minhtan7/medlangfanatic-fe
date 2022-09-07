@@ -2,6 +2,7 @@ import { faCheckSquare, faFileText, faIdCard, faNoteSticky, faPlayCircle, faSdCa
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Button, Card, ListGroup, Placeholder } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import useScript from '../../hook/useScript'
 import { formatTime } from '../../utility/formatTime'
 import { Timer } from '../Timer/Timer'
@@ -9,6 +10,8 @@ import "./style.css"
 
 export const CourseCard = ({ course }) => {
     const { hours, minutes, seconds } = formatTime(course?.duration || 0)
+    const navigate = useNavigate()
+
     useScript("https://tools.luckyorange.com/core/lo.js?site-id=a0c6a81c")
     useScript("https://www.googletagmanager.com/gtag/js?id=G-NJYDR7ML63")
 
@@ -20,7 +23,7 @@ export const CourseCard = ({ course }) => {
                 <Card.Title style={{ textAlign: "center" }}>Chi phí khóa học:
                     <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>3,899K</h2>
                 </Card.Title>
-                <Button target="_blank" href='https://forms.gle/EtHE8p7CxnrQHErq9' variant="primary" className='btn-sign-up' ><span>Đăng ký ngay</span></Button>
+                <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up' ><span>Đăng ký ngay</span></Button>
             </Card.Body >
             <Card.Body>
                 <Timer />

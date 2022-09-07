@@ -3,20 +3,27 @@ import { faEnvelope, faFileText, faMailBulk, faMailForward, faMailReply } from '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Container, Row, Stack } from 'react-bootstrap'
+import "./style.css"
 
 const index = () => {
     return (
-        <>
+        <div id="footer">
             <div className='py-4 text-white' style={{ backgroundColor: "#2b3438" }}>
                 <Container className='px-5 pt-4'>
                     <Row>
                         <Col xs={12} md={4} className="mb-3">
-                            <div className=''>
+                            <div >
                                 <h5>Theo dõi Medlangfanatic:</h5>
-                                <div>
-                                    <FontAwesomeIcon className='ms-3' size='2x' icon={faFacebook} />
-                                    <FontAwesomeIcon className='ms-3' size='2x' icon={faYoutube} />
-                                    <FontAwesomeIcon className='ms-3' size='2x' icon={faSpotify} />
+                                <div className='brands-group'>
+                                    <a target="_blank" href='https://facebook.com/medlangfanatic' rel="noreferrer">
+                                        <FontAwesomeIcon className='ms-3' size='2x' icon={faFacebook} />
+                                    </a>
+                                    <a target="_blank" href='https://www.youtube.com/medlangfanatic' rel="noreferrer">
+                                        <FontAwesomeIcon className='ms-3' size='2x' icon={faYoutube} />
+                                    </a>
+                                    <a target="_blank" href='https://l.facebook.com/l.php?u=https%3A%2F%2Fopen.spotify.com%2Fshow%2F0L2jMfX2LvL1w37ovyu7jW%3Ffbclid%3DIwAR0e3aErVjLYvcnXkatGJfQfrwwnpePBjPDVLHe7NYCbJ9b_BK0vvWxjhvc&h=AT2gZn1yvsbQUo2i32daFyL8zDSoDAhLiRSECFYSPCdHrDkasMNYqCDsuAPImMHk3GOa0WKahCf6qSffqDjhFz-9YPU-WgIAVRMKExIQ0BbGp4gYfyyDnwr6QtOaEqqwnGMJQnz8Vg&__tn__=-UK-R&c[0]=AT0bh4pq9hsmTaaac-gdaNUEmGBvSZnuJswftGTYFSn0J8yrej0VayyDsl2-9TXeoYuty0lX_bTl1W80u0NRn3pHfQku_Z2BAuvdTIXVQigSak1gk0veK0z278Nvn5i6VhGZ9rirbdLYtnvLcZP05bq5MmQxavOMfBBrZR1nKQW5LdG7nMS3Xrzu67kBF2Wvb2w-mGkweN2f-X4rUYS4H98H' rel="noreferrer">
+                                        <FontAwesomeIcon className='ms-3' size='2x' icon={faSpotify} />
+                                    </a>
                                 </div>
                             </div>
                         </Col>
@@ -41,7 +48,7 @@ const index = () => {
             <div className='bg-main py-1 text-center text-white'>
                 <small>© Med Lang Fanatic</small>
             </div>
-        </>
+        </div>
     )
 }
 

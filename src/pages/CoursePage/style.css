@@ -312,8 +312,8 @@
     z-index: -1;
 }
 .slide-quote img{
-  filter: invert(87%) sepia(60%) saturate(4209%) hue-rotate(80deg) brightness(100%) contrast(102%);
-  opacity: 0.5;
+  filter: invert(86%) sepia(83%) saturate(2769%) hue-rotate(80deg) brightness(101%) contrast(99%);
+  opacity: 0.2;
 }
 
 /* Next & previous buttons */

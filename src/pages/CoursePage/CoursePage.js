@@ -15,6 +15,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import { CourseCard } from '../../components/CourseCard/CourseCard'
 import { Cover } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 
 const slugs = {
     "oral-presentation": 1529640,
@@ -28,6 +29,7 @@ const CoursePage = () => {
     const [course, setCourse] = useState(null)
     const [chapters, setChapters] = useState(null)
     const navigate = useNavigate()
+
 
 
     useEffect(() => {
@@ -47,7 +49,7 @@ const CoursePage = () => {
     //     }
     //     getContent()
     // }, [course])
-
+    // return <LoadingScreen />
     return (
         <>
             <Hero course={course} />
@@ -74,6 +76,8 @@ const CoursePage = () => {
 }
 
 const CTA = () => {
+    const navigate = useNavigate()
+
     return (
         <div id="cta" style={{ height: "514px" }}>
             <Container className='h-100'>
@@ -83,7 +87,7 @@ const CTA = () => {
                             <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-                            <Button target="_blank" href='https://forms.gle/EtHE8p7CxnrQHErq9' variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+                            <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
                         </div>
                     </Col>
                     <Col className='d-none d-md-block'></Col>
