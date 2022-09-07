@@ -2,7 +2,6 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Container, Placeholder, Row } from 'react-bootstrap'
-import { CourseCard } from '../CourseCard/CourseCard'
 import "./style.css"
 
 export const Hero = ({ course }) => {

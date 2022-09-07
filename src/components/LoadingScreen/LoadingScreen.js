@@ -1,7 +1,6 @@
 
 // import { Box, CircularProgress } from "@mui/material";
 import React from "react";
-import { Spinner } from "react-bootstrap";
 import "./style.css"
 
 function LoadingScreen({ display }) {

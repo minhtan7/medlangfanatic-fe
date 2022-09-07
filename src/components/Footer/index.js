@@ -1,5 +1,5 @@
 import { faFacebook, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faFileText, faMailBulk, faMailForward, faMailReply } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Container, Row, Stack } from 'react-bootstrap'

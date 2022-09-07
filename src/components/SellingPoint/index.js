@@ -1,7 +1,7 @@
 import { faCertificate, faCheck, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import { Col, Container, Image, OverlayTrigger, Row, Tooltip } from 'react-bootstrap'
+import { Image, OverlayTrigger, Row, Tooltip } from 'react-bootstrap'
 
 
 export const SellingPoint = () => {

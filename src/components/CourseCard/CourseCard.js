@@ -1,15 +1,15 @@
-import { faCheckSquare, faFileText, faIdCard, faNoteSticky, faPlayCircle, faSdCard, faVrCardboard } from '@fortawesome/free-solid-svg-icons'
+import { faFileText, faNoteSticky, faPlayCircle, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Button, Card, ListGroup, Placeholder } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import useScript from '../../hook/useScript'
-import { formatTime } from '../../utility/formatTime'
+// import { formatTime } from '../../utility/formatTime'
 import { Timer } from '../Timer/Timer'
 import "./style.css"
 
 export const CourseCard = ({ course }) => {
-    const { hours, minutes, seconds } = formatTime(course?.duration || 0)
+    // const { hours, minutes, seconds } = formatTime(course?.duration || 0)
     const navigate = useNavigate()
 
     useScript("https://tools.luckyorange.com/core/lo.js?site-id=a0c6a81c")

@@ -1,8 +1,8 @@
 import { faDumbbell, faFileArrowDown, faFileLines, faFilePdf, faQuestion, faSquarePollHorizontal, faVideo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Accordion, Col, Container, Row } from 'react-bootstrap'
-import { formatTime } from '../../utility/formatTime'
+import { Accordion } from 'react-bootstrap'
+// import { formatTime } from '../../utility/formatTime'
 import "./style.css"
 
 const contentIcon = {
@@ -23,7 +23,7 @@ export const CourseDetailContent = ({ chapters }) => {
             <h2 className='mb-4 text-main-title'>Chương trình học</h2>
             <Accordion alwaysOpen>
                 {chapters.map(chapter => {
-                    const { hours, minutes, seconds } = formatTime(chapter.duration_in_seconds)
+                    // const { hours, minutes, seconds } = formatTime(chapter.duration_in_seconds)
                     return (
                         <Accordion.Item eventKey={chapter.id} className="accordion-item-outline">
                             <Accordion.Header bsPrefix='style' >
@@ -35,7 +35,7 @@ export const CourseDetailContent = ({ chapters }) => {
                             </Accordion.Header>
                             <Accordion.Body as={"ul"} className='fa-ul'>
                                 {chapter.contents.map(content => (
-                                    <Content content={content} />
+                                    <Content content={content} id={content.id} />
                                 ))}
                             </Accordion.Body>
                         </Accordion.Item>

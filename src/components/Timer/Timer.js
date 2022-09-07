@@ -6,7 +6,6 @@ export const Timer = () => {
     let targetDate = new Date();
     targetDate.setSeconds(targetDate.getSeconds() + 10);
     const [days, hours, minutes, seconds, timerRef] = useCountdown(targetDate);
-    console.log([days, hours, minutes, seconds, timerRef])
     if (days + hours + minutes + seconds <= 0) {
         clearInterval(timerRef.current)
     }

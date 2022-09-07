@@ -8,13 +8,13 @@ export const ShowMore = ({ defaultHeight, text, index }) => {
     const [heightMin, setHeightMin] = useState(defaultHeight);
     const [isExpanded, setIsExpanded] = useState(false);
     const [isOverflow, setIsOverflow] = useState(false);
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
     useEffect(() => {
         const element = document.querySelector(`.text-display-${index}`)
-        console.log("el", element)
+
         const heightClient = element?.clientHeight || defaultHeight;
         const scrollClient = element?.scrollHeight || defaultHeight;
-        console.log("scrollClient", scrollClient)
+
         if (heightClient !== scrollClient) {
             setIsOverflow(true);
             setHeightMax(scrollClient);
@@ -24,11 +24,11 @@ export const ShowMore = ({ defaultHeight, text, index }) => {
     }, [text, index, width]);
 
     const handleClickBtn = () => {
-        console.log("first", heightMax)
+
         setHeightCurrent(isExpanded ? heightMin : heightMax);
         setIsExpanded((prev) => !prev);
     };
-    console.log("here")
+
     return (
         <>
             {text.length < 400 ? <p className=' text-justify not-expand'>{text}</p> : (

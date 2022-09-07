@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import api from '../../apiService'
 import "./style.css"
@@ -9,13 +9,13 @@ import { CourseDetailContent } from '../../components/CourseDetailContent'
 import { Instructors } from '../../components/Instructor'
 import { Features } from '../../components/Feature'
 import { FAQ } from '../../components/FAQ'
-import { SellingPoint } from '../../components/SellingPoint'
+
 import { about, faq, feedBack, instructors } from '../../mockData'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { CourseCard } from '../../components/CourseCard/CourseCard'
 import { Cover } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
-import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
+
 
 const slugs = {
     "oral-presentation": 1529640,
@@ -28,9 +28,6 @@ const CoursePage = () => {
     const { slug } = useParams()
     const [course, setCourse] = useState(null)
     const [chapters, setChapters] = useState(null)
-    const navigate = useNavigate()
-
-
 
     useEffect(() => {
         const getCourse = async () => {
@@ -39,17 +36,8 @@ const CoursePage = () => {
             setChapters(res.data.data.chapters)
         }
         getCourse()
-    }, [])
+    }, [slug])
 
-    // useEffect(() => {
-    //     const getContent = async () => {
-    //         const res = await api.get("/courses/1522731/chapters")
-    //         const data = await res.data.items
-    //         setChapters(data)
-    //     }
-    //     getContent()
-    // }, [course])
-    // return <LoadingScreen />
     return (
         <>
             <Hero course={course} />
@@ -59,7 +47,6 @@ const CoursePage = () => {
                     <Col xs={12} md={8} className="px-0 ">
                         <Features about={about} course={course} />
                         <CourseDetailContent chapters={chapters} />
-                        {/* <SellingPoint /> */}
                         <Instructors instructors={instructors} />
                         <StudentFeedback defaultHeight={defaultHeight} feedBack={feedBack} />
                         <FAQ faq={faq} />

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
 import { ShowMore } from '../../utility/ShowMore'
 import quote from '../../asset/quote.svg'
 
