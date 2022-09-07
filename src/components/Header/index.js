@@ -10,7 +10,7 @@ function Header() {
     return (
         <Navbar id="header" collapseOnSelect expand="lg" className="bg-main" variant="dark">
             <Container>
-                <Navbar.Brand as="img" src="/images/logo_transparent.webp" href="#home" width={96} />
+                <Navbar.Brand as="img" onClick={() => navigate("/")} src="/images/logo_transparent.webp" href="#home" width={96} />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
