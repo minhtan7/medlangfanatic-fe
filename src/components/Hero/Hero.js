@@ -23,7 +23,7 @@ export const Hero = ({ course }) => {
                 <Col md={6} className="d-none d-md-block">
                     <div className='hero-image-wrapper'>
                         <div className='hero-image'>
-                            <img width="100%" src="http://localhost:3000/images/hero-image.webp" alt="hidden logo" />
+                            <img width="100%" src="/images/hero-image.webp" alt="hidden logo" />
                         </div>
                     </div>
                 </Col>
@@ -45,14 +45,14 @@ export const Hero = ({ course }) => {
                 </Col>
                 <Col md={6}>
                     <div className='hero-image'>
-                        <img width="100%" src="http://localhost:3000/images/hero-image.webp" alt="hidden logo" />
+                        <img width="100%" src="/images/hero-image.webp" alt="hidden logo" />
                     </div>
                 </Col>
 
             </Row>
         </Container>)}
         <div className='hidden-logo'>
-            <img width="100%" src="http://localhost:3000/images/logo_transparent.webp" alt="hidden logo" />
+            <img width="100%" src="/images/logo_transparent.webp" alt="hidden logo" />
         </div>
 
     </div>

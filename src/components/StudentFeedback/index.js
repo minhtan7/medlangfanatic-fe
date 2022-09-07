@@ -30,7 +30,7 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
                         <div className={`mySlides faded  pt-2 ${slide === index ? "d-flex" : ""}`}>
                             <div className="flex-shrink-0" >
                                 {/* <FontAwesomeIcon icon={faUserDoctor} size="2x" className='doctor-icon' /> */}
-                                <img src="http://localhost:3000/images/student_icon.svg" width={60} className='doctor-icon' alt="student icon" />
+                                <img src="/images/student_icon.svg" width={60} className='doctor-icon' alt="student icon" />
                             </div>
                             <div className="flex-grow-1 ms-3 m-auto">
                                 <p className='m-0'><strong>{f.name}</strong></p>

@@ -7,7 +7,7 @@ const ThankyouPage = () => {
             <Row>
                 <Col sx={12} md={6}>
                     <div className="p-5">
-                        <img width="100%" src="http://localhost:3000/images/thankyou.webp" alt="thank you" />
+                        <img width="100%" src="/images/thankyou.webp" alt="thank you" />
                     </div>
                 </Col>
                 <Col sx={12} md={6}>

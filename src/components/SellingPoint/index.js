@@ -14,7 +14,7 @@ export const SellingPoint = () => {
         <div className="mb-5" >
             <Row >
                 <div className="px-5 position-relative overflow-hidden selling-point-shadow-top" >
-                    <Image src='http://localhost:3000/images/graduate.png' width="100%"
+                    <Image src='/images/graduate.png' width="100%"
                         style={{
                             position: "absolute",
                             top: "84%",
@@ -40,7 +40,7 @@ export const SellingPoint = () => {
                                 delay={{ show: 250, hide: 400 }}
                                 overlay={renderTooltip}
                             >
-                                <img src="http://localhost:3000/images/AC-logo-white-trans.png" width={150} alt="AC logo" />
+                                <img src="/images/AC-logo-white-trans.png" width={150} alt="AC logo" />
                             </OverlayTrigger>
                         </li>
                     </ul>

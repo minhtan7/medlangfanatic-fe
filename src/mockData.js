@@ -117,7 +117,7 @@ const feedBack = [
 const about = [
     {
         title: "Đối tượng",
-        url: "http://localhost:3000/images/doi_tuong.jpeg",
+        url: "/images/doi_tuong.jpeg",
         content: <ul className='fa-ul'>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Sinh viên chuyên ngành Y Nha Dược.</li>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Nhân viên y tế các chuyên ngành.</li>
@@ -126,14 +126,14 @@ const about = [
     },
     {
         title: "Hình thức",
-        url: "http://localhost:3000/images/hinh_thuc.jpeg",
+        url: "/images/hinh_thuc.jpeg",
         content: <ul className='fa-ul'>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Lý thuyết tự học và bài tập tương tác trên nền tảng Thinkific.</li>
         </ul>
     },
     {
         title: "Thời gian",
-        url: "http://localhost:3000/images/thoi_gian.jpeg",
+        url: "/images/thoi_gian.jpeg",
         content: <ul className='fa-ul'>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Thời gian dự kiến để hoàn thành khóa học là 8 tuần.</li>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Người học có thể linh hoạt tùy chỉnh tốc độ tùy theo thời gian rảnh của bản thân.</li>
@@ -147,7 +147,7 @@ const about = [
             <FontAwesomeIcon icon={faStar} className="me-1" />
             <FontAwesomeIcon icon={faStar} className="me-1" />
         </>,
-        url: "http://localhost:3000/images/nam_sao.jpeg",
+        url: "/images/nam_sao.jpeg",
         content: <ul className='fa-ul'>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Tập trung vào việc tạo nhiều "điểm chạm" với từ vựng mới, giúp người học có thể hiểu sâu từ vựng bằng cách "ngắm nghĩa" từ vựng ở những góc cạnh khác nhau.</li>
             <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Định hướng học các từ vựng có tần suất gặp cao nhất, giúp tăng nhanh vốn từ trong thời gian ngắn nhất.</li>

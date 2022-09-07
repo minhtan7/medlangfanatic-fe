@@ -18,10 +18,10 @@ const FormPage = () => {
                     <div className="px-5 position-relative w-100 h-100 d-none d-md-block">
                         <div className='position-sticky  left-0  w-100' style={{ height: "40rem", top: "5rem" }}>
                             <div className='position-absolute top-10 start-10 ' style={{ width: "20rem" }}>
-                                <img width="100%" src="http://localhost:3000/images/form-1.webp" alt="thank you" />
+                                <img width="100%" src="/images/form-1.webp" alt="thank you" />
                             </div>
                             <div className='position-absolute top-50 start-50' style={{ transform: "translate(-20%,-20%)", width: "20rem" }} >
-                                <img width="100%" src="http://localhost:3000/images/form-2.webp" alt="thank you" />
+                                <img width="100%" src="/images/form-2.webp" alt="thank you" />
                             </div>
 
                         </div>
