@@ -6,11 +6,13 @@ import CoursePage from './pages/CoursePage/CoursePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ThankyouPage from "./pages/ThankyouPage/ThankyouPage"
 import FormPage from './pages/FormPage/FormPage';
+import HomePage from './pages/Homepage';
 
 function App() {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
         <Route path='/:slug' element={<CoursePage />} />
         <Route path='/thankyou' element={<ThankyouPage />} />
         <Route path='/register-form' element={<FormPage />} />
