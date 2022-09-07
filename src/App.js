@@ -12,8 +12,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path='/courses' element={<HomePage />} />
-        <Route path='/courses/:slug' element={<CoursePage />} />
+        <Route index element={<HomePage />} />
+        <Route path='/:slug' element={<CoursePage />} />
         <Route path='/thankyou' element={<ThankyouPage />} />
         <Route path='/register-form' element={<FormPage />} />
         <Route path='*' element={<NotFoundPage />} />
