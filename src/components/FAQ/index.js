@@ -7,7 +7,7 @@ import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
 export const FAQ = ({ faq }) => {
     return faq && <div className="mb-5" id="faq">
 
-        <h2 className="px-5 mb-4 text-main-title">Các câu hỏi thường gặp</h2>
+        <h2 className="px-3 px-md-5 mb-4 text-main-title">Các câu hỏi thường gặp</h2>
 
         <Tab.Container id="left-tabs-example" defaultActiveKey={0}>
             <Row>

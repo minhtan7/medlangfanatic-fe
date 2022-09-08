@@ -5,7 +5,7 @@ export const Instructors = ({ instructors }) => {
     return (
         <div id="instructors" className="mb-5" >
             <Row >
-                <Col className="px-5">
+                <Col className="px-3 px-md-5">
                     <h2 className='mb-4 text-main-title'>Giảng viên</h2>
                     {instructors.map(instructor => (
                         <Row>

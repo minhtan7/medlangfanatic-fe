@@ -19,7 +19,7 @@ const contentIcon = {
 export const CourseDetailContent = ({ chapters }) => {
     return chapters && <div id="course-detail-content" className="mb-5">
 
-        <div className="px-5">
+        <div className="px-3 px-md-5">
             <h2 className='mb-4 text-main-title'>Chương trình học</h2>
             <Accordion alwaysOpen>
                 {chapters.map(chapter => {

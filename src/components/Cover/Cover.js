@@ -6,7 +6,7 @@ import quote from "../../asset/quote.svg"
 export const Cover = () => {
     return (
         <Container id="cover-session" className='mb-5'>
-            <div className='px-5 border py-3' >
+            <div className='px-md-5 px-4 border py-3' >
                 <h2 className='text-center mb-3 fw-bolder text-main'>40 từ covered trên tổng 162 từ</h2>
                 <div className='position-relative'>
                     <p className='text-justify'>

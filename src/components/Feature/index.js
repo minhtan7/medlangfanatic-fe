@@ -17,7 +17,7 @@ export const Features = ({ about, course }) => {
 
     return course && <div id="about-bar" className="mb-5">
 
-        <div className="px-5 position-relative " >
+        <div className="px-3 px-md-5 position-relative " >
             <div className='about-bar row row-cols-2 row-cols-lg-4'>
                 {about.map((a, index) => (
                     <span className={`col py-2 ${slide === index ? "active" : ""}`} onClick={() => handleChangleSlideBar(index)}>
