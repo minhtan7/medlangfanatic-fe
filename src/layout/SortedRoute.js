@@ -16,7 +16,7 @@ function SortedRoute({ children }) {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 2000);
+        }, 3000);
     }, [])
     if (!slugs[at]) {
         return <Navigate to="/" />

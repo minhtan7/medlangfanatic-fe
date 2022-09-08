@@ -16,7 +16,7 @@ export const CourseCard = ({ course }) => {
     useScript("https://www.googletagmanager.com/gtag/js?id=G-NJYDR7ML63")
 
     return course ?
-        (<Card className='course-card d-none d-sm-none d-md-block'>
+        (<Card className='course-card '>
             < Card.Img variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }
             } />
             < Card.Body style={{ color: "black" }}>

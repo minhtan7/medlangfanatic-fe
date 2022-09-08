@@ -51,13 +51,13 @@ const CoursePage = () => {
                         <StudentFeedback defaultHeight={defaultHeight} feedBack={feedBack} />
                         <FAQ faq={faq} />
                     </Col>
-                    <Col xs={0} sm={0} md={4} >
+                    <Col xs={0} sm={0} md={4} className="d-none d-sm-none d-md-block">
                         <CourseCard course={course} />
                     </Col>
                 </Row>
             </Container>
             <CTA />
-            <ToTopArrow />
+            <ToTopArrow course={course} />
         </>
     )
 }

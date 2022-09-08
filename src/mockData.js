@@ -128,7 +128,7 @@ const about = [
         title: "Hình thức",
         url: "/images/hinh_thuc.jpeg",
         content: <ul className='fa-ul'>
-            <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Lý thuyết tự học và bài tập tương tác trên nền tảng Thinkific.</li>
+            <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Lý thuyết tự học và bài tập tương tác trên nền tảng học online.</li>
         </ul>
     },
     {

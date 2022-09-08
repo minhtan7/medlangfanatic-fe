@@ -1,0 +1,18 @@
+#mobileModal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mobileModal .modal-content{
+    background-color: transparent;
+    width: fit-content;
+}
+
+#mobileModal .modal-content .course-card{
+    transform: translate(0,0);
+    box-shadow: 0px 0px 12px 1px #ffffffa8;
+}
+
