@@ -49,11 +49,11 @@ const courseDetail = {
 }
 
 const feedBack = [
-    {
-        name: "Lan Thư",
-        title: "Sinh viên Y5",
-        content: `Mình rất thích kiểu định hướng học 80/20 theo kiểu corpus-based learning, vì bản thân mình cũng khá... lười, hihi, và bộ từ vựng Medical Academic Vocabulary List đã giúp mình rất nhiều trong việc cải thiện vốn từ vựng academic của mình. Khóa học rất hay, và trình bày rất đẹp. Mình có thể thấy sự trau chuốt công phu từ anh Hưng và chị Trâm cho khóa học này. Cảm ơn Med Lang Fanatic rất nhiều vì không chỉ cung cấp cần câu như mọi lần, mà lần này đã cung cấp cá rất tươi ngon.`
-    },
+    // {
+    //     name: "Lan Thư",
+    //     title: "Sinh viên Y5",
+    //     content: `Mình rất thích kiểu định hướng học 80/20 theo kiểu corpus-based learning, vì bản thân mình cũng khá... lười, hihi, và bộ từ vựng Medical Academic Vocabulary List đã giúp mình rất nhiều trong việc cải thiện vốn từ vựng academic của mình. Khóa học rất hay, và trình bày rất đẹp. Mình có thể thấy sự trau chuốt công phu từ anh Hưng và chị Trâm cho khóa học này. Cảm ơn Med Lang Fanatic rất nhiều vì không chỉ cung cấp cần câu như mọi lần, mà lần này đã cung cấp cá rất tươi ngon.`
+    // },
     {
         name: "Hoàng Anh",
         title: "Bác sĩ",
