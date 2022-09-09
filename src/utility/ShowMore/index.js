@@ -3,6 +3,7 @@ import useWindowDimensions from '../../hook/useWindowDimension';
 
 export const ShowMore = ({ defaultHeight, text, index }) => {
     // const text = `${copyStart} ${isLongCopy ? copyEnd : ""}`;
+    const [more, setMore] = useState(false)
     const [heightCurrent, setHeightCurrent] = useState(defaultHeight);
     const [heightMax, setHeightMax] = useState(defaultHeight);
     const [heightMin, setHeightMin] = useState(defaultHeight);
@@ -22,6 +23,11 @@ export const ShowMore = ({ defaultHeight, text, index }) => {
             setHeightCurrent(heightClient);
         }
     }, [text, index, width]);
+    useEffect(() => {
+        if (text.length < 400) {
+            setMore(!more)
+        }
+    }, [text])
 
     const handleClickBtn = () => {
 
@@ -31,7 +37,7 @@ export const ShowMore = ({ defaultHeight, text, index }) => {
 
     return (
         <>
-            {text.length < 400 ? <p className=' text-justify not-expand'>{text}</p> : (
+            {text.length < 450 ? <p className=' text-justify not-expand'>{text}</p> : (
                 <>
                     <p
                         className={`${isExpanded ? "expanded" : "collapsed"} text-display text-display-${index}  text-justify`}

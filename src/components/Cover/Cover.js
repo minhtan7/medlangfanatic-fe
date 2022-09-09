@@ -23,6 +23,9 @@ export const Cover = () => {
                 <p className='text-center fst-italic'>
                     <small>(Đoạn văn trích từ cuốn Harrison's principles of internal medicine, 21st ed, trang 481)</small>
                 </p>
+                <small style={{ fontSize: "10px", display: "inline-table" }}>
+                    * Các từ được tô màu <span className='covered-text'>highlight</span> là các từ khóa trong bộ Medical Academic Vocabulary List
+                </small>
             </div>
         </Container>
     )

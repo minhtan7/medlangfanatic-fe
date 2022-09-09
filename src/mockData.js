@@ -19,7 +19,7 @@ const faq = [
     // },
     {
         question: "Đăng ký khóa học như thế nào?",
-        answer: "Bạn cần điền đầy đủ thông tin trong form đăng ký và chuyển khoản học phí để hoàn tất đăng "
+        answer: "Bạn cần điền đầy đủ thông tin trong form đăng ký và chuyển khoản học phí để hoàn tất đăng ký."
     },
     // {
     //     question: "Có bài kiểm tra đầu vào không?",
@@ -50,22 +50,22 @@ const courseDetail = {
 
 const feedBack = [
     {
-        name: "Như Quỳnh",
+        name: "Lan Thư",
         title: "Sinh viên Y5",
         content: `Mình rất thích kiểu định hướng học 80/20 theo kiểu corpus-based learning, vì bản thân mình cũng khá... lười, hihi, và bộ từ vựng Medical Academic Vocabulary List đã giúp mình rất nhiều trong việc cải thiện vốn từ vựng academic của mình. Khóa học rất hay, và trình bày rất đẹp. Mình có thể thấy sự trau chuốt công phu từ anh Hưng và chị Trâm cho khóa học này. Cảm ơn Med Lang Fanatic rất nhiều vì không chỉ cung cấp cần câu như mọi lần, mà lần này đã cung cấp cá rất tươi ngon.`
     },
     {
-        name: "Hoàng Thị Kim Anh",
+        name: "Hoàng Anh",
         title: "Bác sĩ",
         content: "Mình tình cờ biết được bộ từ vựng MAVL do học lớp Medical Literacy của anh Hưng, và thật sự thích bộ từ vựng này. Nhờ tập trung trau dồi bộ từ vựng này, mình đã có thể cải thiện khả năng hiểu các textbook mà trước đó mình đọc nhưng chỉ hiểu lõm bõm. Highly recommend mọi người học bộ từ MAVL nha."
     },
     {
-        name: "Tuyết Phương",
+        name: "Đạt Võ",
         title: "Sinh viên Y5",
         content: `Thật sự bất ngờ vì khóa học hay hơn mình tưởng tượng rất nhiều. Nội dung không chỉ có các video giảng bài như các khóa học từ vựng thường thấy, mà có cả một hệ thống bài tập tương tác rất công phu. Chưa kể còn có email nhắc nhở bài mỗi tuần. Quá chu đáo. Highly recommend khóa học này.`
     },
     {
-        name: "Trần Hà Uyên",
+        name: "Thanh Hà",
         title: "Sinh viên Y6",
         content: `Em vừa học xong và không biết nói gì ngoài cảm ơn anh Hưng và chị Trâm đã đầu tư quá xịn sò cho khóa học chất lượng này ạ. Em đã hoàn thành khóa học này sớm hơn dự kiến vì nội dung quá cuốn ạ, không nhàm chán như kiểu mô tả liệt kê từ vựng. Hy vọng Med Lang Fanatic sẽ có thêm các khóa học cho các bộ từ vựng giống giống như vậy để em đăng ký học tiếp ạ.`
     }
