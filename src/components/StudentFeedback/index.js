@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ShowMore } from '../../utility/ShowMore'
 import quote from '../../asset/quote.svg'
 
 
 export const StudentFeedback = ({ defaultHeight, feedBack }) => {
     const [slide, setSlide] = useState(0)
+
 
     const handleChangeSlide = (n) => {
         if ((slide === 0 && n === 1)
@@ -13,6 +14,7 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
             setSlide(slide + n)
         }
     }
+
     return (
         <div className="mb-5" id="student-feedback">
             <div className="px-5 position-relative bg-lighter py-3" >
