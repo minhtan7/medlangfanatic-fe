@@ -12,8 +12,8 @@ export const CourseCard = ({ course }) => {
     // const { hours, minutes, seconds } = formatTime(course?.duration || 0)
     const navigate = useNavigate()
 
-    useScript(process.env.REACT_APP_LUCKY_ORANGE)
-    useScript(process.env.REACT_APP_GG_TAG_MNG)
+    // useScript(process.env.REACT_APP_LUCKY_ORANGE)
+    // useScript(process.env.REACT_APP_GG_TAG_MNG)
 
     return course ?
         (<Card className='course-card '>
@@ -33,19 +33,19 @@ export const CourseCard = ({ course }) => {
                 <ListGroup variant="flush">
                     <ListGroup.Item className='course-card-item fa-ul' as="ul" >
                         <li>
-                            <span class="fa-li" ><FontAwesomeIcon icon={faFileText} /></span>
+                            <span className="fa-li" ><FontAwesomeIcon icon={faFileText} /></span>
                             Bài tập tương tác đa dạng
                         </li>
                     </ListGroup.Item>
                     <ListGroup.Item className='course-card-item fa-ul' as="ul" >
                         <li>
-                            <span class="fa-li" ><FontAwesomeIcon icon={faPlayCircle} /></span>
+                            <span className="fa-li" ><FontAwesomeIcon icon={faPlayCircle} /></span>
                             Video phân tích hàm nghĩa của các từ
                         </li>
                     </ListGroup.Item>
                     <ListGroup.Item className='course-card-item fa-ul' as="ul" >
                         <li>
-                            <span class="fa-li" ><FontAwesomeIcon icon={faNoteSticky} /></span>
+                            <span className="fa-li" ><FontAwesomeIcon icon={faNoteSticky} /></span>
                             Flashcards ôn tập
                         </li>
                     </ListGroup.Item>

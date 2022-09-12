@@ -8,7 +8,8 @@ export const Instructors = ({ instructors }) => {
                 <Col className="px-3 px-md-5">
                     <h2 className='mb-4 text-main-title'>Giảng viên</h2>
                     {instructors.map(instructor => (
-                        <Row>
+
+                        <Row key={instructor.name}>
                             <Col md={4} className="d-flex justify-content-center">
                                 <Image
                                     src={instructor.imageUrl} roundedCircle
@@ -18,13 +19,14 @@ export const Instructors = ({ instructors }) => {
                             <Col className='m-auto'>
                                 <h4 style={{ fontWeight: "600", color: "var(--main)" }}>{instructor.title} {instructor.name}</h4>
                                 <ul>
-                                    {instructor.bio.split("\n").map(b => (
-                                        <li>{b}</li>
+                                    {instructor.bio.split("\n").map((b, idx) => (
+                                        <li key={idx}>{b}</li>
                                     ))}
                                 </ul>
 
                             </Col>
                         </Row>
+
                     ))}
                 </Col>
             </Row>

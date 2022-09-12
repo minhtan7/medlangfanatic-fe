@@ -20,13 +20,13 @@ export const Features = ({ about, course }) => {
         <div className="px-3 px-md-5 position-relative " >
             <div className='about-bar row row-cols-2 row-cols-lg-4'>
                 {about.map((a, index) => (
-                    <span className={`col py-2 ${slide === index ? "active" : ""}`} onClick={() => handleChangleSlideBar(index)}>
+                    <span key={index} className={`col py-2 ${slide === index ? "active" : ""}`} onClick={() => handleChangleSlideBar(index)}>
                         {a.title}
                     </span>
                 ))}
             </div>
             {about.map((a, index) => (
-                <div className="slideshow-container ">
+                <div className="slideshow-container " key={index}>
                     <div className={` mySlides faded ${slide === index ? "d-flex flex-column  flex-lg-row" : ""}`}>
                         <Col sm={12} lg={6} className="flex-shrink-0" >
                             <Image src={a.url} width="100%" />

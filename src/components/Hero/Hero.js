@@ -12,10 +12,10 @@ export const Hero = ({ course }) => {
                     <h1 className='title-animation anim-typewriter-first mb-3 text-contrast fw-bold ' >Medical Academic</h1>
                     <h1 className='title-animation anim-typewriter-second mb-3 text-contrast fw-bold '> Vocabulary List</h1>
                     <ul className='fa-ul sub-title'>
-                        <li> <span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa.</li>
-                        <li><span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.</li>
-                        <li><span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Phân tích hàm nghĩa của từ vựng đa nghĩa trong nhiều ngữ cảnh khác nhau.</li>
-                        <li><span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Tăng nhanh vốn từ vựng một cách có định hướng.</li>
+                        <li> <span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa.</li>
+                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.</li>
+                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Phân tích hàm nghĩa của từ vựng đa nghĩa trong nhiều ngữ cảnh khác nhau.</li>
+                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Tăng nhanh vốn từ vựng một cách có định hướng.</li>
                     </ul>
 
                 </Col>
@@ -36,10 +36,10 @@ export const Hero = ({ course }) => {
                     </Placeholder>
 
                     <ul className='fa-ul'>
-                        <li> <span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Cấu trúc của một ca lâm sàng được trình miệng bằng tiếng Anh</li>
-                        <li><span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Đi sâu vào phân tích cách trình bày hiệu quả cho từng phần riêng biệt. </li>
-                        <li><span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Công thức và từ vựng khác nhau</li>
-                        <li><span class="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Cấu trúc dễ học dễ áp dụng.</li>
+                        <li> <span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Cấu trúc của một ca lâm sàng được trình miệng bằng tiếng Anh</li>
+                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Đi sâu vào phân tích cách trình bày hiệu quả cho từng phần riêng biệt. </li>
+                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Công thức và từ vựng khác nhau</li>
+                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Cấu trúc dễ học dễ áp dụng.</li>
                     </ul>
                 </Col>
                 <Col md={6}>

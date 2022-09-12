@@ -25,7 +25,7 @@ export const CourseDetailContent = ({ chapters }) => {
                 {chapters.map(chapter => {
                     // const { hours, minutes, seconds } = formatTime(chapter.duration_in_seconds)
                     return (
-                        <Accordion.Item eventKey={chapter.id} className="accordion-item-outline">
+                        <Accordion.Item key={chapter.id} eventKey={chapter.id} className="accordion-item-outline">
                             <Accordion.Header bsPrefix='style' >
                                 <span>{chapter.name}</span>
                                 <div className='duration d-none d-md-block' >
@@ -35,7 +35,7 @@ export const CourseDetailContent = ({ chapters }) => {
                             </Accordion.Header>
                             <Accordion.Body as={"ul"} className='fa-ul'>
                                 {chapter.contents.map(content => (
-                                    <Content content={content} id={content.id} />
+                                    <Content key={content.id} content={content} id={content.id} />
                                 ))}
                             </Accordion.Body>
                         </Accordion.Item>

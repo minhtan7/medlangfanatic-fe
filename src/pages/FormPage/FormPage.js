@@ -5,7 +5,7 @@ import "./style.css"
 
 const FormPage = () => {
     const [show, setShow] = useState(false)
-    useScript(process.env.REACT_APP_PIPEDRIVE_LOADER)
+    // useScript(process.env.REACT_APP_PIPEDRIVE_LOADER)
     useEffect(() => {
         setTimeout(() => {
             setShow(true)

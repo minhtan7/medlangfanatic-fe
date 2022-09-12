@@ -20,7 +20,7 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
             <div className="px-5 position-relative bg-lighter py-3" >
                 <h2 className='mb-4 text-main-title'>Nhận xét của học viên</h2>
                 {feedBack.map((f, index) => (
-                    <div className="slideshow-container">
+                    <div className="slideshow-container" key={f.name}>
                         <div className={`mySlides faded ${slide === index ? "slide-active" : ""}`}  >
                             <ShowMore defaultHeight={defaultHeight} text={f.content} index={index} />
                             <span className='slide-quote'>
