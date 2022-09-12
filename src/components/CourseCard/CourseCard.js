@@ -12,8 +12,8 @@ export const CourseCard = ({ course }) => {
     // const { hours, minutes, seconds } = formatTime(course?.duration || 0)
     const navigate = useNavigate()
 
-    // useScript(process.env.REACT_APP_LUCKY_ORANGE)
-    // useScript(process.env.REACT_APP_GG_TAG_MNG)
+    useScript(process.env.REACT_APP_LUCKY_ORANGE)
+    useScript(process.env.REACT_APP_GG_TAG_MNG)
 
     return course ?
         (<Card className='course-card '>

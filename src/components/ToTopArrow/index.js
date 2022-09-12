@@ -1,6 +1,6 @@
 
 
-import { faAngleDoubleUp, faFire, faInfo, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleUp, faInfo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import MobileModal from '../MobileModal'

@@ -1,7 +1,7 @@
 import { faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
+import { Col, Nav, Row, Tab } from 'react-bootstrap'
 
 
 export const FAQ = ({ faq }) => {

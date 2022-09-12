@@ -62,7 +62,7 @@ const CoursePage = () => {
     )
 }
 
-const CTA = () => {
+export const CTA = () => {
     const navigate = useNavigate()
 
     return (
