@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import useScript from '../../hook/useScript'
 
 const ThankyouPage = () => {
-    useScript("https://tools.luckyorange.com/core/lo.js?site-id=a0c6a81c")
+    useScript(process.env.REACT_APP_LUCKY_ORANGE)
 
     return (
         <Container>

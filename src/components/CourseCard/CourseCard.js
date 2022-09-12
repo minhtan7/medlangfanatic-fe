@@ -12,8 +12,8 @@ export const CourseCard = ({ course }) => {
     // const { hours, minutes, seconds } = formatTime(course?.duration || 0)
     const navigate = useNavigate()
 
-    useScript("https://tools.luckyorange.com/core/lo.js?site-id=a0c6a81c")
-    useScript("https://www.googletagmanager.com/gtag/js?id=G-NJYDR7ML63")
+    useScript(process.env.REACT_APP_LUCKY_ORANGE)
+    useScript(process.env.REACT_APP_GG_TAG_MNG)
 
     return course ?
         (<Card className='course-card '>
