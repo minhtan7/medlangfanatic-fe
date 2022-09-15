@@ -29,7 +29,7 @@ const EventPage = () => {
                 </Col>
                 <Col xs={12} md={6}>
                     <div className={`w-100 ${show ? "d-block" : "d-none"}`} >
-                        <div className="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/6Na7FxACrR9AIRnhT8dm44I4RAqCPurExWfMOooL85t0s1JxH2m9WyyqEEW9kzCo5t"></div>
+                        <div className="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/bYYsEmdAWOeSU2Pw7yWCOiSbrRfOby9SP9RtJSIMZH4wIqkpRegRx5sg1usNTk6Ldx"></div>
                     </div>
                     <div className={` ${!show ? "d-block" : "d-none"} h-100 w-100 d-flex justify-content-center align-items-center`} >
                         <Spinner animation="border" role="status"  >
