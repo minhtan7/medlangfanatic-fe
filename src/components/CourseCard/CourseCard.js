@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Button, Card, ListGroup, Placeholder } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import useScript from '../../hook/useScript'
+import { useScript } from '../../hook/useScript'
 // import { formatTime } from '../../utility/formatTime'
 import { Timer } from '../Timer/Timer'
 import "./style.css"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, Spinner } from 'react-bootstrap'
-import useScript from '../../hook/useScript'
+import { useScript } from '../../hook/useScript'
 import "./style.css"
 
 const EventPage = () => {

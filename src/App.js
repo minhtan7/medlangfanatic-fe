@@ -11,6 +11,8 @@ import SortedRoute from './layout/SortedRoute';
 // import TempFormPage from './pages/TempFormPage';
 import GamePage from './pages/GamePage';
 import EventPage from './pages/EventPage';
+import BlogPage from './pages/BlogPage';
+import SingleBlogPage from './pages/SingleBlogPage';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path='/register-form' element={<FormPage />} />
         {/* <Route path='/event-form' element={<TempFormPage />} /> */}
         <Route path='/game' element={<GamePage />} />
+        <Route path='/blogs' element={<BlogPage />} />
+        <Route path='/blogs/:id' element={<SingleBlogPage />} />
         <Route path='/event-form' element={<EventPage />} />
         <Route path='/:slug'
           element={<SortedRoute>

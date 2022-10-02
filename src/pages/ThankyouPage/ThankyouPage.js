@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import useScript from '../../hook/useScript'
+import { useScript } from '../../hook/useScript'
 
 const ThankyouPage = () => {
     useScript(process.env.REACT_APP_LUCKY_ORANGE)
