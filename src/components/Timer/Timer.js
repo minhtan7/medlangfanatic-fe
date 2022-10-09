@@ -12,10 +12,10 @@ export const Timer = () => {
     }
     return (
         <ShowCounter
-            days={days}
-            hours={hours}
-            minutes={minutes}
-            seconds={seconds}
+            days={days < 0 ? 0 : days}
+            hours={hours < 0 ? 0 : hours}
+            minutes={minutes < 0 ? 0 : minutes}
+            seconds={seconds < 0 ? 0 : seconds}
         />
     );
 }
