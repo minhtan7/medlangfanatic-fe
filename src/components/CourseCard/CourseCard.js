@@ -21,7 +21,7 @@ export const CourseCard = ({ course }) => {
             } />
             < Card.Body style={{ color: "black" }}>
                 <Card.Title style={{ textAlign: "center" }}>Chi phí khóa học:
-                    <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>3,899K</h2>
+                    <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>3,690K</h2>
                 </Card.Title>
                 <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up' ><span>Đăng ký ngay</span></Button>
             </Card.Body >
