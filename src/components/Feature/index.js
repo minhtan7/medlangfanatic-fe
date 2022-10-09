@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
 import { Col, Image } from 'react-bootstrap'
+import { handleChangeSlide } from '../../utils/changeSlide'
 
 export const Features = ({ about, course }) => {
     const [slide, setSlide] = useState(0)
 
-    const handleChangeSlide = (n) => {
-        if ((slide === 0 && n === 1)
-            || (slide === about.length - 1 && n === -1)
-            || (slide > 0 && slide < about.length - 1)) {
-            setSlide(slide + n)
-        }
-    }
     const handleChangleSlideBar = (index) => {
         setSlide(index)
     }
@@ -39,8 +33,14 @@ export const Features = ({ about, course }) => {
             ))
             }
             <div className='carousel-btn-wrapper'>
-                <button className={`prev ${slide === 0 ? "stop-slide" : ""}`} onClick={() => handleChangeSlide(-1)}>&#10094;</button>
-                <button className={`next ${slide === about.length - 1 ? "stop-slide" : ""}`} onClick={() => handleChangeSlide(1)}>&#10095;</button>
+                <button className={`prev ${slide === 0 ? "stop-slide" : ""}`}
+                    onClick={() => handleChangeSlide(-1, slide, setSlide, about)}>
+                    &#10094;
+                </button>
+                <button className={`next ${slide === about.length - 1 ? "stop-slide" : ""}`}
+                    onClick={() => handleChangeSlide(1, slide, setSlide, about)}>
+                    &#10095;
+                </button>
             </div>
         </div>
 

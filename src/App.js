@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
 import CoursePage from './pages/CoursePage/CoursePage';
-import NotFoundPage from './pages/NotFoundPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ThankyouPage from "./pages/ThankyouPage/ThankyouPage"
 import FormPage from './pages/FormPage/FormPage';
 import HomePage from './pages/Homepage';
@@ -24,13 +24,16 @@ function App() {
         {/* <Route path='/event-form' element={<TempFormPage />} /> */}
         <Route path='/game' element={<GamePage />} />
         <Route path='/blogs' element={<BlogPage />} />
-        <Route path='/blogs/:id' element={<SingleBlogPage />} />
+        <Route path='/blogs/:slug' element={<SingleBlogPage />} />
         <Route path='/event-form' element={<EventPage />} />
-        <Route path='/:slug'
+        {/* <Route path='/:slug'
           element={<SortedRoute>
             <CoursePage />
-          </SortedRoute>} />
+          </SortedRoute>} /> */}
         <Route path='*' element={<NotFoundPage />} />
+      </Route>
+      <Route element={< SortedRoute />}>
+        <Route path='/:slug' element={<CoursePage />} />
       </Route>
     </Routes>
   );

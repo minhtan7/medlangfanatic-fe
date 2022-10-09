@@ -28,10 +28,9 @@ const CoursePage = () => {
     const { slug } = useParams()
     const [course, setCourse] = useState(null)
     const [chapters, setChapters] = useState(null)
-
     useEffect(() => {
         const getCourse = async () => {
-            const res = await api.get(`courses/${slugs[slug]}`)
+            const res = await api.get(`courses/${slugs[slug.toUpperCase()]}`)
             setCourse(res.data.data)
             setChapters(res.data.data.chapters)
         }

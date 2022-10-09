@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate } from 'react-router-dom';
 import "./style.css"
 
-function Header() {
+function CourseHeader() {
     const navigate = useNavigate()
     return (
         <Navbar id="header" collapseOnSelect expand="lg" className="bg-main" variant="dark">
@@ -27,5 +27,25 @@ function Header() {
         </Navbar>
     );
 }
+function MainHeader() {
+    const navigate = useNavigate()
+    return (
+        <Navbar id="header" collapseOnSelect expand="lg" className="bg-main" variant="dark">
+            <Container>
+                <Navbar.Brand as="img" onClick={() => navigate("/")} src="/images/logo_transparent.webp" href="#home" width={96} />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
 
-export default Header;
+                    </Nav>
+                    <Nav>
+                        <Nav.Link className='me-3' onClick={() => navigate("/blogs")} >Blogs</Nav.Link>
+                        <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
+}
+
+export { CourseHeader, MainHeader };

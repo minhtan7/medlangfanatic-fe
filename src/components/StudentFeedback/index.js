@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { ShowMore } from '../../utility/ShowMore'
 import quote from '../../asset/quote.svg'
+import { handleChangeSlide } from '../../utils/changeSlide'
 
 
 export const StudentFeedback = ({ defaultHeight, feedBack }) => {
     const [slide, setSlide] = useState(0)
-
-
-    const handleChangeSlide = (n) => {
-        if ((slide === 0 && n === 1)
-            || (slide === feedBack.length - 1 && n === -1)
-            || (slide > 0 && slide < feedBack.length - 1)) {
-            setSlide(slide + n)
-        }
-    }
 
     return (
         <div className="mb-5" id="student-feedback">
@@ -42,8 +34,14 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
                 ))
                 }
                 <div className='carousel-btn-wrapper'>
-                    <button className={`prev ${slide === 0 ? "stop-slide" : ""}`} onClick={() => handleChangeSlide(-1)}>&#10094;</button>
-                    <button className={`next ${slide === feedBack.length - 1 ? "stop-slide" : ""}`} onClick={() => handleChangeSlide(1)}>&#10095;</button>
+                    <button className={`prev ${slide === 0 ? "stop-slide" : ""}`}
+                        onClick={() => handleChangeSlide(-1, slide, setSlide, feedBack)}>
+                        &#10094;
+                    </button>
+                    <button className={`next ${slide === feedBack.length - 1 ? "stop-slide" : ""}`}
+                        onClick={() => handleChangeSlide(1, slide, setSlide, feedBack)}>
+                        &#10095;
+                    </button>
                 </div>
             </div>
         </div>

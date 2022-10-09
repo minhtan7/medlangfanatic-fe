@@ -1,11 +1,12 @@
 
 import { useEffect, useState } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
+import Footer from "./Footer";
+import { CourseHeader } from "./Header";
 import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 
 
 const slugs = {
-    "oral-presentation": 1529640,
     "MAVL": 1751294
 }
 function SortedRoute({ children }) {
@@ -23,9 +24,15 @@ function SortedRoute({ children }) {
     }
     return <>
         {/* <LoadingScreen /> */}
-        <LoadingScreen display={`${loading ? "d-fixed" : "d-none"}`} />
+        <div className={`${loading ? "d-fixed" : "d-none"}`}>
+            <CourseHeader />
+            <LoadingScreen />
+            <Footer />
+        </div>
         <div className={`${loading ? "d-none" : "d-block"}`}>
-            {children}
+            <CourseHeader />
+            <Outlet />
+            <Footer />
         </div>
     </>
 }

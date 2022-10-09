@@ -6,8 +6,9 @@ const initialState = {
   isLoading: false,
   error: null,
   postsById: {},
-  currentPageBlogs: [],
+  currentPageBlogs: {},
   totalBlogs: 0,
+  singleBlogPage: {}
 };
 
 const slice = createSlice({
@@ -24,36 +25,38 @@ const slice = createSlice({
     getBlogSuccess(state, action) {
       state.isLoading = false;
       state.error = null;
-      // const { count, posts } = action.payload;
-      // posts.forEach((post) => {
-      //   state.postsById[post._id] = post;
-      //   if (!state.currentPageBlogs.includes(post._id)) {
-      //     state.currentPageBlogs.push(post._id);
-      //   }
-      // });
-      // state.totalBlogs = count;
+      state.currentPageBlogs = action.payload
     },
-    resetPost(state, action) {
-      state.postsById = {};
-      state.currentPageBlogs = [];
-    },
-
+    getSingleBlogSuccess(state, action) {
+      state.isLoading = false
+      state.error = null
+      state.singleBlogPage = action.payload
+    }
   },
 });
 
 
 
 export const getPosts =
-  ({ userId, page, limit = POST_PER_PAGE }) =>
+  ({ page = 1, limit = POST_PER_PAGE }) =>
     async (dispatch) => {
       dispatch(slice.actions.startLoading());
       try {
-        const params = { page, limit };
-        const response = await apiService.get(`/posts/user/${userId}`, {
-          params,
-        });
-        if (page === 1) dispatch(slice.actions.resetPost());
-        dispatch(slice.actions.getPostSuccess(response.data));
+        const response = await apiService.get(`/posts?page=${page}&limit=${limit}`);
+        console.log(response)
+        dispatch(slice.actions.getBlogSuccess(response.data));
+      } catch (error) {
+        dispatch(slice.actions.hasError(error.message));
+      }
+    };
+
+export const getSingleBlog =
+  ({ slug }) =>
+    async (dispatch) => {
+      dispatch(slice.actions.startLoading());
+      try {
+        const response = await apiService.get(`/posts/${slug}`);
+        dispatch(slice.actions.getSingleBlogSuccess(response.data));
       } catch (error) {
         dispatch(slice.actions.hasError(error.message));
       }

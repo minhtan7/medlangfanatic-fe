@@ -5,7 +5,7 @@ import React from 'react'
 import { Col, Container, Row, Stack } from 'react-bootstrap'
 import "./style.css"
 
-const index = () => {
+const Footer = () => {
     return (
         <div id="footer">
             <div className='py-4 text-white' style={{ backgroundColor: "#2b3438" }}>
@@ -52,4 +52,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Footer

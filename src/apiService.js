@@ -4,8 +4,8 @@ const api = axios.create({
     baseURL: process.env.REACT_APP_BACK_END_URL,
     headers: {
         "Content-Type": "application/json",
-        "X-Auth-API-Key": process.env.REACT_APP_THINKIFIC_API_KEY,
-        "X-Auth-Subdomain": process.env.REACT_APP_THINKIFI_SUBDOMAIN
+        // "X-Auth-API-Key": process.env.REACT_APP_THINKIFIC_API_KEY,
+        // "X-Auth-Subdomain": process.env.REACT_APP_THINKIFI_SUBDOMAIN,
     },
 });
 

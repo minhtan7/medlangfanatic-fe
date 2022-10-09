@@ -2,9 +2,13 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import dayjs from 'dayjs'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useParams } from 'react-router-dom'
+import LoadingSpinner from '../../components/LoadingSpinner'
+import Subscribe from '../../components/Subscribe'
+import { getSingleBlog } from '../../features/blog/blogSlice'
 import { useScript, useScriptFbShare } from '../../hook/useScript'
 import "./style.css"
 
@@ -66,62 +70,101 @@ Quan hệ của bác sĩ và bệnh nhân không còn là cơ chế 1 chiều xi
 ]
 
 const SingleBlogPage = () => {
-    const { id } = useParams()
-    const blog = blogContent.filter(b => b._id === parseInt(id))[0]
     useScript("https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0")
-    return (
-        <div>
-            <Container>
-                <Row className='pt-5'>
-                    <Col xs={2}></Col>
-                    <Col >
-                        <div className=' pt-4'>
-                            <Link to="/blogs" className='text-secondary text-decoration-none'>
-                                <FontAwesomeIcon icon={faAngleLeft} className="me-3" />
-                                Về trang blogs
-                            </Link>
-                        </div>
-                    </Col>
-                    <Col xs={2}></Col>
-                </Row>
-                <Row >
-                    <Col xs={2}></Col>
-                    <Col>
-                        <h1 className='py-3'>{blog.title}</h1>
-                        <div className='wrapper-fb-share-btn'>
-                            <FontAwesomeIcon size='2x' icon={faFacebook} />
-                            <div className="fb-share-button position-absolute "
-                                data-href={`${process.env.REACT_APP_FRONTEND_URL}/blogs/${id}`}
-                                data-layout="button_count">
-                            </div>
-                        </div>
-                        <div>
-                            <img src={blog.image} alt="blog" width="100%" />
-                        </div>
-                        <div className='py-4'>
-                            {blog.topic.map((t, index) => (
-                                <span>
-                                    {t.toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
-                                </span>
-                            ))}
-                        </div>
-                        <div>
-                            <small className="text-muted">{dayjs(blog.createAt).format("DD/MM/YYYY")} - </small>
-                            {blog.content}
-                        </div>
-                    </Col>
-                    <Col xs={2} className="d-flex align-items-end">
-                        <div className='related-border'>
-                            <p>Liên quan</p>
-                            <small>Blogs</small>
-                            <Link to="/blogs/3" className='related-link'>{blogContent[0].title}</Link>
-                        </div>
-                    </Col>
-                </Row>
+    useScript("<path>/dist/share-buttons.js")
+    useScript("//cdn.jsdelivr.net/npm/share-buttons/dist/share-buttons.js")
+    const { slug } = useParams()
+    const dispatch = useDispatch()
+    const { singleBlogPage: blog, isLoading } = useSelector(state => state.blog)
+    useEffect(() => {
+        dispatch(getSingleBlog({ slug }))
+    }, [slug])
 
-            </Container>
+    // const blog = blogContent.filter(b => b._id === parseInt(id))[0]
+    console.log(blog, !Object.keys(blog).length)
+    return (
+        <>
+            {isLoading | !Object.keys(blog).length ? <LoadingSpinner /> : (
+                <Container className='mb-5'>
+                    <Row className='pt-5'>
+                        <Col xs={0} md={2} ></Col>
+                        <Col xs={12} md={8}>
+                            <div className=' pt-4'>
+                                <Link to="/blogs" className='text-secondary text-decoration-none'>
+                                    <FontAwesomeIcon icon={faAngleLeft} className="me-3" />
+                                    Về trang blogs
+                                </Link>
+                            </div>
+
+                        </Col>
+                        <Col xs={12} md={2}></Col>
+                    </Row>
+                    <Row >
+                        <Col xs={0} md={2} ></Col>
+                        <Col xs={12} md={8}>
+                            <BlogContent blog={blog} slug={slug} />
+                        </Col>
+                        <Col xs={12} md={2} className="d-flex align-items-end">
+                            <RelatedBlog blog={blogContent} />
+                        </Col>
+                    </Row>
+
+                </Container>
+            )}
+            <Subscribe />
+        </>
+    )
+}
+
+const BlogContent = ({ blog, slug }) => {
+    return (
+        <div >
+            <h1 className='py-3 mb-0 fw-bold blog-title' >{blog.title}</h1>
+            {/* <div className='wrapper-fb-share-btn'>
+                <FontAwesomeIcon size='2x' icon={faFacebook} />
+                <div className="fb-share-button position-absolute "
+                    data-href={`${process.env.REACT_APP_FRONTEND_URL}/blogs/${slug}`}
+                    data-layout="button_count">
+                </div>
+            </div> */}
+            <div className="share-btn mb-2">
+                <a className="btn-facebook" data-id="fb">
+                    <FontAwesomeIcon size='2x' icon={faFacebook} />
+                </a>
+            </div>
+            {!blog.image ? (
+                <div>
+                    <img
+                        // src={blog.image} 
+                        src="https://www.mckinsey.com/~/media/mckinsey/about%20us/mckinsey%20blog/jobsohio%20revitalizes%20states%20economy%20through%20innovative%20solutions/jobsohio-hero-small-1410686370-1536x864.jpg?mw=1536&car=16:9&cpx=Center&cpy=Center"
+                        alt="blog" width="100%" />
+                </div>
+            ) : null
+            }
+            <div className='py-4 d-flex justify-content-between' >
+                <small className="text-muted">{dayjs(blog.createAt).format("DD/MM/YYYY")}</small>
+                {blog.topic.map((t, index) => (
+                    <span>
+                        {t.name.toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
+                    </span>
+                ))}
+            </div>
+            <div>
+                <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
+            </div></div>
+    )
+}
+
+const RelatedBlog = ({ blog }) => {
+    return (
+        <div className='related-border'>
+            <p>Liên quan</p>
+            <small>Blogs</small>
+            <Link to="/blogs/3" className='related-link'>{blog[0].title}</Link>
         </div>
     )
 }
+
+
 
 export default SingleBlogPage
