@@ -1,4 +1,4 @@
-import { faFileText, faNoteSticky, faPlayCircle, } from '@fortawesome/free-solid-svg-icons'
+import { faFileText, faNoteSticky, faPlayCircle, faT, faGlasses } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Button, Card, ListGroup, Placeholder } from 'react-bootstrap'
@@ -21,7 +21,7 @@ export const CourseCard = ({ course }) => {
             } />
             < Card.Body style={{ color: "black" }}>
                 <Card.Title style={{ textAlign: "center" }}>Chi phí khóa học:
-                    <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>3,899K</h2>
+                    <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>{course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}K</h2>
                 </Card.Title>
                 <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up' ><span>Đăng ký ngay</span></Button>
             </Card.Body >
@@ -31,24 +31,17 @@ export const CourseCard = ({ course }) => {
             <Card.Body style={{ paddingTop: "0" }}>
                 <p style={{ color: "black", marginBottom: '0' }}>Khóa học bao gồm:</p>
                 <ListGroup variant="flush">
-                    <ListGroup.Item className='course-card-item fa-ul' as="ul" >
-                        <li>
-                            <span className="fa-li" ><FontAwesomeIcon icon={faFileText} /></span>
-                            Bài tập tương tác đa dạng
-                        </li>
-                    </ListGroup.Item>
-                    <ListGroup.Item className='course-card-item fa-ul' as="ul" >
-                        <li>
-                            <span className="fa-li" ><FontAwesomeIcon icon={faPlayCircle} /></span>
-                            Video phân tích hàm nghĩa của các từ
-                        </li>
-                    </ListGroup.Item>
-                    <ListGroup.Item className='course-card-item fa-ul' as="ul" >
-                        <li>
-                            <span className="fa-li" ><FontAwesomeIcon icon={faNoteSticky} /></span>
-                            Flashcards ôn tập
-                        </li>
-                    </ListGroup.Item>
+                    {course.material.map((m, index) => (
+                        <ListGroup.Item key={index} className='course-card-item fa-ul' as="ul" >
+                            <li>
+                                <span className="fa-li" >
+                                    {filterIcon(m.icon)}
+                                </span>
+                                {m.text}
+                            </li>
+                        </ListGroup.Item>
+
+                    ))}
                 </ListGroup>
             </Card.Body>
         </Card >) :
@@ -89,4 +82,22 @@ export const CourseCard = ({ course }) => {
                 </ListGroup>
             </Card.Body>
         </Card>)
+}
+
+const filterIcon = (icon) => {
+
+    switch (icon) {
+        case "faPlayCircle":
+            return <FontAwesomeIcon icon={faPlayCircle} />
+        case "faT":
+            return <FontAwesomeIcon icon={faT} />
+        case "faFileText":
+            return <FontAwesomeIcon icon={faFileText} />
+        case "faGlasses":
+            return <FontAwesomeIcon icon={faGlasses} />
+        case "faNoteSticky":
+            return <FontAwesomeIcon icon={faNoteSticky} />
+        default:
+            return <FontAwesomeIcon icon={faT} />
+    }
 }

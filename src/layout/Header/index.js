@@ -17,9 +17,9 @@ function CourseHeader() {
 
                     </Nav>
                     <Nav>
-                        <Nav.Link className='me-3' onClick={() => navigate("/MAVL")} href="#course-detail-content">Chương trình học</Nav.Link>
-                        <Nav.Link className='me-3' onClick={() => navigate("/MAVL")} href="#instructors">Giảng viên</Nav.Link>
-                        <Nav.Link className='me-3' onClick={() => navigate("/MAVL")} href="#faq">FAQ</Nav.Link>
+                        <Nav.Link className='me-3' href="#course-detail-content">Chương trình học</Nav.Link>
+                        <Nav.Link className='me-3' href="#instructors">Giảng viên</Nav.Link>
+                        <Nav.Link className='me-3' href="#faq">FAQ</Nav.Link>
                         <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

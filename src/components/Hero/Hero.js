@@ -5,17 +5,21 @@ import { Col, Container, Placeholder, Row } from 'react-bootstrap'
 import "./style.css"
 
 export const Hero = ({ course }) => {
+    console.log(course)
     return <div id="hero" className='mb-5 bg-main position-relative overflow-hidden' style={{ color: "white", padding: "3rem 0 29px" }}>
         {course ? (<Container >
             <Row >
                 <Col xs={12} md={6} className="px-2 px-md-3 m-auto overflow-hidden" style={{ paddingTop: "4rem" }}>
-                    <h1 className='title-animation anim-typewriter-first mb-3 text-contrast fw-bold ' >Medical Academic</h1>
-                    <h1 className='title-animation anim-typewriter-second mb-3 text-contrast fw-bold '> Vocabulary List</h1>
+                    {heroCourseName(course.slug)}
                     <ul className='fa-ul sub-title'>
-                        <li> <span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa.</li>
-                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.</li>
-                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Phân tích hàm nghĩa của từ vựng đa nghĩa trong nhiều ngữ cảnh khác nhau.</li>
-                        <li><span className="fa-li" ><FontAwesomeIcon icon={faCheck} /></span>Tăng nhanh vốn từ vựng một cách có định hướng.</li>
+                        {course.heroDescription.map(h => (
+                            <li key={h}>
+                                <span className="fa-li" >
+                                    <FontAwesomeIcon icon={faCheck} />
+                                </span>
+                                {h}
+                            </li>
+                        ))}
                     </ul>
 
                 </Col>
@@ -55,4 +59,22 @@ export const Hero = ({ course }) => {
         </div>
 
     </div>
+}
+
+const heroCourseName = (slug) => {
+
+    switch (slug.toLowerCase()) {
+        case "mavl":
+            return <>
+                <h1 className='title-animation anim-typewriter-first mb-3 text-contrast fw-bold ' >Medical Academic</h1>
+                <h1 className='title-animation anim-typewriter-second mb-3 text-contrast fw-bold '> Vocabulary List</h1>
+            </>
+        case "medical-terminology":
+            return <>
+                <h1 className='title-animation anim-typewriter-first mb-3 text-contrast fw-bold ' >Medical Terminology</h1>
+                {/* <h1 className='title-animation anim-typewriter-second mb-3 text-contrast fw-bold '> Vocabulary List</h1> */}
+            </>
+        default:
+            break;
+    }
 }

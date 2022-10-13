@@ -12,7 +12,7 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
             <div className="px-5 position-relative bg-lighter py-3" >
                 <h2 className='mb-4 text-main-title'>Nhận xét của học viên</h2>
                 {feedBack.map((f, index) => (
-                    <div className="slideshow-container" key={f.name}>
+                    <div className="slideshow-container" key={f.reviewerName}>
                         <div className={`mySlides faded ${slide === index ? "slide-active" : ""}`}  >
                             <ShowMore defaultHeight={defaultHeight} text={f.content} index={index} />
                             <span className='slide-quote'>
@@ -26,8 +26,8 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
                                 <img src="/images/student_icon.svg" width={60} className='doctor-icon' alt="student icon" />
                             </div>
                             <div className="flex-grow-1 ms-3 m-auto">
-                                <p className='m-0'><strong>{f.name}</strong></p>
-                                <p className='m-0'>{f.title}</p>
+                                <p className='m-0'><strong>{f.reviewerName}</strong></p>
+                                <p className='m-0'>{f.reviewerTitle}</p>
                             </div>
                         </div>
                     </div>

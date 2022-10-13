@@ -7,7 +7,8 @@ import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 
 
 const slugs = {
-    "MAVL": 1751294
+    "MAVL": 1751294,
+    "medical-terminology": 2026776,
 }
 function SortedRoute({ children }) {
     const location = useLocation();
@@ -24,16 +25,14 @@ function SortedRoute({ children }) {
     }
     return <>
         {/* <LoadingScreen /> */}
+        <CourseHeader />
         <div className={`${loading ? "d-fixed" : "d-none"}`}>
-            <CourseHeader />
             <LoadingScreen />
-            <Footer />
         </div>
         <div className={`${loading ? "d-none" : "d-block"}`}>
-            <CourseHeader />
             <Outlet />
-            <Footer />
         </div>
+        <Footer />
     </>
 }
 

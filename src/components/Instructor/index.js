@@ -12,7 +12,7 @@ export const Instructors = ({ instructors }) => {
                         <Row key={instructor.name}>
                             <Col md={4} className="d-flex justify-content-center">
                                 <Image
-                                    src={instructor.imageUrl} roundedCircle
+                                    src={filterInstructor(instructor.name)} roundedCircle
                                     width={180} style={{ border: "2px solid var(--main)", padding: 0, height: "fit-content" }}
                                 />
                             </Col>
@@ -32,4 +32,15 @@ export const Instructors = ({ instructors }) => {
             </Row>
         </div>
     )
+}
+
+const filterInstructor = (name) => {
+    switch (name) {
+        case "Trần Quang Hưng":
+            return "/images/dr.hung.webp"
+        case "Nguyễn Ngọc Quỳnh Trâm":
+            return "/images/dr.tram.webp"
+        default:
+            break;
+    }
 }
