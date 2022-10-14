@@ -12,11 +12,16 @@
     left: 0;
 }
 .related-link{
-    color: rgb(217, 186, 186);
-    font-weight: bold;
+    color: black;
+    /* font-weight: bold; */
     text-decoration: none;
     display: block;
 }
+
+.related-link:hover{
+    color: var(--main)
+}
+
 .wrapper-fb-share-btn{
     position: relative;
     display: inline-block;

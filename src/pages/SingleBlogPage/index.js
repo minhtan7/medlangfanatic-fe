@@ -105,7 +105,7 @@ const SingleBlogPage = () => {
                             <BlogContent blog={blog} slug={slug} />
                         </Col>
                         <Col xs={12} md={2} className="d-flex align-items-end">
-                            <RelatedBlog blog={blogContent} />
+                            <RelatedBlog blog={randomRelatedBlog(blog)} />
                         </Col>
                     </Row>
 
@@ -141,13 +141,15 @@ const BlogContent = ({ blog, slug }) => {
                 </div>
             ) : null
             }
-            <div className='py-4 d-flex justify-content-between' >
+            <div className='py-4 d-block d-md-flex justify-content-between' >
                 <small className="text-muted">{dayjs(blog.createAt).format("DD/MM/YYYY")}</small>
-                {blog.topic.map((t, index) => (
-                    <span>
-                        {t.name.toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
-                    </span>
-                ))}
+                <div>
+                    {blog.topic.map((t, index) => (
+                        <small key={index}>
+                            {t.name.toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
+                        </small>
+                    ))}
+                </div>
             </div>
             <div>
                 <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
@@ -156,15 +158,28 @@ const BlogContent = ({ blog, slug }) => {
 }
 
 const RelatedBlog = ({ blog }) => {
-    return (
+
+    return blog && (
         <div className='related-border'>
             <p>Liên quan</p>
             <small>Blogs</small>
-            <Link to="/blogs/3" className='related-link'>{blog[0].title}</Link>
+            <Link to={`/blogs/${blog.slug}`} className='related-link'>{blog.title}</Link>
         </div>
     )
 }
 
+const randomRelatedBlog = (blog) => {
+    if (blog.relatedPost.length === 1) return
+    if (blog.relatedPost[blog.relatedPost.length - 1].slug === blog.slug) {
+        return blog.relatedPost[0]
+    }
+    for (let i = 0; i < blog.relatedPost.length; i++) {
+        if (blog.relatedPost[i].slug !== blog.slug) {
+            return blog.relatedPost[i]
+        }
+    }
+    return
 
+}
 
 export default SingleBlogPage

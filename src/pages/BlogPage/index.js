@@ -10,20 +10,15 @@ import BlogCard from '../../features/blog/BlogCard'
 import { getPosts } from '../../features/blog/blogSlice'
 import "./style.css"
 
-// 
 
 const BlogPage = () => {
     const dispatch = useDispatch();
-    const { currentPageBlogs: { posts: blogs, totalPage }, isLoading } = useSelector(state => {
-        console.log(state.blog)
-        return state.blog
-    })
+    const { currentPageBlogs: { posts: blogs, totalPage }, isLoading } = useSelector(state => state.blog)
     const [page, setPage] = useState(1)
 
     useEffect(() => {
         dispatch(getPosts({ page, limit: 5 }))
     }, [page])
-    console.log(blogs)
     return (
         <div id="blog-page" style={{ backgroundColor: "#f0f0f0" }}>
             <Container>
@@ -43,14 +38,6 @@ const BlogPage = () => {
                     ))}
                     <hr />
                 </Row>
-                {/* <Row>
-                    <hr />
-                    {blogContent.map((blog) => (
-                        <Col xs={4} className="mb-5 px-4" >
-                            <BlogCard blog={blog} />
-                        </Col>
-                    ))}
-                </Row> */}
                 <PaginationBar page={page} setPage={setPage} totalPage={totalPage} />
             </Container>
         </div>
