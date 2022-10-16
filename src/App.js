@@ -9,7 +9,7 @@ import FormPage from './pages/FormPage/FormPage';
 import HomePage from './pages/HomePage';
 import SortedRoute from './layout/SortedRoute';
 // import TempFormPage from './pages/TempFormPage';
-import GamePage from './pages/GamePage';
+import GamePage from './pages/Gamepage';
 import EventPage from './pages/EventPage';
 import BlogPage from './pages/BlogPage';
 import SingleBlogPage from './pages/SingleBlogPage';
