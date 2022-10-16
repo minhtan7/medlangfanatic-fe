@@ -6,7 +6,7 @@ import CoursePage from './pages/CoursePage/CoursePage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ThankyouPage from "./pages/ThankyouPage/ThankyouPage"
 import FormPage from './pages/FormPage/FormPage';
-import HomePage from './pages/Homepage';
+import HomePage from './pages/HomePage';
 import SortedRoute from './layout/SortedRoute';
 // import TempFormPage from './pages/TempFormPage';
 import GamePage from './pages/GamePage';

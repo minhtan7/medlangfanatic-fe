@@ -57,7 +57,7 @@ const CoursePage = () => {
                     <Col xs={12} md={8} className="px-0 ">
                         <Features course={course} />
                         <CourseDetailContent chapters={chapters} />
-                        <Instructors instructors={course.instructors} />
+                        <Instructors instructors={course.instructors[0]} />
                         <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />
                         <FAQ faq={course.faq} />
                     </Col>

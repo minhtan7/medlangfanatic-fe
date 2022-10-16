@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Image, Row } from 'react-bootstrap'
 
 export const Instructors = ({ instructors }) => {
+    console.log("instructors", instructors)
     return (
         <div id="instructors" className="mb-5" >
             <Row >
@@ -44,3 +45,4 @@ const filterInstructor = (name) => {
             break;
     }
 }
+

@@ -14,7 +14,6 @@ export const CourseCard = ({ course }) => {
 
     useScript(process.env.REACT_APP_LUCKY_ORANGE)
     useScript(process.env.REACT_APP_GG_TAG_MNG)
-
     return course ?
         (<Card className='course-card '>
             < Card.Img variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }
