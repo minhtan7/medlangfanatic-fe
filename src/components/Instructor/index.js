@@ -35,14 +35,14 @@ export const Instructors = ({ instructors }) => {
                     <Row >
                         <Col md={4} className="d-flex justify-content-center">
                             <Image
-                                src={filterInstructor(instructors[0].name)} roundedCircle
+                                src={filterInstructor(instructors.name)} roundedCircle
                                 width={180} style={{ border: "2px solid var(--main)", padding: 0, height: "fit-content" }}
                             />
                         </Col>
                         <Col className='m-auto'>
-                            <h4 style={{ fontWeight: "600", color: "var(--main)" }}>{instructors[0].title} {instructors[0].name}</h4>
+                            <h4 style={{ fontWeight: "600", color: "var(--main)" }}>{instructors.title} {instructors.name}</h4>
                             <ul>
-                                {instructors[0].bio.split("\n").map((b, idx) => (
+                                {instructors.bio.split("\n").map((b, idx) => (
                                     <li key={idx}>{b}</li>
                                 ))}
                             </ul>
