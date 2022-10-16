@@ -5,11 +5,11 @@ import dayjs from 'dayjs'
 import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import LoadingSpinner from '../../components/LoadingSpinner'
 import Subscribe from '../../components/Subscribe'
 import { getSingleBlog } from '../../features/blog/blogSlice'
-import { useScript, useScriptFbShare } from '../../hook/useScript'
+import { useScript } from '../../hook/useScript'
 import "./style.css"
 
 const today = (new Date()).toString()
@@ -102,7 +102,7 @@ const SingleBlogPage = () => {
                     <Row >
                         <Col xs={0} md={2} ></Col>
                         <Col xs={12} md={8}>
-                            <BlogContent blog={blog} slug={slug} />
+                            <BlogContent blog={blog} />
                         </Col>
                         <Col xs={12} md={2} className="d-flex align-items-end">
                             <RelatedBlog blog={randomRelatedBlog(blog)} />
@@ -116,7 +116,8 @@ const SingleBlogPage = () => {
     )
 }
 
-const BlogContent = ({ blog, slug }) => {
+const BlogContent = ({ blog }) => {
+
     return (
         <div >
             <h1 className='py-3 mb-0 fw-bold blog-title' >{blog.title}</h1>
@@ -132,15 +133,13 @@ const BlogContent = ({ blog, slug }) => {
                     <FontAwesomeIcon size='2x' icon={faFacebook} />
                 </a>
             </div>
-            {!blog.image ? (
-                <div>
-                    <img
-                        // src={blog.image} 
-                        src="https://www.mckinsey.com/~/media/mckinsey/about%20us/mckinsey%20blog/jobsohio%20revitalizes%20states%20economy%20through%20innovative%20solutions/jobsohio-hero-small-1410686370-1536x864.jpg?mw=1536&car=16:9&cpx=Center&cpy=Center"
-                        alt="blog" width="100%" />
-                </div>
-            ) : null
-            }
+
+            <div>
+                <img
+                    // src={blog.image} 
+                    src={blog.image}
+                    alt="blog" width="100%" />
+            </div>
             <div className='py-4 d-block d-md-flex justify-content-between' >
                 <small className="text-muted">{dayjs(blog.createAt).format("DD/MM/YYYY")}</small>
                 <div>
