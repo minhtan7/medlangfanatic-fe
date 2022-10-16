@@ -6,19 +6,21 @@ import CoursePage from './pages/CoursePage/CoursePage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ThankyouPage from "./pages/ThankyouPage/ThankyouPage"
 import FormPage from './pages/FormPage/FormPage';
-import HomePage from './pages/Homepage';
 import SortedRoute from './layout/SortedRoute';
 // import TempFormPage from './pages/TempFormPage';
 import GamePage from './pages/GamePage';
 import EventPage from './pages/EventPage';
 import BlogPage from './pages/BlogPage';
 import SingleBlogPage from './pages/SingleBlogPage';
+import AllCourse from './pages/AllCourse';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="/courses" element={<AllCourse />} />
         <Route path='/thankyou' element={<ThankyouPage />} />
         <Route path='/register-form' element={<FormPage />} />
         {/* <Route path='/event-form' element={<TempFormPage />} /> */}

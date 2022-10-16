@@ -39,8 +39,9 @@ function MainHeader() {
 
                     </Nav>
                     <Nav>
+                        <Nav.Link className='me-3' onClick={() => navigate("/")} >Trang chủ</Nav.Link>
                         <Nav.Link className='me-3' onClick={() => navigate("/blogs")} >Blogs</Nav.Link>
-                        <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link>
+                        {/* <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

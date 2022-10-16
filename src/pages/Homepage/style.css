@@ -1,0 +1,21 @@
+/* instructor card #hp-instructor-card*/
+#hp-instructor-card .card{
+    width: 18rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+#hp-instructor-card .card:hover{
+    background-color: var(--main);
+    color: white;
+    transition-duration: 0.5s;
+}
+
+#hp-instructor-card .wrapperImg {
+    padding: 1rem;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+#hp-instructor-card .card:hover .wrapperImg{
+    padding: 0.5rem;
+}

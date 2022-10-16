@@ -28,7 +28,7 @@ const filterCss = (slug) => {
         case "mavl":
             return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1" }
         case "medical-terminology":
-            return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400" }
+            return { main: "#850091", mainDark: "#64006e", contrast: "#fff400" }
         default:
             break;
     }
@@ -85,15 +85,6 @@ const filterCover = (slug) => {
 
 export const CTA = () => {
     const navigate = useNavigate()
-    const ex = (
-        <div className=''>
-            <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
-            <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
-            <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-            <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
-        </div>
-    )
-    console.log(typeof jsxToString(ex))
     return (
         <div id="cta" style={{ height: "514px" }}>
             <Container className='h-100'>
