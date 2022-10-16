@@ -1,0 +1,24 @@
+#subscribe{
+    background-color: #f0f0f0;
+}
+#subscribe form{
+    height: 2.6rem;
+}
+#subscribe .btn{
+    border-radius: 0;
+    height: 100%;
+    vertical-align: baseline;
+}
+#subscribe input{
+    width: 17rem;
+    height: 100%;
+    padding: 0 0.5rem;
+    margin-right: 1rem;
+    border: 1px solid black;
+    margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+    #subscribe input{
+        width: 70%;
+    }
+}

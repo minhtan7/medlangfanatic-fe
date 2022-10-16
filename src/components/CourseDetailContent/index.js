@@ -17,6 +17,7 @@ const contentIcon = {
 }
 
 export const CourseDetailContent = ({ chapters }) => {
+    console.log(chapters)
     return chapters && <div id="course-detail-content" className="mb-5">
 
         <div className="px-3 px-md-5">

@@ -1,0 +1,55 @@
+#course-thumbnail-horizontal{
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: url("../../asset/topography.svg") ;
+    background-color: var(--main);
+    color: white;
+}
+#course-thumbnail-horizontal .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+#course-thumbnail-horizontal .card-title{
+    font-size: 2rem;
+    /* display: none; */
+    text-align: start;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px var(--contrast);
+    font-weight: bold;
+}
+#course-thumbnail-horizontal .card-text{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+#course-thumbnail-horizontal .btn-sign-up{
+    background-color: var(--contrast)!important;
+    color: var(--main);
+}
+
+#course-thumbnail-horizontal .btn-sign-up:hover{
+    box-shadow: inset 16.5em 0 0 0 white!important;
+    color: var(--main);
+    transition-duration: .3s;
+}
+
+#course-thumbnail-horizontal .btn-sign-up span:after {
+    top: 50%;
+    right: -20px;
+    transform: translate(-20%,-54%);
+}
+@media only screen and (max-width: 600px) {
+    #course-thumbnail-horizontal .card-body{
+        padding:  2rem;
+    }
+  #course-thumbnail-horizontal .card-title{
+    font-size: 2rem;
+    }
+    #course-thumbnail-horizontal .card-text{
+        font-size: 1rem;
+        text-align: justify;
+    }
+}
