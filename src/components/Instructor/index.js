@@ -1,6 +1,12 @@
 import React from 'react'
 import { Col, Image, Row } from 'react-bootstrap'
 
+const hungtran = {
+    name: "Trần Quang Hưng",
+    title: "BS. CKI",
+    bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
+    imageUrl: "/images/dr.hung.webp"
+}
 export const Instructors = ({ instructors }) => {
     console.log("instructors", instructors)
     return (
@@ -8,27 +14,42 @@ export const Instructors = ({ instructors }) => {
             <Row >
                 <Col className="px-3 px-md-5">
                     <h2 className='mb-4 text-main-title'>Giảng viên</h2>
-                    {instructors.map(instructor => (
+                    <Row >
+                        <Col md={4} className="d-flex justify-content-center">
+                            <Image
+                                src={hungtran.imageUrl} roundedCircle
+                                width={180} style={{ border: "2px solid var(--main)", padding: 0, height: "fit-content" }}
+                            />
+                        </Col>
+                        <Col className='m-auto'>
+                            <h4 style={{ fontWeight: "600", color: "var(--main)" }}>{hungtran.title} {hungtran.name}</h4>
+                            <ul>
+                                {hungtran.bio.split("\n").map((b, idx) => (
+                                    <li key={idx}>{b}</li>
+                                ))}
+                            </ul>
 
-                        <Row key={instructor.name}>
-                            <Col md={4} className="d-flex justify-content-center">
-                                <Image
-                                    src={filterInstructor(instructor.name)} roundedCircle
-                                    width={180} style={{ border: "2px solid var(--main)", padding: 0, height: "fit-content" }}
-                                />
-                            </Col>
-                            <Col className='m-auto'>
-                                <h4 style={{ fontWeight: "600", color: "var(--main)" }}>{instructor.title} {instructor.name}</h4>
-                                <ul>
-                                    {instructor.bio.split("\n").map((b, idx) => (
-                                        <li key={idx}>{b}</li>
-                                    ))}
-                                </ul>
+                        </Col>
+                    </Row>
+                    {/* {instructors.map(instructor => ( */}
+                    <Row >
+                        <Col md={4} className="d-flex justify-content-center">
+                            <Image
+                                src={filterInstructor(instructors[0].name)} roundedCircle
+                                width={180} style={{ border: "2px solid var(--main)", padding: 0, height: "fit-content" }}
+                            />
+                        </Col>
+                        <Col className='m-auto'>
+                            <h4 style={{ fontWeight: "600", color: "var(--main)" }}>{instructors[0].title} {instructors[0].name}</h4>
+                            <ul>
+                                {instructors[0].bio.split("\n").map((b, idx) => (
+                                    <li key={idx}>{b}</li>
+                                ))}
+                            </ul>
 
-                            </Col>
-                        </Row>
-
-                    ))}
+                        </Col>
+                    </Row>
+                    {/* ))} */}
                 </Col>
             </Row>
         </div>
