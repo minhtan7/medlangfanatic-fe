@@ -2,10 +2,11 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Container, Placeholder, Row } from 'react-bootstrap'
+import { slugTranslate } from '../../utility/slugTranslate'
 import "./style.css"
 
 export const Hero = ({ course }) => {
-    console.log(course)
+
     return <div id="hero" className='mb-5 bg-main position-relative overflow-hidden' style={{ color: "white", padding: "3rem 0 29px" }}>
         {course ? (<Container >
             <Row >
@@ -26,7 +27,7 @@ export const Hero = ({ course }) => {
                 <Col md={6} className="d-none d-md-block">
                     <div className='hero-image-wrapper'>
                         <div className='hero-image'>
-                            <img width="100%" src="/images/hero-image.webp" alt="hidden logo" />
+                            <img width="100%" src={slugTranslate({ slug: course.slug, target: "hero" })} alt="hidden logo" />
                         </div>
                     </div>
                 </Col>

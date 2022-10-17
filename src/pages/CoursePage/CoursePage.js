@@ -66,7 +66,7 @@ const CoursePage = () => {
                     </Col>
                 </Row>
             </Container>
-            <CTA />
+            <CTA slug={course.slug} />
             <ToTopArrow course={course} />
         </>
     )
@@ -83,17 +83,17 @@ const filterCover = (slug) => {
     }
 }
 
-export const CTA = () => {
+export const CTA = ({ slug }) => {
     const navigate = useNavigate()
-    const ex = (
-        <div className=''>
-            <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
-            <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
-            <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-            <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
-        </div>
-    )
-    console.log(typeof jsxToString(ex))
+    // const ex = (
+    //     <div className=''>
+    //         <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
+    //         <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
+    //         <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
+    //         <Button onClick={() => navigate(`/register-form/${slug}`)} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+    //     </div>
+    // )
+    // console.log(typeof jsxToString(ex))
     return (
         <div id="cta" style={{ height: "514px" }}>
             <Container className='h-100'>
@@ -103,7 +103,7 @@ export const CTA = () => {
                             <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-                            <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+                            <Button onClick={() => navigate(`/register-form/${slug}`)} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
                         </div>
                     </Col>
                     <Col className='d-none d-md-block'></Col>

@@ -20,7 +20,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path='/thankyou/:slug' element={<ThankyouPage />} />
-        <Route path='/register-form' element={<FormPage />} />
+        <Route path='/register-form/:slug' element={<FormPage />} />
         {/* <Route path='/event-form' element={<TempFormPage />} /> */}
         <Route path='/game' element={<GamePage />} />
         <Route path='/blogs' element={<BlogPage />} />

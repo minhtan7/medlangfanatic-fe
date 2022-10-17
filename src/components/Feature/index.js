@@ -2,6 +2,7 @@ import { faCheck, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { Col, Image } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
 import { handleChangeSlide } from '../../utils/changeSlide'
 
 export const Features = ({ course }) => {
@@ -10,20 +11,40 @@ export const Features = ({ course }) => {
     const handleChangleSlideBar = (index) => {
         setSlide(index)
     }
-    const featureImage = (feature) => {
+    const MAVLFeatureImage = (feature) => {
         let url
         switch (feature) {
             case "subject":
-                url = "/images/doi_tuong.png"
+                url = "/images/mavl-doi_tuong.png"
                 break;
             case "format":
-                url = "/images/hinh_thuc.png"
+                url = "/images/mavl-hinh_thuc.png"
                 break;
             case "time":
-                url = "/images/thoi_gian.png"
+                url = "/images/mavl-thoi_gian.png"
                 break;
             case "fiveStarts":
-                url = "/images/nam_sao.png"
+                url = "/images/mavl-nam_sao.png"
+                break;
+            default:
+                break;
+        }
+        return url
+    }
+    const MTFeatureImage = (feature) => {
+        let url
+        switch (feature) {
+            case "subject":
+                url = "/images/mt-doi_tuong.jpg"
+                break;
+            case "format":
+                url = "/images/mt-hinh_thuc.jpg"
+                break;
+            case "time":
+                url = "/images/mt-thoi_gian.jpg"
+                break;
+            case "fiveStarts":
+                url = "/images/mt-nam_sao.jpg"
                 break;
             default:
                 break;
@@ -56,6 +77,8 @@ export const Features = ({ course }) => {
         return tab
     }
 
+    const { slug } = useParams()
+
     return course && <div id="about-bar" className="mb-5">
 
         <div className="px-3 px-md-5 position-relative " >
@@ -70,7 +93,7 @@ export const Features = ({ course }) => {
                 <div className="slideshow-container " key={index}>
                     <div className={` mySlides faded ${slide === index ? "d-flex flex-column  flex-lg-row" : ""}`}>
                         <Col sm={12} lg={6} className="flex-shrink-0" >
-                            <Image src={featureImage(a)} width="100%" />
+                            <Image src={slug === "mavl" ? MAVLFeatureImage(a) : MTFeatureImage(a)} width="100%" />
                         </Col>
                         <Col sm={12} lg={6} className="flex-grow-1">
                             {a.content}

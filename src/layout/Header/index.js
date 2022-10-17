@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { slugTranslate } from '../../utility/slugTranslate';
 import "./style.css"
 
 function CourseHeader() {
     const navigate = useNavigate()
+    const { slug } = useParams()
+
     return (
         <Navbar id="header" collapseOnSelect expand="lg" className="bg-main" variant="dark">
             <Container>
@@ -20,7 +23,7 @@ function CourseHeader() {
                         <Nav.Link className='me-3' href="#course-detail-content">Chương trình học</Nav.Link>
                         <Nav.Link className='me-3' href="#instructors">Giảng viên</Nav.Link>
                         <Nav.Link className='me-3' href="#faq">FAQ</Nav.Link>
-                        <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link>
+                        <Nav.Link className='sign-up' onClick={() => navigate(`/register-form/${slug.toLowerCase()}`)} >Đăng ký ngay</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
@@ -39,8 +42,9 @@ function MainHeader() {
 
                     </Nav>
                     <Nav>
+                        <Nav.Link className='me-3' onClick={() => navigate("/")} >Trang chủ</Nav.Link>
                         <Nav.Link className='me-3' onClick={() => navigate("/blogs")} >Blogs</Nav.Link>
-                        <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link>
+                        {/* <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

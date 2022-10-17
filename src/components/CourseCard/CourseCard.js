@@ -4,6 +4,7 @@ import React from 'react'
 import { Button, Card, ListGroup, Placeholder } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { useScript } from '../../hook/useScript'
+import { slugTranslate } from '../../utility/slugTranslate'
 // import { formatTime } from '../../utility/formatTime'
 import { Timer } from '../Timer/Timer'
 import "./style.css"
@@ -16,7 +17,7 @@ export const CourseCard = ({ course }) => {
     useScript(process.env.REACT_APP_GG_TAG_MNG)
     return course ?
         (<Card className='course-card '>
-            < Card.Img variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }
+            < Card.Img variant="top" src={slugTranslate({ slug: course.slug, target: "thumbnail" })} style={{ borderRadius: 0 }
             } />
             < Card.Body style={{ color: "black" }}>
                 <Card.Title style={{ textAlign: "center" }}>Chi phí khóa học:
