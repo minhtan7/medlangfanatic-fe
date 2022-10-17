@@ -42,7 +42,7 @@ export const CoverMedicalTerminology = () => {
                         Các bạn sẽ làm quen với khái niệm 7 loại thuật ngữ y khoa được đề xuất bởi Pitt và Hendrickson vào năm 2020, và cùng dành thời gian nghiên cứu cách đối phó với từ viết tắt khó, và những thuật ngữ y khoa dễ nhầm lẫn với nhau.<br />
                         Phần Technical Terminology gồm hơn 1.000 thuật ngữ được trình bày theo 13 hệ cơ quan khác nhau như hệ hô hấp, hệ tim mạch, hệ tiết niệu… là những chủ điểm quan trọng cần thiết để xây vững chắc vốn từ vựng y khoa. Mỗi chủ đề bao gồm 3 video phân tích các thuật ngữ thường gặp trong giải phẫu, sinh lý, triệu chứng, chẩn đoán, và điều trị của hệ cơ quan đó. Các bài Reading cũng rất phong phú giúp các bạn học viên gặp và học lại các thuật ngữ đã gặp trước đó qua video. Ngoài ra, khóa học cung cấp rất nhiều các dạng bài tập mini-game khác nhau để bạn luyện tập từ vựng như flashcards (có phát âm), nối thuật ngữ với cấu trúc giải phẫu, điền thuật ngữ vào bệnh án, trắc nghiệm từ vựng cuối chương…
                     </p>
-                    <span className='slide-quote'>
+                    <span className='slide-quote slide-quote-mt'>
                         <img src={quote} alt="quote sign" />
                     </span>
                 </div>

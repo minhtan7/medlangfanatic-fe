@@ -315,6 +315,10 @@
   filter: invert(86%) sepia(83%) saturate(2769%) hue-rotate(80deg) brightness(101%) contrast(99%);
   opacity: 0.2;
 }
+.slide-quote-mt img{
+  filter: invert(9%) sepia(82%) saturate(7498%) hue-rotate(294deg) brightness(77%) contrast(105%);
+  opacity: 0.2;
+}
 
 /* Next & previous buttons */
 .prev, .next {

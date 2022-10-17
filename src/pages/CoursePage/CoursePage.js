@@ -26,9 +26,9 @@ const defaultHeight = 72;
 const filterCss = (slug) => {
     switch (slug.toLowerCase()) {
         case "mavl":
-            return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1" }
+            return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1", contrastLight: "#05feb12e" }
         case "medical-terminology":
-            return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400" }
+            return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400", contrastLight: "#fac5ff" }
         default:
             break;
     }
