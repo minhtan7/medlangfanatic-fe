@@ -63,7 +63,7 @@ const filterInstructor = (name) => {
         case "Nguyễn Ngọc Quỳnh Trâm":
             return "/images/dr.tram.webp"
         case "Nguyễn Đình Cang":
-            return "https://import.cdn.thinkific.com/426600/KJcUAmL9SH6qPps6ilfy_Cang.jpg"
+            return "/images/dr.cang.jpg"
         default:
             break;
     }
