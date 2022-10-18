@@ -93,7 +93,7 @@ export const Features = ({ course }) => {
                 <div className="slideshow-container " key={index}>
                     <div className={` mySlides faded ${slide === index ? "d-flex flex-column  flex-lg-row" : ""}`}>
                         <Col sm={12} lg={6} className="flex-shrink-0" >
-                            <Image src={slug === "mavl" ? MAVLFeatureImage(a) : MTFeatureImage(a)} width="100%" />
+                            <Image src={slug.toLowerCase() === "mavl" ? MAVLFeatureImage(a) : MTFeatureImage(a)} width="100%" />
                         </Col>
                         <Col sm={12} lg={6} className="flex-grow-1">
                             {a.content}

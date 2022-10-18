@@ -35,7 +35,7 @@ export const CoverMedicalTerminology = () => {
     return (
         <Container id="cover-session" className='mb-5'>
             <div className='px-md-5 px-4 border py-3' >
-                <h2 className='text-center mb-3 fw-bolder text-main'>An Essential Course for Beginner Learners</h2>
+                <h2 className='text-center mb-3 fw-bolder text-main'>An Essential Course for Beginners</h2>
                 <div className='position-relative'>
                     <p className='text-justify'>
                         Khóa học Medical Terminology: An Essential Course for Beginner Learners hướng đến đối tượng các bạn chưa vững nền tảng thuật ngữ y khoa tiếng Anh, và có mục tiêu là xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.<br />
@@ -46,10 +46,6 @@ export const CoverMedicalTerminology = () => {
                         <img src={quote} alt="quote sign" />
                     </span>
                 </div>
-                <p className='text-center fst-italic'>
-                    <small>- BS. CKI Trần Quang Hưng</small>
-                </p>
-
             </div>
         </Container>
     )
