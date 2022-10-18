@@ -23,10 +23,10 @@ export const CourseCard = ({ course }) => {
                 <Card.Title style={{ textAlign: "center" }}>Chi phí khóa học:
                     <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>{course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}K</h2>
                 </Card.Title>
-                <Button onClick={() => navigate(`/register-form/${course.slug}`)} variant="primary" className='btn-sign-up' ><span>Đăng ký ngay</span></Button>
+                <Button onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)} variant="primary" className='btn-sign-up' ><span>Đăng ký ngay</span></Button>
             </Card.Body >
             <Card.Body>
-                <Timer />
+                <Timer targetDate={slugTranslate({ slug: course.slug, target: "targetDate" })} />
             </Card.Body>
             <Card.Body style={{ paddingTop: "0" }}>
                 <p style={{ color: "black", marginBottom: '0' }}>Khóa học bao gồm:</p>
