@@ -14,25 +14,25 @@ const slugs = {
     },
     thumbnail: {
         "medical-terminology": "/images/mt-thumbnail.jpg",
-        "mavl": "/images/mavl-hero_image.webp"
+        "mavl": "/images/mavl-thumbnail.svg",
     },
     hero: {
         "medical-terminology": "/images/mt-hero_image.jpg",
-        "mavl": "/images/mavl-thumbnail.svg"
+        "mavl": "/images/mavl-hero_image.webp"
     },
     targetDate: {
         "medical-terminology": new Date(2022, 10, 5, 0, 0, 0),
         "mavl": new Date(2022, 10, 5, 0, 0, 0)
     }
-    ,
-    "medical-terminology": {
-        link: "https://webforms.pipedrive.com/f/ckweFskLyr2V5zNB3vMuVsB0jgaEbAHXcuRFz8YBHN5O4Bsdk3od9WJ8rD19uCnL0f",
-        id: 2026776,
-        "register-form": 2026776,
-        thumbnail: "/images/mt-thumbnail.jpg",
-        "mavl": "/images/mavl-thumbnail.svg",
-        hero: "/images/mt-hero_image.jpg"
-    }
+    // ,
+    // "medical-terminology": {
+    //     link: "https://webforms.pipedrive.com/f/ckweFskLyr2V5zNB3vMuVsB0jgaEbAHXcuRFz8YBHN5O4Bsdk3od9WJ8rD19uCnL0f",
+    //     id: 2026776,
+    //     "register-form": 2026776,
+    //     thumbnail: "/images/mt-thumbnail.jpg",
+    //     "mavl": "/images/mavl-thumbnail.svg",
+    //     hero: "/images/mt-hero_image.jpg"
+    // }
 }
 
 export const slugTranslate = ({ slug, target }) => slugs[target][slug.toLowerCase()]
