@@ -23,6 +23,9 @@ const slugs = {
     targetDate: {
         "medical-terminology": new Date(2022, 10, 5, 0, 0, 0),
         "mavl": new Date(2022, 10, 5, 0, 0, 0)
+    }, signUpHover: {
+        "medical-terminology": "sign-up-mt",
+        "mavl": "sign-up-mavl"
     }
     // ,
     // "medical-terminology": {
