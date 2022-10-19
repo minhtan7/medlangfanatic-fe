@@ -7,12 +7,12 @@ import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 
 
 const slugs = {
-    "MAVL": 1751294,
+    "mavl": 1751294,
     "medical-terminology": 2026776,
 }
 function SortedRoute({ children }) {
     const location = useLocation();
-    const at = location.pathname.slice(1)
+    const at = location.pathname.slice(1).toLowerCase()
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {

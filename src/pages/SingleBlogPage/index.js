@@ -5,11 +5,11 @@ import dayjs from 'dayjs'
 import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import LoadingSpinner from '../../components/LoadingSpinner'
 import Subscribe from '../../components/Subscribe'
 import { getSingleBlog } from '../../features/blog/blogSlice'
-import { useScript, useScriptFbShare } from '../../hook/useScript'
+import { useScript } from '../../hook/useScript'
 import "./style.css"
 
 const today = (new Date()).toString()

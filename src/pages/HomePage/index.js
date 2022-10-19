@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { Col, Container, Row } from 'react-bootstrap'
+import { CourseThumbnailVertical } from '../../components/CourseThumbnail'
 import "./style.css"
 
 const HomePage = () => {

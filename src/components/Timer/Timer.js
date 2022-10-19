@@ -1,10 +1,10 @@
 import React from 'react'
 import useCountdown from '../../hook/useTimer';
 
-export const Timer = () => {
+export const Timer = ({ targetDate }) => {
 
     // const targetDate = (new Date()).add
-    let targetDate = new Date(2022, 8, 21, 17, 59, 0);
+    // let targetDate = new Date(2022, 8, 21, 17, 59, 0);
     targetDate.setSeconds(targetDate.getSeconds() + 10);
     const [days, hours, minutes, seconds, timerRef] = useCountdown(targetDate);
     if (days + hours + minutes + seconds <= 0) {

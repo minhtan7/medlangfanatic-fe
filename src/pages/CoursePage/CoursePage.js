@@ -26,9 +26,9 @@ const defaultHeight = 72;
 const filterCss = (slug) => {
     switch (slug.toLowerCase()) {
         case "mavl":
-            return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1" }
+            return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1", contrastLight: "#05feb12e" }
         case "medical-terminology":
-            return { main: "#850091", mainDark: "#64006e", contrast: "#fff400" }
+            return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400", contrastLight: "#fac5ff" }
         default:
             break;
     }
@@ -57,7 +57,7 @@ const CoursePage = () => {
                     <Col xs={12} md={8} className="px-0 ">
                         <Features course={course} />
                         <CourseDetailContent chapters={chapters} />
-                        <Instructors instructors={course.instructors} />
+                        <Instructors instructors={course.instructors[0]} />
                         <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />
                         <FAQ faq={course.faq} />
                     </Col>
@@ -66,7 +66,7 @@ const CoursePage = () => {
                     </Col>
                 </Row>
             </Container>
-            <CTA />
+            <CTA slug={course.slug} />
             <ToTopArrow course={course} />
         </>
     )
@@ -83,8 +83,17 @@ const filterCover = (slug) => {
     }
 }
 
-export const CTA = () => {
+export const CTA = ({ slug }) => {
     const navigate = useNavigate()
+    // const ex = (
+    //     <div className=''>
+    //         <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
+    //         <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
+    //         <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
+    //         <Button onClick={() => navigate(`/register-form/${slug}`)} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+    //     </div>
+    // )
+    // console.log(typeof jsxToString(ex))
     return (
         <div id="cta" style={{ height: "514px" }}>
             <Container className='h-100'>
@@ -94,7 +103,7 @@ export const CTA = () => {
                             <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-                            <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+                            <Button onClick={() => navigate(`/register-form/${slug.toLowerCase()}`)} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
                         </div>
                     </Col>
                     <Col className='d-none d-md-block'></Col>

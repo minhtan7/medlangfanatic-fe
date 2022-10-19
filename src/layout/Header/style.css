@@ -10,5 +10,11 @@
 .sign-up:hover{
     transform: translateY(-3px);
     transition: transform 0.3s;
+}
+
+.sign-up-mavl:hover{
     background-color: #7dfdd6;
+}
+.sign-up-mt:hover{
+    background-color: #fffa8e;
 }
