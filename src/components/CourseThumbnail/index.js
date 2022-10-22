@@ -40,7 +40,7 @@ const CourseThumbnailVerticalMT = () => {
     const navigate = useNavigate()
     return (
         <Card>
-            < Card.Img variant="top" src="/images/mt-thumbnail.jpg" style={{ borderRadius: 0 }} />
+            < Card.Img variant="top" src="/images/mt-thumbnail.jpeg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
                 <Card.Title>Medical Terminology</Card.Title>
                 <p></p>
