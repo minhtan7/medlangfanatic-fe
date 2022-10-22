@@ -25,7 +25,8 @@ const CourseThumbnailVertical = () => {
         <Card>
             < Card.Img variant="top" src="/images/mavl-thumbnail.svg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
-                <Card.Title>Medical Academic Vocabulary List</Card.Title>
+                <Card.Title>Medical Academic <br /> Vocabulary List</Card.Title>
+                <p></p>
                 <Card.Text>
                     Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa. MAVL là khóa học giúp bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
@@ -35,4 +36,21 @@ const CourseThumbnailVertical = () => {
     )
 }
 
-export { CourseThumbnailHorizontal, CourseThumbnailVertical }
+const CourseThumbnailVerticalMT = () => {
+    const navigate = useNavigate()
+    return (
+        <Card>
+            < Card.Img variant="top" src="/images/mt-thumbnail.jpg" style={{ borderRadius: 0 }} />
+            <Card.Body className='text-center'>
+                <Card.Title>Medical Terminology</Card.Title>
+                <p></p>
+                <Card.Text>
+                    Khóa học Medical Terminology: An Essential Course for Beginner Learners hướng đến đối tượng các bạn chưa vững nền tảng thuật ngữ y khoa tiếng Anh, và có mục tiêu là xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
+                </Card.Text>
+                <Button onClick={() => navigate("/medical-terminology")} variant="primary" className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Xem thêm</small></Button>
+            </Card.Body>
+        </Card>
+    )
+}
+
+export { CourseThumbnailHorizontal, CourseThumbnailVertical, CourseThumbnailVerticalMT }
