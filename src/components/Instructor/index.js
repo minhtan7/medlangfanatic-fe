@@ -3,12 +3,11 @@ import { Col, Image, Row } from 'react-bootstrap'
 
 const hungtran = {
     name: "Trần Quang Hưng",
-    title: "BS. CKI",
-    bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
+    title: "BS. CKI.",
+    bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, Đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
     imageUrl: "/images/dr.hung.webp"
 }
 export const Instructors = ({ instructors }) => {
-    console.log("instructors", instructors)
     return (
         <div id="instructors" className="mb-5" >
             <Row >
