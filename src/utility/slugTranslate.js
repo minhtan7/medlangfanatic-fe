@@ -13,7 +13,7 @@ const slugs = {
         "mavl": 1751294
     },
     thumbnail: {
-        "medical-terminology": "/images/mt-thumbnail.jpg",
+        "medical-terminology": "/images/mt-thumbnail.jpeg",
         "mavl": "/images/mavl-thumbnail.svg",
     },
     hero: {

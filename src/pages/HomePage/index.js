@@ -117,7 +117,21 @@ const HomePage = () => {
             <CourseList />
             <FeedBackList />
             <BlogSession />
+            <PodCardHP />
         </>
+    )
+}
+
+const PodCardHP = () => {
+    return (
+        <div id="podcast-session" >
+            <Container className='h-100'>
+                <h1>Premium Quality<br />
+                    Free video course
+                </h1>
+
+            </Container>
+        </div>
     )
 }
 
