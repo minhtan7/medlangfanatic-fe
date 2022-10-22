@@ -6,8 +6,8 @@ import "./style.css"
 const CourseThumbnailHorizontal = () => {
     const navigate = useNavigate()
     return (
-        <Card id="course-thumbnail-horizontal" className=' border-0 row flex-md-row-reverse flex-md-nowrap' >
-            <Card.Img className='col' variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }} />
+        <Card id="course-thumbnail-horizontal" className='py-5 border-0 row flex-md-row-reverse flex-md-nowrap' >
+            {/* <Card.Img className='col' variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }} /> */}
             <Card.Body className='col text-center '>
                 <Card.Title>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
