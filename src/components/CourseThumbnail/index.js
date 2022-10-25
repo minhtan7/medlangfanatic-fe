@@ -6,8 +6,8 @@ import "./style.css"
 const CourseThumbnailHorizontal = () => {
     const navigate = useNavigate()
     return (
-        <Card id="course-thumbnail-horizontal" className=' border-0 row flex-md-row-reverse flex-md-nowrap' >
-            <Card.Img className='col' variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }} />
+        <Card id="course-thumbnail-horizontal" className='py-5 border-0 row flex-md-row-reverse flex-md-nowrap' >
+            {/* <Card.Img className='col' variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }} /> */}
             <Card.Body className='col text-center '>
                 <Card.Title>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
@@ -35,4 +35,21 @@ const CourseThumbnailVertical = () => {
     )
 }
 
-export { CourseThumbnailHorizontal, CourseThumbnailVertical }
+const CourseThumbnailVerticalMT = () => {
+    const navigate = useNavigate()
+    return (
+        <Card>
+            < Card.Img variant="top" src="/images/mt-thumbnail.jpeg" style={{ borderRadius: 0 }} />
+            <Card.Body className='text-center'>
+                <Card.Title>Medical Terminology</Card.Title>
+                <p></p>
+                <Card.Text>
+                    Khóa học Medical Terminology: An Essential Course for Beginner Learners hướng đến đối tượng các bạn chưa vững nền tảng thuật ngữ y khoa tiếng Anh, và có mục tiêu là xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
+                </Card.Text>
+                <Button onClick={() => navigate("/medical-terminology")} variant="primary" className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Xem thêm</small></Button>
+            </Card.Body>
+        </Card>
+    )
+}
+
+export { CourseThumbnailHorizontal, CourseThumbnailVertical, CourseThumbnailVerticalMT }

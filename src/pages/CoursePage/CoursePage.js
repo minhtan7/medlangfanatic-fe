@@ -14,7 +14,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import { CourseCard } from '../../components/CourseCard/CourseCard'
 import { Cover, CoverMedicalTerminology } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
-import jsxToString from 'jsx-to-string';
+// import jsxToString from 'jsx-to-string';
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
 
 const slugs = {
@@ -47,7 +47,6 @@ const CoursePage = () => {
         }
         getCourse()
     }, [slug])
-    console.log(course)
     return course && chapters && (
         <>
             <Hero course={course} />

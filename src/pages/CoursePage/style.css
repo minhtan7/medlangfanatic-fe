@@ -82,7 +82,7 @@
 }
 
 .btn-sign-up:hover{
-  box-shadow: inset 16.5em 0 0 0 var(--contrast)!important;
+  box-shadow: inset 16.5em 0 0 0 var(--contrast);
   color: var(--main);
   transition-duration: .3s;
 }
