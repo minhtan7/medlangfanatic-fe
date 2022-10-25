@@ -1,8 +1,8 @@
-import { faCircleCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBriefcaseClock, faCertificate, faCheck, faCircleCheck, faClock, faClockFour, faClockRotateLeft, faFileCircleExclamation, faFileCircleQuestion, faNetworkWired, faPenRuler, faSchoolCircleCheck, faSchoolCircleXmark, faTimes, faWifi, faWifi3, faWifiStrong } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { CourseThumbnailVertical } from '../../components/CourseThumbnail'
 import { handleChangeSlide } from '../../utils/changeSlide'
 import ReactCardCarousel from "react-card-carousel";
@@ -12,6 +12,7 @@ import quote from '../../asset/quote.svg'
 
 import "./style.css"
 import BlogCard from '../../features/blog/BlogCard'
+import { instructors } from '../../mockData'
 
 const today = (new Date()).toString()
 const blogContent = [
@@ -84,10 +85,29 @@ const responsive = {
         items: 1
     }
 };
+const responsivePodcast = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+};
 
 const containerStyle = {
     position: "relative",
-    height: "25rem",
+    height: "100%",
     width: "100%",
     display: "flex",
     flex: 1,
@@ -96,14 +116,15 @@ const containerStyle = {
 };
 
 const cardStyle = {
-    height: "220px",
-    width: "450px",
-    paddingTop: "30px",
+    height: "fit-content",
+    width: "600px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
     textAlign: "center",
-    background: "#fcf5e8",
+    background: "white",
     color: "var(--main)",
     fontFamily: "sans-serif",
-    fontSize: "12px",
+    fontSize: "16px",
     borderRadius: "10px",
     boxSizing: "border-box",
 };
@@ -113,22 +134,61 @@ const HomePage = () => {
         <>
             <CTA />
             <WhyMedLangWeb />
-            <InstructorList />
+            <InstructorList instructors={instructors} />
             <CourseList />
             <FeedBackList />
             <BlogSession />
-            <PodCardHP />
+            <PodCastHP />
+            <SubscriptionHP />
         </>
     )
 }
 
-const PodCardHP = () => {
+const SubscriptionHP = () => {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+    })
+    const handleChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value })
+    }
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+    }
     return (
-        <div id="podcast-session" >
+        <div id="subscription-session" className='mb-6 overflow-hidden'>
             <Container className='h-100'>
-                <h1>Premium Quality<br />
-                    Free video course
-                </h1>
+
+                <Row>
+                    <Col>
+                        <h2>Join now get class certificates</h2>
+                    </Col>
+                    <Col className='m-auto'>
+                        <form onSubmit={handleSubmit} className="position-relative">
+                            <div>
+                                <input onChange={handleChange} name='email' type="email" placeholder="Email address" />
+                                <Button className='subscription-span position-absolute' >Get started</Button>
+                            </div>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    )
+}
+
+const PodCastHP = () => {
+    return (
+        <div id="podcast-session" className='mb-6'>
+            <Container className='h-100'>
+                <h1 className='text-main fw-bold mb-4'>Spotify List</h1>
+                <Carousel responsive={responsivePodcast}>
+                    {new Array(10).fill(null).map(p => (
+                        <div style={{ width: "80%", margin: "auto" }}>
+                            <img width="100%" src="./images/podcast.webp" alt="podcast img" />
+                        </div>
+                    ))}
+                </Carousel>
 
             </Container>
         </div>
@@ -137,16 +197,21 @@ const PodCardHP = () => {
 
 const BlogSession = () => {
     return (
-        <div id="blog-session" >
+        <div id="blog-session" className='mb-5'>
             <Container className='h-100'>
-                <h1><span>Blog</span> that <br /> can help your more</h1>
+                <h1 className='mb-4'>
+                    <span className='text-main fw-bold'>Blogs </span>
+                    that <br /> can help your more
+                    <Link to="/blogs" className='visit-blog'>Visit our blogs</Link>
+                </h1>
                 <Carousel responsive={responsive}>
                     {blogContent.map(blog => (
-                        <BlogCard blog={blog} />
+                        // <div style={{ padding: "1rem 2rem" }}>
+                        <div style={{ marginRight: "1rem" }}>
+                            <BlogCard blog={blog} />
+                        </div>
                     ))}
                 </Carousel>
-
-
             </Container>
         </div>
     )
@@ -188,11 +253,15 @@ const FeedBackCard = () => {
                             <Card.Body>
                                 <Card.Title style={{ textTransform: "uppercase" }}>
                                     {fb.name} <br />
-                                    <small style={{ fontSize: "10px", textTransform: "lowercase" }}>- {fb.title} -</small>
+                                    <small style={{ fontSize: "15px", textTransform: "lowercase" }}>- {fb.title} -</small>
                                 </Card.Title>
-                                <Card.Text>
-                                    {fb.content}
+                                <Card.Text className='text-black position-relative'>
 
+                                    {fb.content}
+                                    <span className='slide-quote' style={{ zIndex: 1, top: "1rem", left: "1.5rem", opacity: "0.7" }}>
+                                        {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
+                                        <img src={quote} alt="quote sign" />
+                                    </span>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -202,14 +271,40 @@ const FeedBackCard = () => {
         </>
     )
 }
+const LIST_FB_IMAGE = [
+    "./images/student_icon.svg",
+    "./images/student_icon.svg",
+    "./images/student_icon.svg",
+    "./images/student_icon.svg",
+    "./images/student_icon.svg"
+]
 const FeedBackList = () => {
+    const circleListFn = (arr, index) => {
+        if (index === -1) {
+            return (<li className='student-icon last'>
+                <img src="./images/plus-icon.png" alt="student icon" width={40} />
+            </li>)
+        }
+        return (<li className='student-icon'>
+            <img src={arr[index]} alt="student icon" width={40} />
+            {circleListFn(arr, index - 1)}
+        </li>)
+    }
+
     return (
-        <div>
-            <Container className='my-5'>
+        <div id="feedback-list" className='mt-5 mb-6 py-5'>
+            <Container >
                 <Row xs={1} md={12} className="g-4 m-5">
-                    <Col md={4}>
-                        <h3>Review</h3>
-                        <h1>What are the learners saying about us</h1>
+                    <Col md={4} className="text-40 ">
+                        {/* <h1 className='fw-bold text-main ' > </h1> */}
+                        <h1 className='mb-5'>
+                            <span className='text-main fw-bold'>Feedback </span>
+                            -<br />Học viên nói gì?
+                        </h1>
+                        <ul className='d-flex' >
+                            {circleListFn(LIST_FB_IMAGE, LIST_FB_IMAGE.length - 1)}
+                        </ul>
+
                     </Col>
                     <Col md={8}>
                         <FeedBackCard />
@@ -219,24 +314,39 @@ const FeedBackList = () => {
         </div>
     )
 }
+
+const COURSE_LIST_ICON = [
+    {
+        icon: <FontAwesomeIcon icon={faCircleCheck} />,
+        content: "Live classes"
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleCheck} />,
+        content: "Flexible - 2 to 6 months"
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleCheck} />,
+        content: "Online"
+    }
+
+]
+
 const CourseList = () => {
     return (
-        <div>
-            <Container className='my-5'>
-                <h1>Build your dream career with our Medical English courses</h1>
+        <div id="course-list-session" className='text-center mb-5'>
+            <Container className='mt-5'>
+                <h1 className='fw-bold text-main'>Build your dream career<br /> with our Medical English courses</h1>
                 <p>Start a new career in weeks with our courses</p>
-                <span>
-                    <FontAwesomeIcon icon={faCircleCheck} />
-                    Live classes
-                </span>
-                <span>
-                    <FontAwesomeIcon icon={faCircleCheck} />
-                    Flexible - 2 to 6 months
-                </span>
-                <span>
-                    <FontAwesomeIcon icon={faCircleCheck} />
-                    Online
-                </span>
+
+                <ul className='fa-ul text-12' >
+                    {COURSE_LIST_ICON.map(icon => (
+                        <li key={icon.content} className="d-inline-block me-5">
+                            <span className="fa-li" >{icon.icon}</span>{icon.content}
+                        </li>
+
+                    ))}
+
+                </ul>
 
                 <Row xs={1} md={12} className="g-4 m-5">
                     <Col md={2}></Col>
@@ -254,24 +364,28 @@ const CourseList = () => {
     )
 }
 
-const InstructorList = () => {
+const InstructorList = ({ instructors }) => {
     return (
-        <div id="hp-instructor-card">
+        <div id="hp-instructor-card" className='mb-6 text-justify'>
             <Container>
                 <Row>
-                    <Col md={1}></Col>
-                    <Col md={10}>
+                    {/* <Col md={1}></Col> */}
+                    <Col>
+                        <h1 className='fw-bold text-main'>Giảng viên</h1>
+                    </Col>
+                </Row>
+                <Row >
+                    {/* <Col md={1}></Col> */}
+                    <Col md={12} >
                         <Row>
-
-                            {[0, 0, 0, 0, 0, 0].map(ins => (
-                                <Col md={4} >
-                                    <InstructorCard />
-                                </Col>
-                            )
+                            {instructors.map((instructor, index) =>
+                            (<Col md={6}>
+                                <InstructorCardLeft instructor={instructor} />
+                            </Col>)
                             )}
                         </Row>
                     </Col>
-                    <Col md={1}></Col>
+                    {/* <Col md={1}></Col> */}
 
                 </Row>
             </Container>
@@ -280,31 +394,77 @@ const InstructorList = () => {
     )
 }
 
-const InstructorCard = () => {
+const InstructorCardLeft = ({ instructor }) => {
     return (
-        <Card >
-            <div className='wrapperImg'>
-                < Card.Img variant="top" src="/images/dr.tram.webp" />
+        <>
+            <div className="new-speaker my-2">
+                <div className="speaker-right">
+                    <div>
+                        <ul className="speaker-topic mb-0 fa-ul">
+                            {instructor.bio.split("\n").map((b, idx) => (
+                                <li key={idx}>
+                                    <span className="fa-li" >
+                                        <FontAwesomeIcon icon={faCheck} />
+                                    </span>
+                                    {b}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <div className="speaker-left">
+                    <div style={{ height: "60%" }}>
+                        <div className="team-image">
+                            <img src={instructor.imageUrl} alt="instructor " />
+                        </div>
+                    </div>
+                    <div style={{ height: "40%" }}>
+                        <p className="speaker-sub">{instructor.titleFull}</p>
+                        <p className="speaker-name mb-0 fw-bold" >
+                            {instructor.name.split("\n").map(b => (<>{b}<br /></>))}
+                        </p>
+                    </div>
+                </div>
             </div>
+        </>
+    )
+}
 
-            < Card.Body className="pb-0">
-                <Card.Title style={{ textAlign: "center", fontSize: "1.1rem" }}>
-                    Nguyễn Ngọc Quỳnh Trâm
-                </Card.Title>
-
-
-            </Card.Body >
-
-            <Card.Body style={{ paddingTop: "0" }}>
-                Bác sĩ
-            </Card.Body>
-        </Card >)
+const InstructorCardRight = ({ instructor }) => {
+    return (
+        <>
+            <div className="new-speaker  my-2">
+                <div className="speaker-left">
+                    <div style={{ height: "60%" }}>
+                        <div className="team-image">
+                            <img src={instructor.imageUrl} alt="instructor " />
+                        </div>
+                    </div>
+                    <div style={{ height: "40%" }}>
+                        <p className="speaker-sub">{instructor.titleFull}</p>
+                        <p className="speaker-name mb-0 fw-bold" >
+                            {instructor.name.split("\n").map(b => (<>{b}<br /></>))}
+                        </p>
+                    </div>
+                </div>
+                <div className="speaker-right">
+                    <div>
+                        <ul className="speaker-topic mb-0">
+                            {instructor.bio.split("\n").map((b, idx) => (
+                                <li key={idx}>{b}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export const CTA = () => {
     const navigate = useNavigate()
     return (
-        <div id="cta" style={{ height: "514px" }}>
+        <div id="cta" style={{ height: "514px" }} className="mb-7">
             <Container className='h-100'>
                 <Row className='h-100'>
                     <Col xs={12} md={6} className='text-center d-flex justify-content-center align-items-center'>
@@ -312,60 +472,65 @@ export const CTA = () => {
                             <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-                            <Button onClick={() => navigate("/register-form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
-                        </div>
-                    </Col>
+                            <Button onClick={() => navigate("/register - form")} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+                        </div >
+                    </Col >
                     <Col className='d-none d-md-block'></Col>
-                </Row>
-            </Container>
-        </div>
+                </Row >
+            </Container >
+        </div >
     )
 }
 
+const WHY_SESSION_ICON = [
+    {
+        icon: <FontAwesomeIcon icon={faSchoolCircleCheck} />,
+        title: "Flexible time",
+        content: "Online education allows teachers and students set their own pace of learning, and there is added flexibility in setting a schedule that fit everyone's agenda"
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCertificate} />,
+        title: "Certificate",
+        content: "Online education allows teachers and students to set their own pace of learning and there is added flexibility in setting a schedule that fits everyone's agenda"
+    },
+    {
+        icon: <FontAwesomeIcon icon={faPenRuler} />,
+        title: "Class program options",
+        content: "Online education allows teachers and students to set their own pace of learning, and there is added flexibility in setting a schedule that fits everyone's agenda"
+    },
+    {
+        icon: <FontAwesomeIcon icon={faWifiStrong} />,
+        title: "Access anywhere",
+        content: "Online education allows teachers and students to set their own pace of learning, and there is added flexibility in setting a schedule that fits everyone's"
+    }
+]
+
 const WhyMedLangWeb = () => {
     return (
-        <section>
+        <section id="why-medlang-session" className='mb-7'>
             <Container>
                 <Row>
-                    <Col>
-                        <h1>Why online<br />learning method</h1>
-                        <p>Studying online teaches important time management skills, which makes it easier for you to find a good work-study balance</p>
-                        <Button>Get Started</Button>
+                    <Col md={6} className="py-5 px-5 m-auto">
+                        <h1 className='fw-bold text-main mb-5'>Why online<br />learning method</h1>
+                        <p className='text-16' style={{ paddingRight: "2rem" }}>Studying online teaches important time management skills, which makes it easier for you to find a good work-study balance</p>
+                        <Button variant='primary' className='btn-sign-up'>Tìm hiểu thêm</Button>
                     </Col>
-                    <Col>
+                    <Col md={6} >
                         <Row>
-                            <Col md={6}>
-                                <div>
-                                    <FontAwesomeIcon icon={faTimes} />
-                                </div>
-                                <h4>Flexible time</h4>
-                                <p>Online education allows teachers and students set their own pace of learning, and there is added flexibility in setting a schedule that fit everyone's agenda</p>
-                            </Col>
-                            <Col md={6}>
-                                <div>
-                                    <FontAwesomeIcon icon={faTimes} />
-                                </div>
-                                <h4>Flexible time</h4>
-                                <p>Online education allows teachers and students set their own pace of learning, and there is added flexibility in setting a schedule that fit everyone's agenda</p>
-                            </Col><Col md={6}>
-                                <div>
-                                    <FontAwesomeIcon icon={faTimes} />
-                                </div>
-                                <h4>Flexible time</h4>
-                                <p>Online education allows teachers and students set their own pace of learning, and there is added flexibility in setting a schedule that fit everyone's agenda</p>
-                            </Col><Col md={6}>
-                                <div>
-                                    <FontAwesomeIcon icon={faTimes} />
-                                </div>
-                                <h4>Flexible time</h4>
-                                <p>Online education allows teachers and students set their own pace of learning, and there is added flexibility in setting a schedule that fit everyone's agenda</p>
-                            </Col>
-
+                            {WHY_SESSION_ICON.map((icon, index) => (
+                                <Col md={6} className="mb-4">
+                                    <span className='why-icon'>
+                                        {icon.icon}
+                                    </span>
+                                    <h4 className='fw-bold text-main'>{icon.title}</h4>
+                                    <p style={{ paddingRight: "50px" }} className="text-12">{icon.content}</p>
+                                </Col>
+                            ))}
                         </Row>
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </section >
     )
 }
 const WhyMedLangMobile = () => {

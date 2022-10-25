@@ -87,3 +87,22 @@ body{
     color: var(--main);
     font-weight: 700;
 }
+.text-12{
+    font-size: 12px;
+}
+.text-16{
+    font-size: 16px;
+}
+.text-40{
+    font-size: 40px;
+}
+
+.mb-6{
+    margin-bottom: 4rem;
+}
+.mt-6{
+    margin-top: 4rem;;
+}
+.mb-7{
+    margin-bottom: 5rem;
+}

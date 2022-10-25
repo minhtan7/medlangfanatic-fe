@@ -25,7 +25,7 @@ const CourseThumbnailVertical = () => {
         <Card>
             < Card.Img variant="top" src="/images/mavl-thumbnail.svg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
-                <Card.Title>Medical Academic Vocabulary List</Card.Title>
+                <Card.Title className='fw-bold text-main'>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
                     Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa. MAVL là khóa học giúp bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>

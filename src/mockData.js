@@ -33,15 +33,45 @@ const faq = [
 const instructors = [
     {
         name: "Trần Quang Hưng",
-        title: "BS. CKI",
-        bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
-        imageUrl: "/images/dr.hung.webp"
+        title: "BS. CKI.",
+        bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, Đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
+        imageUrl: "/images/dr.hung.webp",
+        titleFull: "Bác sĩ Chuyên Khoa I"
     },
     {
-        name: "Nguyễn Ngọc Quỳnh Trâm",
+        name: "Nguyễn Ngọc\nQuỳnh Trâm",
         title: "BS.",
         bio: `Tốt nghiệp bác sĩ đa khoa hạng Summa Cum Laude với GPA 4.67/5 tại đại học Debrecen, Hungary\nCựu phó chủ tịch hội sinh viên Việt Nam tại Debrecen, Hungary`,
-        imageUrl: "/images/dr.tram.webp"
+        imageUrl: "/images/dr.tram.webp",
+        titleFull: "Bác sĩ"
+    },
+    {
+        name: "Trần Quang Hưng",
+        title: "BS. CKI.",
+        bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, Đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
+        imageUrl: "/images/dr.hung.webp",
+        titleFull: "Bác sĩ Chuyên Khoa I"
+    },
+    {
+        name: "Nguyễn Ngọc\nQuỳnh Trâm",
+        title: "BS.",
+        bio: `Tốt nghiệp bác sĩ đa khoa hạng Summa Cum Laude với GPA 4.67/5 tại đại học Debrecen, Hungary\nCựu phó chủ tịch hội sinh viên Việt Nam tại Debrecen, Hungary`,
+        imageUrl: "/images/dr.tram.webp",
+        titleFull: "Bác sĩ"
+    },
+    {
+        name: "Trần Quang Hưng",
+        title: "BS. CKI.",
+        bio: `Trưởng phòng Đào tạo và Quản lý chất lượng Jio Health\nFounder của Med Lang Fanatic\nGiảng viên kỹ năng giao tiếp trong y khoa, được đào tạo theo chương trình của ACH Hoa Kỳ\nTổ chức các khóa học tiếng Anh tại Đại học Y Dược TPHCM, Đại học Y khoa Phạm Ngọc Thạch, và tại Tổng lãnh sự quán Hoa Kỳ tại TPHCM`,
+        imageUrl: "/images/dr.hung.webp",
+        titleFull: "Bác sĩ Chuyên Khoa I"
+    },
+    {
+        name: "Nguyễn Ngọc\nQuỳnh Trâm",
+        title: "BS.",
+        bio: `Tốt nghiệp bác sĩ đa khoa hạng Summa Cum Laude với GPA 4.67/5 tại đại học Debrecen, Hungary\nCựu phó chủ tịch hội sinh viên Việt Nam tại Debrecen, Hungary`,
+        imageUrl: "/images/dr.tram.webp",
+        titleFull: "Bác sĩ"
     }
 ]
 const courseDetail = {
