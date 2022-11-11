@@ -15,6 +15,7 @@ import BlogPage from './pages/BlogPage';
 import SingleBlogPage from './pages/SingleBlogPage';
 import AllCourse from './pages/AllCourse';
 import HomePage from './pages/HomePage';
+import { InstructorPage } from './pages/InstructorPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/register-form/:slug' element={<FormPage />} />
         {/* <Route path='/event-form' element={<TempFormPage />} /> */}
         <Route path='/game' element={<GamePage />} />
+        <Route path='/instructors/:slug' element={<InstructorPage />} />
         <Route path='/blogs' element={<BlogPage />} />
         <Route path='/blogs/:slug' element={<SingleBlogPage />} />
         <Route path='/event-form' element={<EventPage />} />
