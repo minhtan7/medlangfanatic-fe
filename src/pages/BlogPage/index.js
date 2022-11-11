@@ -17,7 +17,7 @@ const BlogPage = () => {
     const [page, setPage] = useState(1)
 
     useEffect(() => {
-        dispatch(getPosts({ page, limit: 5 }))
+        dispatch(getPosts({ page, limit: 6 }))
     }, [page])
     return (
         <div id="blog-page" style={{ backgroundColor: "#f0f0f0" }}>

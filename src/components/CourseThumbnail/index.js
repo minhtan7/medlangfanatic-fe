@@ -6,14 +6,14 @@ import "./style.css"
 const CourseThumbnailHorizontal = () => {
     const navigate = useNavigate()
     return (
-        <Card id="course-thumbnail-horizontal" className='py-5 border-0 row flex-md-row-reverse flex-md-nowrap' >
+        <Card id="course-thumbnail-horizontal" className='py-5 border-0 row flex-md-row-reverse flex-md-nowrap box-shadow-card' >
             {/* <Card.Img className='col' variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }} /> */}
             <Card.Body className='col text-center '>
                 <Card.Title>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
-                    Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa. MAVL là khóa học giúp bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
+                    Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
-                <Button onClick={() => navigate("/MAVL")} className='btn-sign-up ' style={{ width: "10rem" }}><span>Xem thêm</span></Button>
+                <Button onClick={() => navigate("/MAVL")} className='btn-sign-up ' style={{ width: "10rem" }}><span>Tìm hiểu thêm</span></Button>
             </Card.Body>
         </Card>
     )
@@ -22,14 +22,14 @@ const CourseThumbnailHorizontal = () => {
 const CourseThumbnailVertical = () => {
     const navigate = useNavigate()
     return (
-        <Card>
+        <Card className='box-shadow-card'>
             < Card.Img variant="top" src="/images/mavl-thumbnail.svg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
                 <Card.Title className='fw-bold text-main'>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
-                    Từ vựng academic có tần suất gặp cao nhất trong y văn - 20% lượng từ vựng trong textbook và bài báo y khoa. MAVL là khóa học giúp bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
+                    Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
-                <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Xem thêm</small></Button>
+                <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
             </Card.Body>
         </Card>
     )
@@ -38,15 +38,15 @@ const CourseThumbnailVertical = () => {
 const CourseThumbnailVerticalMT = () => {
     const navigate = useNavigate()
     return (
-        <Card>
+        <Card className='box-shadow-card'>
             < Card.Img variant="top" src="/images/mt-thumbnail.jpeg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
                 <Card.Title>Medical Terminology</Card.Title>
                 <p></p>
                 <Card.Text>
-                    Khóa học Medical Terminology: An Essential Course for Beginner Learners hướng đến đối tượng các bạn chưa vững nền tảng thuật ngữ y khoa tiếng Anh, và có mục tiêu là xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
+                    Medical Terminology: An Essential Course for Beginner Learners - xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
                 </Card.Text>
-                <Button onClick={() => navigate("/medical-terminology")} variant="primary" className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Xem thêm</small></Button>
+                <Button onClick={() => navigate("/medical-terminology")} variant="primary" className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
             </Card.Body>
         </Card>
     )

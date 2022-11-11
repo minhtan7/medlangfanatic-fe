@@ -75,6 +75,19 @@ body{
     background-color: var(--contrast-light)!important;
     color: var(--main) !important
 }
+.btn-primary-contrast{
+    background-color: var(--contrast) !important;
+    border: none !important;
+    color: var(--main)!important;
+}
+.btn-primary-contrast:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+.btn-primary-contrast:hover{
+    background-color: var(--main)!important;
+    color: var(--contrast) !important
+}
 
 .btn-secondary{
     background-color: var(--mt-secondary) !important;
@@ -87,6 +100,83 @@ body{
 .btn-secondary:hover{
     background-color: var(--mt-contrast-light)!important;
     color: var(--mt-secondary) !important
+}
+
+.btn-sign-up{
+  width: 100%; 
+  border-radius: 0;
+  border-radius: 25px!important;
+  font-weight: 600;
+  color: var(--contrast);
+}
+
+.btn-sign-up:hover{
+  box-shadow: inset 16.5em 0 0 0 var(--contrast);
+  color: var(--main);
+  transition-duration: .3s;
+}
+.btn-sign-up span{
+  display: inline-block;
+  position: relative;
+  transition: .3s;
+  font-weight: 600;
+
+}
+.btn-sign-up:hover span{
+  padding-right: 25px
+}
+
+.btn-sign-up span:after {
+    content: "\00bb";
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transition: .3s;
+    opacity: 0;
+    font-size: 30px;
+    transform: translate(-20%,-50%);
+}
+.btn-sign-up:hover span:after {
+    opacity: 1;
+}
+
+
+.btn-sign-up-contrast{
+  width: 100%; 
+  border-radius: 25px!important;
+  font-weight: 700;
+  color: var(--main);
+}
+
+.btn-sign-up-contrast:hover{
+  box-shadow: inset 16.5em 0 0 0 var(--main);
+  color: var(--contrast);
+  transition-duration: .3s;
+}
+.btn-sign-up-contrast span{
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  padding-right: 25px;
+  transition: .3s;
+}
+.btn-sign-up-contrast:hover span{
+}
+
+.btn-sign-up-contrast span:after {
+    content: "\00bb";
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transition: .3s;
+    opacity: 1;
+    font-size: 30px;
+    transform: translate(-20%,-55%);    
+}
+.btn-sign-up-contrast:hover span:after {
+    opacity: 1;
 }
 
 
@@ -107,8 +197,14 @@ body{
 .text-12{
     font-size: 12px;
 }
+.text-14{
+    font-size: 14px;
+}
 .text-16{
     font-size: 16px;
+}
+.text-30{
+    font-size: 30px;
 }
 .text-40{
     font-size: 40px;
@@ -120,9 +216,24 @@ body{
 .mt-6{
     margin-top: 4rem;;
 }
-.mb-7{
-    margin-bottom: 5rem;
+.mb-md-7{
+    margin-bottom: 5rem!important;
 }
+
+@media only screen and (min-width: 600px) {
+    .mb-md-7{
+        margin-bottom: 5rem;
+    }
+    .position-md-absolute{
+        position: absolute;
+    }
+    .mx-md-7{
+        margin-right: 7rem!important;
+        margin-left: 7rem!important;
+    }
+}
+
+
 
 /* mt secondary btn */
 
@@ -160,3 +271,7 @@ body{
 .btn-mt-secondary:hover span:after {
     opacity: 1;
 } */
+
+.box-shadow-card{
+    box-shadow: 0 0 10px 5px rgb(128 128 128 / 39%)
+}
