@@ -16,6 +16,9 @@ import { Cover, CoverMedicalTerminology } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
 // import jsxToString from 'jsx-to-string';
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
+import { useDispatch, useSelector } from 'react-redux'
+import { getSingleCourse } from '../../features/course/courseSlice'
+
 
 const slugs = {
     "medical-terminology": 2026776,
@@ -37,17 +40,16 @@ const filterCss = (slug) => {
 const CoursePage = () => {
     const { slug } = useParams()
     useFilterCssRoot({ slug, ...filterCss(slug) })
-    const [course, setCourse] = useState(null)
-    const [chapters, setChapters] = useState(null)
+    // const [course, setCourse] = useState(null)
+    // const [chapters, setChapters] = useState(null)
+    const dispatch = useDispatch()
+    const course = useSelector(state => state.course.currentCourse)
     useEffect(() => {
-        const getCourse = async () => {
-            const res = await api.get(`courses/${slugs[slug.toLowerCase()]}`)
-            setCourse(res.data.data)
-            setChapters(res.data.data.chapters)
-        }
-        getCourse()
+
+        dispatch(getSingleCourse({ courseId: slugs[slug.toLowerCase()] }))
     }, [slug])
-    return course && chapters && (
+    console.log(course)
+    return Object.keys(course).length && (
         <>
             <Hero course={course} />
             {filterCover(course.slug)}
@@ -55,7 +57,7 @@ const CoursePage = () => {
                 <Row>
                     <Col xs={12} md={8} className="px-0 ">
                         <Features course={course} />
-                        <CourseDetailContent chapters={chapters} />
+                        <CourseDetailContent chapters={course.chapters} />
                         <Instructors instructors={course.instructors[0]} />
                         <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />
                         <FAQ faq={course.faq} />

@@ -1,0 +1,481 @@
+/* subscription HP */
+#subscription-session h2{
+    font-size: 25px;
+    line-height: 1.3;
+}
+#subscription-session .container{
+    position: relative;
+    padding: 2rem 4rem;
+    background-color: var(--main);
+    color: white;
+    border-radius: 80px;
+    width: 70%;
+    background-image: url("../../asset/topography.svg") ;
+}
+#subscription-session form{
+    
+}
+#subscription-session input{
+    border-radius: 80px;
+    padding: 1rem 2rem;
+    border: none;
+    width: 100%;
+}
+#subscription-session .subscription-span{
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    background-color: var(--contrast)!important;
+    transform: translateY(-50%);
+    padding: 0.5rem 2rem;
+    border-radius: 80px;
+    color: var(--main);
+    font-weight: bold;
+}
+#subscription-session .container .hidden-logo{
+    width: 40rem;
+    top: 33%;
+    left: 50%;
+    opacity: 0.2;
+    transform: translateX(-5%) scale(1.5);
+}
+@media only screen and (max-width: 600px) {
+    #subscription-session .container{
+        width: 100%;
+        padding: 2.5rem 2rem;
+        border-radius: 0;
+    }
+    #subscription-session .subscription-span {
+        transform: none;
+        margin-top: 0.5rem;
+    }
+    #subscription-session input{
+        padding: 0.6rem 2rem;
+    }
+}
+
+/* podcast-session */
+#podcast-session{
+   
+
+}
+/* course-list-session */
+#course-list-session{
+    background-color: #edf1ff91;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#course-list-session ul li svg{
+    color: var(--main);
+    font-size: 18px;
+}
+#course-list-session ul{
+    margin: 0px auto;
+    text-align: initial;
+    width: 11.9rem;
+    transform: translateX(25%);
+}
+#course-list-session ul li{
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+#course-list-session ul li .fa-li{
+    left: -2rem;
+}
+
+@media only screen and (min-width: 600px) {
+    #course-list-session ul{
+        margin: 0;
+        text-align: unset;
+        width: auto;
+        transform: unset;
+    }
+}
+/* Why medlang WEB */
+#why-medlang-session{
+    text-align: justify;
+    background-color: #edf1ff91;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+#why-medlang-session .left{
+    padding-right: 6rem!important;
+}
+#why-medlang-session .btn-sign-up-contrast{
+    width: 15rem;
+    font-weight: 600!important;
+}
+
+#why-medlang-session .why-icon{
+    background-color: #bbfeea;
+    color: var(--main);
+    padding: 15px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1rem;
+}
+#why-medlang-session .why-web-icon{
+    padding-right: 65px;
+}
+#why-medlang-session .why-icon svg{
+    font-size: 2rem;
+}
+#why-medlang-session h1{
+    position: relative;
+    font-size: 2.5rem;
+}
+#why-medlang-session h1::before{
+    content: "";
+    position: absolute;
+    width: 10rem;
+    height: 4px;
+    background-color: var(--main);
+    bottom: -1rem;
+    left: 0;
+}
+
+#why-medlang-session.mobile .why-icon{
+    background-color: rgb(128 128 128 / 39%);
+    transition-duration: 0.3s;
+}
+#why-medlang-session.mobile .why-icon.show{
+    background-color: #bbfeea;
+    transition-duration: 0.3s;
+}
+
+#why-medlang-session.mobile .why-icon::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #bbfeea;
+    bottom: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+#why-medlang-session.mobile .why-icon.show::after{
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+#why-medlang-session.mobile .why-mob-content .mySlides{
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgb(128 128 128 / 39%)
+}
+
+
+
+/* instructor */
+
+.new-speaker {
+    height: 16rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    transition-duration: 0.2s;
+    box-shadow: 0 0 12px 5px #80808024;
+    /* border: 1px solid var(--contrast); */
+}
+.new-speaker .speaker-left {
+    height: 100%;
+    width: 40%;
+    background-color: var(--main-dark);
+    padding: 1rem 0.5rem;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--contrast);
+    background-image: url("../../asset/topography.svg");
+    /* border-left: 1px solid var(--contrast); */
+}
+
+
+.new-speaker .team-image {
+    border: 3px solid var(--contrast);
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+}
+.new-speaker .team-image img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.new-speaker .speaker-right {
+    height: 100%;
+    width: 60%;
+    /* background-color: var(--contrast-light); */
+    padding: 1rem 1rem 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--main);
+    background-image: url("../../asset/topography.svg");
+    /* animation: 8s sliderRight 3s forwards ease-out; */
+    float:left
+}
+
+@keyframes sliderRight {
+    from {width: 0;}
+    to {width: 60%;}
+}
+
+
+.speaker-topic {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.speaker-name{
+    font-size: 18px;
+}
+.speaker-sub{
+    font-size: 12px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+    .speaker-topic {
+    font-size: 10.7px;
+    font-weight: 400;
+    }
+    .speaker-name{
+        font-size:14px
+    }
+    .speaker-sub{
+        font-size: 10px;
+    }
+}
+
+
+/* blog sessions */
+#blog-session{
+    background-color: #edf1ff91;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#blog-session h1{
+    position: relative;
+    line-height: 1;
+}
+#blog-session .blog-card{
+    box-shadow: 0 1px 13px -5px grey;
+}
+#blog-session .visit-blog{
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    line-height: 1.8;
+}
+
+#blog-session .visit-blog::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+    transform: translate(-100%,65%);
+    height: 100%;
+    width: 40rem;
+    border-top: 1px dashed var(--main);
+    border-top-style: dotted;
+}
+
+#blog-session .visit-blog:hover{
+    color: var(--main);
+    cursor: pointer;
+    
+}
+
+/* feedback list */
+#feedback-list ul.d-flex{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+    transform: translateX(-70%);
+    position: relative;
+}
+#feedback-list .student-icon{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+#feedback-list .student-icon img{
+    vertical-align: top;
+    border-radius: 50%;
+    width: 40px;
+    border: 1px solid var(--main-dark);
+}
+
+
+#feedback-list ul li.last::after{
+    content: "+50 Feedback";
+    position: absolute;
+    font-size: 12px;
+    width: 7rem;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    transform: translate(110%, -50%);
+    height: fit-content;
+    color: var(--main);
+}
+#feedback-list .container-style{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center
+}
+
+#feedback-list .card-style{
+    height: fit-content;
+    width: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: white;
+    color: var(--main);
+    font-size: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 600px) {
+    #feedback-list .card-style{
+        width: 220px;
+        font-size: 10px;
+    }
+    #feedback-list .container-style{
+        height: 300px;
+    }
+    #feedback-list .student-icon img{
+        width: 30px;
+    }
+    #feedback-list .student-icon{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Video Session */
+#video-session .video-thumbnail{
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.385);
+    height: 100%;
+}
+#video-session h1{
+    line-height: 1;
+}
+#video-session .video-thumbnail,#video-session .video-thumbnail a{
+    color: black;
+    text-decoration: none;
+}
+#video-session .video-thumbnail,#video-session .video-thumbnail:hover a{
+    color: var(--main);
+}
+#video-session .video-thumbnail.left{
+    height: 100%;
+}
+#video-session .video-thumbnail.left div{
+    height: 21rem;
+}
+#video-session .video-thumbnail div{
+    height: 8rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#video-session .video-thumbnail div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#video-session .video-thumbnail-mobile div{
+    width: 6rem
+}
+#video-session .video-thumbnail-mobile img{
+    border-radius: 10px;
+}
+#video-session .video-thumbnail-mobile a{
+    width: 70%;
+    color: black;
+    text-decoration: none;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+#video-session .video-thumbnail-mobile a:hover{
+    color: var(--main);
+}
+#video-session .video-thumbnail-mobile p{
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media only screen and (max-width: 600px) {
+    #video-session .video-thumbnail.left div{
+        height: 11rem;
+    }
+}
+
+/* CTA-homepage */
+#cta-homepage .btn-sign-up,.btn-sign-up-contrast{
+    width: 12rem;
+}
+
+#cta-homepage .cta-hung .cta-left{
+}
+#cta-homepage .cta-hung .cta-right p{
+    
+}
+#cta-homepage .cta-hung img{
+    border: 1px solid var(--main);
+    border-radius: 50%;
+}
+#cta-homepage .cta-hung{
+    margin: auto;
+    transform: translateY(-30px);
+    background-color: #f1f3fd;
+    padding: 0.9rem 2rem;
+    border-radius: 5rem;
+    width: 24rem;
+    box-shadow: 11px 12px 17px -3px #acb1cf;
+}
+#cta-homepage .text-main{
+    font-weight: 900;
+}

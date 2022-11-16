@@ -73,42 +73,7 @@
 }
 /* ----course card */
 
-.btn-sign-up{
-  width: 100%; 
-  border-radius: 0;
-  border-radius: 25px;
-  font-weight: 600;
-  color: var(--contrast);
-}
 
-.btn-sign-up:hover{
-  box-shadow: inset 16.5em 0 0 0 var(--contrast);
-  color: var(--main);
-  transition-duration: .3s;
-}
-.btn-sign-up span{
-  display: inline-block;
-  position: relative;
-  transition: .3s;
-}
-.btn-sign-up:hover span{
-  padding-right: 25px
-}
-
-.btn-sign-up span:after {
-    content: "\00bb";
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transition: .3s;
-    opacity: 0;
-    font-size: 30px;
-    transform: translate(-20%,-50%);
-}
-.btn-sign-up:hover span:after {
-    opacity: 1;
-}
 
 .course-card-item{
     border:0;

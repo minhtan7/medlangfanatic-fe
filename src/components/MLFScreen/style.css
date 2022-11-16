@@ -1,0 +1,159 @@
+.loader-wrap{
+}
+.handle-preloader {
+    background-image: url("../../asset/topography.svg");
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    z-index: 9999999;
+}
+
+.handle-preloader .animation-preloader {
+    position: absolute;
+    z-index: 100;
+}
+/* .handle-preloader .animation-preloader .spinner {
+    border: 3px solid var(--contrast);
+} */
+.handle-preloader .animation-preloader .spinner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 45px auto;
+    animation-name: zoomInOut;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: zoomInOut;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    position: relative;
+}
+.handle-preloader .animation-preloader .spinner img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.handle-preloader .animation-preloader .txt-loading {
+    text-align: center;
+    user-select: none;
+}
+
+.handle-preloader .animation-preloader .txt-loading .letters-loading {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 600;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--contrast);
+    font-family: 'Montserrat', sans-serif;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:before {
+    color: #ffffff;
+}
+
+.handle-preloader .animation-preloader .txt-loading .letters-loading:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: letters-loading 6s infinite;
+    content: attr(data-text-preloader);
+    opacity: 0;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes letters-loading {
+
+    0%,
+    75%,
+    100% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+
+    25%,
+    50% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.5;
+        border: 1px solid var(--contrast);
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+        border: 5px solid var(--contrast);
+        }
+    100%{
+        transform: scale(0.7);
+        border: 1px solid var(--contrast);
+        opacity: 0.5;
+    }
+}
+
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+    animation-delay: 0.1s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+    animation-delay: 0.2s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+    animation-delay: 0.3s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+    animation-delay: 0.4s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+    animation-delay: 0.5s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+    animation-delay: 0.6s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+    animation-delay: 0.7s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+    animation-delay: 0.8s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before {
+    animation-delay: 0.9s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(11):before {
+    animation-delay: 0.9s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(12):before {
+    animation-delay: 1s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(13):before {
+    animation-delay: 1.1s;
+}
+.handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(14):before {
+    animation-delay: 1.2s;
+}

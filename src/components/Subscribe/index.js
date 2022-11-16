@@ -31,7 +31,6 @@ const Subscribe = () => {
             body: JSON.stringify({ ...data, marketing_status: "subscribed" })
         });
         const d = await res.json()
-        console.log(d)
         setMess(d.success ? SUBSRIBE_MESSAGE_SUCCESS : SUBSRIBE_MESSAGE_FAIL)
         setShow(true)
     }
