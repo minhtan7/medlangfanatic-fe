@@ -17,6 +17,48 @@ import { blogContent, instructors } from '../../mockData'
 import ToastMsg from '../../components/ToastMsg.js'
 import { ToTopArrowNormalUse } from '../../components/ToTopArrow'
 
+const fbs = [
+    {
+        content: "Nhờ khóa học mà em có ý thức hơn trong việc giao tiếp, đặc biệt là những mindset và skill theo hướng patient - centered nhiều hơn so với những gì mình vẫn hay làm ở Tiếng Việt. Một điều rất lớn em học được từ các anh chị trong khóa học này đó là hiểu rõ hơn mục đích của việc giao tiếp, đó là sự quan tâm và thấu cảm với người đối diện, từ đó định hướng những gì mình nói, mình thể hiện trong lúc khám bệnh cũng sẽ thay đổi so với trước đây, luôn hướng về điều mà người bệnh đang thực sự gặp khó khăn, biết cân bằng giữa thời gian khám và hiệu quả cuộc khám. Với những tình huống bất ngờ trong giao tiếp thì em cũng phần nào hiểu được mình phải vừa giải quyết được những thắc mắc của người bệnh trong phạm vị cho phép, vừa cam đoan với người bệnh những gì sẽ làm được và đặc biệt là cố gắng hết sức để cuộc khám trở nên có ý nghĩa với người bệnh nhất có thể.",
+        name: "Dương Lê",
+        title: "Sinh viên"
+    },
+    {
+        content: "Em hiện chưa có cơ hội thực hành giao tiếp với người bệnh bằng tiếng Anh. Tuy nhiên, khoá học đã giúp em có một cái nhìn tổng quát hơn về khai thác bệnh sử, tiền sử, khám lâm sàng, quan tâm hơn đến cảm xúc của người bệnh. Nhờ đó, em đã tự tin hơn trong khi khám lâm sàng, khai thác thông tin từ bệnh nhân bằng tiếng Việt, đặc biệt là em đã biết quan tâm và tiếp cận lấy người bệnh làm trung tâm, do vậy hiệu quả học lâm sàng của em đã cải thiện nhiều.",
+        name: "Thanh Ngân",
+        title: "Bác sĩ"
+    },
+    {
+        content: "Trước khi học thì khả năng giao tiếp bằng tiếng Anh với bệnh nhân của riêng em chỉ khoảng 2.5/10. Sau 12 buổi học với các instructors thì em đã tự tin hơn rất nhiều trong việc tư vấn, giải thích, hỏi han bệnh nhân. Không chỉ học được về tiếng Anh, những nghệ thuật về giao tiếp này em cũng đã áp dụng với bệnh nhân em đang thực tập và kết quả ngoài sức mong đợi ^^ ",
+        name: "Khoa",
+        title: "Sinh viên"
+    },
+    {
+        content: "Có rất nhiều điều bổ ích từ khoá học này như về phương diện ngôn ngữ thì khoá học đã giúp mình khá nhiều trong việc sử dụng Tiếng Anh trong giao tiếp, những cụm từ và cách nói mà hay sử dụng cũng như về phương diện chuyên ngành thì khoá học đã giúp đỡ rất bổ ích từ việc trao đổi với bệnh nhân, những điều tưởng chừng như đơn giản nhưng khi giao tiếp bằng tiếng Anh thì hoá ra lại cực kì khó.",
+        name: "Tiến Lê",
+        title: "Bác sĩ"
+    },
+    {
+        content: "Đầu tiên là khóa đưa ra những guide rất rõ ràng và dễ hiểu để áp dụng trong việc giao tiếp với người bệnh mà có thể áp dụng cả tiếng Việt lẫn tiếng Anh. Các guide khi tóm tắt lại thì hoàn toàn có thể áp dụng, dù em bên chuyên ngành khác bác sĩ nhưng vẫn rất hiệu quả. Thứ hai là nhờ những bài tập và bài học mà em biết được thêm nhiều những từ vựng chuyên ngành, cũng như những loại bệnh khác mà chuyên ngành của mình ít tiếp xúc. Ngoài ra, em cũng biết thêm nhiều các medicine mà em chưa biết hoặc ít biết đến. Thứ ba là khả năng giao tiếp của em đã nâng lên đáng kể, về khả năng giao tiếp với người khác nói chung, và khả năng giao tiếp với người bệnh ở khá nhiều scenerios nói riêng.",
+        name: "Hồng Diễm ",
+        title: "Dược sĩ"
+    },
+    {
+        content: "Thầy share một lượng kiến thức và kinh nghiệm rất lớn cho học viên, điều đó khiến mình có nhiều cách để cải thiện Tiếng Anh chuyên ngành của mình hơn.",
+        name: "Thanh Thảo",
+        title: "Bác sĩ"
+    },
+    {
+        content: "Những kiến thức mà anh Hưng chia sẻ ạ, các khoá học khác sẽ dạy đơn thuần nghĩa từng từ từng bài khô khan, còn khoá học này lại cung cấp “cần câu” bởi một người có nhiều kinh nghiệm. Chỉ sợ là có học hết được những cái anh chỉ không thui ạ.",
+        name: "Thu Hương",
+        title: "Sinh viên"
+    },
+    {
+        content: "Để trả lời cho câu hỏi này em cũng đắn đo nhiều lắm á, bởi vì có khá nhiều điều em thích về CA. Đầu tiên là giáo trình học theo 1 tiến trình rất mạch lạc, cụ thể, các mẫu câu có tính ứng dụng cao, và nội dung học cũng hay được nhắc lại giữa các buổi giúp em dễ nhớ hơn. Những trang web được giới thiệu cũng thiết thực, hay lạ, có nhiều trang em còn chưa từng biết đến sự tồn tại luôn :3. Em đặc biệt ấn tượng với accent của anh Hưng, lần đầu tiên nghe ảnh nói em bất ngờ kinh khủng, dù em cũng biết anh Hưng 'khủng' từ trước rồi nhưng mà không ngờ nó siêu trầm và siêu hay luôn í 😣 Thêm một cái nữa là mỗi lần chữa bài tập, em đều được nhận các feedback rất cụ thể để bài trình của mình súc tích hơn, và các góp ý về phát âm nữa.",
+        name: "Lan Chi",
+        title: "Bác sĩ"
+    }
+]
 
 const responsive = {
     superLargeDesktop: {
@@ -63,7 +105,7 @@ const HomePage = () => {
     return (
         <>
             <CTA />
-            {isMobile ? <WhyMedLangMobile /> : <WhyMedLangWeb />}
+            {/* {isMobile ? <WhyMedLangMobile /> : <WhyMedLangWeb />} */}
 
             <InstructorList instructors={instructors} />
             <CourseList />
@@ -388,28 +430,7 @@ const BlogSession = () => {
 }
 
 const FeedBackCard = () => {
-    const fbs = [
-        {
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            name: "minh tân",
-            title: "Bác sĩ"
-        },
-        {
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            name: "thanh ngân",
-            title: "Bác sĩ"
-        },
-        {
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            name: "jasmin ha",
-            title: "Bác sĩ"
-        },
-        {
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            name: "matthew duffin",
-            title: "Bác sĩ"
-        }
-    ]
+
     return (
         <>
 

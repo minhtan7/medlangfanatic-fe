@@ -367,6 +367,9 @@ const blogContent = [
 
 ]
 
+
+
+
 export { instructors, courseDetail, faq, feedBack, about, blogContent }
 
 const x = [
