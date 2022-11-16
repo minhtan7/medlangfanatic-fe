@@ -8,7 +8,7 @@ export const MLFScreen = () => {
                 <div id="handle-preloader" className="handle-preloader">
                     <div className="animation-preloader">
                         <div className="spinner">
-                            <img width={250} alt="logo" src="http://localhost:3000/images/logo-color-transparent.png" />
+                            <img width={250} alt="logo" src="/images/logo-color-transparent.png" />
                         </div>
                         <div className="txt-loading">
                             {["m", "e", "d", "l", "a", "n", "g", "f", "a", "n", "a", "t", "i", "c"].map(t => (
