@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { CourseThumbnailVertical, CourseThumbnailVerticalMT } from '../../components/CourseThumbnail'
-import ReactCardCarousel from "react-card-carousel";
+// import ReactCardCarousel from "react-card-carousel";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import quote from '../../asset/quote.svg'
@@ -109,7 +109,7 @@ const HomePage = () => {
 
             <InstructorList instructors={instructors} />
             <CourseList />
-            <FeedBackList />
+            {/* <FeedBackList /> */}
             <BlogSession />
             <VideoSession />
             <PodCastHP />
@@ -429,82 +429,82 @@ const BlogSession = () => {
     )
 }
 
-const FeedBackCard = () => {
+// const FeedBackCard = () => {
 
-    return (
-        <>
+//     return (
+//         <>
 
-            <div className="container-style">
-                <ReactCardCarousel autoplay={true} autoplay_speed={50000}>
-                    {fbs.map(fb => (
-                        <Card className="card-style" key={fb.name}>
-                            {/* <Card.Img variant="top" src="/images/student_icon.svg"
-                                style={{ width: "90px", margin: "auto" }} className='doctor-icon' /> */}
+//             <div className="container-style">
+//                 <ReactCardCarousel autoplay={true} autoplay_speed={50000}>
+//                     {fbs.map(fb => (
+//                         <Card className="card-style" key={fb.name}>
+//                             {/* <Card.Img variant="top" src="/images/student_icon.svg"
+//                                 style={{ width: "90px", margin: "auto" }} className='doctor-icon' /> */}
 
-                            <Card.Body>
-                                <Card.Title style={{ textTransform: "uppercase" }}>
-                                    {fb.name} <br />
-                                    <small style={{ fontSize: "15px", textTransform: "lowercase" }}>- {fb.title} -</small>
-                                </Card.Title>
-                                <Card.Text className='text-black position-relative'>
+//                             <Card.Body>
+//                                 <Card.Title style={{ textTransform: "uppercase" }}>
+//                                     {fb.name} <br />
+//                                     <small style={{ fontSize: "15px", textTransform: "lowercase" }}>- {fb.title} -</small>
+//                                 </Card.Title>
+//                                 <Card.Text className='text-black position-relative'>
 
-                                    {fb.content}
-                                    <span className='slide-quote' style={{ zIndex: 1, top: "1rem", left: "1.5rem", opacity: "0.7" }}>
-                                        {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
-                                        <img src={quote} alt="quote sign" />
-                                    </span>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    ))}
-                </ReactCardCarousel>
-            </div>
-        </>
-    )
-}
-const LIST_FB_IMAGE = [
-    "./images/student_fb_1.jpg",
-    "./images/student_fb_2.jpg",
-    "./images/student_fb_3.jpg",
-    "./images/student_fb_4.jpg",
-    "./images/student_fb_5.jpg"
-]
-const FeedBackList = () => {
-    const circleListFn = (arr, index) => {
-        if (index === -1) {
-            return (<ul><li className='student-icon last '>
-                <img src="./images/plus-icon.png" alt="student icon" width={40} />
-            </li></ul>)
-        }
-        return (<ul><li className='student-icon '>
-            <img src={arr[index]} alt="student icon" />
-            {circleListFn(arr, index - 1)}
-        </li></ul>)
-    }
+//                                     {fb.content}
+//                                     <span className='slide-quote' style={{ zIndex: 1, top: "1rem", left: "1.5rem", opacity: "0.7" }}>
+//                                         {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
+//                                         <img src={quote} alt="quote sign" />
+//                                     </span>
+//                                 </Card.Text>
+//                             </Card.Body>
+//                         </Card>
+//                     ))}
+//                 </ReactCardCarousel>
+//             </div>
+//         </>
+//     )
+// }
+// const LIST_FB_IMAGE = [
+//     "./images/student_fb_1.jpg",
+//     "./images/student_fb_2.jpg",
+//     "./images/student_fb_3.jpg",
+//     "./images/student_fb_4.jpg",
+//     "./images/student_fb_5.jpg"
+// ]
+// const FeedBackList = () => {
+//     const circleListFn = (arr, index) => {
+//         if (index === -1) {
+//             return (<ul><li className='student-icon last '>
+//                 <img src="./images/plus-icon.png" alt="student icon" width={40} />
+//             </li></ul>)
+//         }
+//         return (<ul><li className='student-icon '>
+//             <img src={arr[index]} alt="student icon" />
+//             {circleListFn(arr, index - 1)}
+//         </li></ul>)
+//     }
 
-    return (
-        <div id="feedback-list" className='mb-4 my-md-5 py-md-5 mx-md-7'>
-            <Container >
-                <Row xs={1} md={12} className="g-4 my-md-5">
-                    <Col xs={12} md={5} className="text-40 ">
-                        {/* <h1 className='fw-bold text-main ' > </h1> */}
-                        <h1 className='mb-2 mb-md-5'>
-                            <span className='text-main fw-bold'>Feedback </span>
-                            -<br />Học viên nói gì?
-                        </h1>
-                        <ul className='d-flex' >
-                            {circleListFn(LIST_FB_IMAGE, LIST_FB_IMAGE.length - 1)}
-                        </ul>
+//     return (
+//         <div id="feedback-list" className='mb-4 my-md-5 py-md-5 mx-md-7'>
+//             <Container >
+//                 <Row xs={1} md={12} className="g-4 my-md-5">
+//                     <Col xs={12} md={5} className="text-40 ">
+//                         {/* <h1 className='fw-bold text-main ' > </h1> */}
+//                         <h1 className='mb-2 mb-md-5'>
+//                             <span className='text-main fw-bold'>Feedback </span>
+//                             -<br />Học viên nói gì?
+//                         </h1>
+//                         <ul className='d-flex' >
+//                             {circleListFn(LIST_FB_IMAGE, LIST_FB_IMAGE.length - 1)}
+//                         </ul>
 
-                    </Col>
-                    <Col xs={12} md={6} >
-                        <FeedBackCard />
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    )
-}
+//                     </Col>
+//                     <Col xs={12} md={6} >
+//                         <FeedBackCard />
+//                     </Col>
+//                 </Row>
+//             </Container>
+//         </div>
+//     )
+// }
 
 const COURSE_LIST_ICON = [
     {
