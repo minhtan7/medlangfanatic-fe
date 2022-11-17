@@ -41,10 +41,10 @@ const CourseThumbnailVerticalMT = () => {
         <Card className='box-shadow-card'>
             < Card.Img variant="top" src="/images/mt-thumbnail.jpeg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
-                <Card.Title>Medical Terminology</Card.Title>
+                <Card.Title>Medical Terminology: An essential course for healthcare professional</Card.Title>
                 <p></p>
                 <Card.Text>
-                    Medical Terminology: An Essential Course for Beginner Learners - xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
+                    Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
                 </Card.Text>
                 <Button onClick={() => navigate("/medical-terminology")} variant="primary" className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
             </Card.Body>
