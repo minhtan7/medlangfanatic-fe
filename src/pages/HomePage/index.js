@@ -165,7 +165,7 @@ const DOCUMENT_FREE = [
     },
     {
         image: "./images/document_prefix-suffix.jpeg",
-        title: "A comprehensive list of prefixes, suffixes, and combining forms",
+        title: "Prefixes, suffixes, and combining forms",
         link: "https://drive.google.com/file/d/1zHqOXs5SYbghJ5zVsHUDBOa-YR0XJ8W3/view?usp=sharing"
     },
     {
