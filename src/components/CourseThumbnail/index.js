@@ -6,14 +6,14 @@ import "./style.css"
 const CourseThumbnailHorizontal = () => {
     const navigate = useNavigate()
     return (
-        <Card id="courshorizontale-thumbnail-" className='py-5 border-0 row flex-md-row-reverse flex-md-nowrap box-shadow-card' >
+        <Card id="course-thumbnail-horizontal" className='py-5 border-0 row flex-md-row-reverse flex-md-nowrap box-shadow-card' >
             {/* <Card.Img className='col' variant="top" src="/images/thumbnail.svg" style={{ borderRadius: 0 }} /> */}
             <Card.Body className='col text-center '>
                 <Card.Title>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
                     Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
-                <Button onClick={() => navigate("/MAVL")} className='btn-sign-up ' style={{ width: "10rem" }}><span>Tìm hiểu thêm</span></Button>
+                <Button onClick={() => navigate("/MAVL")} className='btn-sign-up ' style={{ width: "11rem" }}><span>Tìm hiểu thêm</span></Button>
             </Card.Body>
         </Card>
     )
