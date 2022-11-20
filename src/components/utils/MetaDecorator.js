@@ -17,6 +17,9 @@ const MetaDecorator = ({ title, description, imageUrl, imageAlt }) => (
             property="og:url"
             content={metaDecorator.hostname + window.location.pathname + window.location.search}
         />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content={description} />
+
     </Helmet>
 );
 
