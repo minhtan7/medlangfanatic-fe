@@ -10,8 +10,9 @@ const slugs = {
     },
     "register-form": {
         "medical-terminology": 2026776,
-        "mavl": 1751294
+        "mavl": 1751294,
     },
+
     thumbnail: {
         "medical-terminology": "/images/mt-thumbnail.jpeg",
         "mavl": "/images/mavl-thumbnail.svg",

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, Spinner } from 'react-bootstrap'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
 import { useScript } from '../../hook/useScript'
 import { filterCss } from '../../utility/filterCss'
@@ -9,14 +9,15 @@ import "./style.css"
 
 const slugs = {
     "medical-terminology": "https://webforms.pipedrive.com/f/ckweFskLyr2V5zNB3vMuVsB0jgaEbAHXcuRFz8YBHN5O4Bsdk3od9WJ8rD19uCnL0f",
-    "mavl": "https://webforms.pipedrive.com/f/6Na7FxACrR9AIRnhT8dm44I4RAqCPurExWfMOooL85t0s1JxH2m9WyyqEEW9kzCo5t"
+    "mavl": "https://webforms.pipedrive.com/f/6Na7FxACrR9AIRnhT8dm44I4RAqCPurExWfMOooL85t0s1JxH2m9WyyqEEW9kzCo5t",
+    "medical-terminology-trial": "https://webforms.pipedrive.com/f/6N37cxIUxaxGnALsAiEAT4LSo6G8xjanTmsByGJEUj3zBfhJlgYRYBsJN6DhbKxWyn",
+    "mavl-trial": "https://webforms.pipedrive.com/f/5XdP3bJX5SfOZmrSFx0Fg41UHirDkKLIr3Sm8hafZ2DOHU1HJK8Osq1efouFK9wmVZ"
 }
 
 const FormPage = () => {
     const [show, setShow] = useState(false)
     const [link, setLink] = useState("")
     const { slug } = useParams()
-
     useScript(process.env.REACT_APP_PIPEDRIVE_LOADER)
     useEffect(() => {
         setTimeout(() => {

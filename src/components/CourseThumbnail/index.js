@@ -22,14 +22,20 @@ const CourseThumbnailHorizontal = () => {
 const CourseThumbnailVertical = () => {
     const navigate = useNavigate()
     return (
-        <Card className='box-shadow-card'>
+        <Card id="mt-thumbnail-vertical" className='box-shadow-card'>
             < Card.Img variant="top" src="/images/mavl-thumbnail.svg" style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
                 <Card.Title className='fw-bold text-main'>Medical Academic Vocabulary List</Card.Title>
                 <Card.Text>
                     Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
-                <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                <div className='d-md-flex'>
+                    <Button className="mb-2 mb-md-0 btn-primary-contrast btn-sign-up-contrast me-2"
+                        onClick={() => navigate("/register-form/mavl-trial")} variant="primary">
+                        <small>Học thử</small>
+                    </Button>
+                    <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                </div>
             </Card.Body>
         </Card>
     )
@@ -46,7 +52,13 @@ const CourseThumbnailVerticalMT = () => {
                 <Card.Text>
                     Medical Terminology: An Essential Course for Beginner Learners - xây dựng lại vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
                 </Card.Text>
-                <Button onClick={() => navigate("/medical-terminology")} variant="primary" className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                <div className='d-md-flex'>
+                    <Button className="mb-2 mb-md-0 btn-sign-up-secondary-contrast me-2"
+                        onClick={() => navigate("/register-form/medical-terminology-trial")} variant="primary"
+                        style={{ width: "10rem", fontWeight: "500" }}><small>Học thử</small></Button>
+                    <Button onClick={() => navigate("/medical-terminology")} variant="primary"
+                        className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                </div>
             </Card.Body>
         </Card>
     )
