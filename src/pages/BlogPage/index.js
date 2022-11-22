@@ -20,7 +20,7 @@ const BlogPage = () => {
         dispatch(getPosts({ page, limit: 6 }))
     }, [page])
     return (
-        <div id="blog-page" style={{ backgroundColor: "#f0f0f0" }}>
+        <div id="blog-page" style={{ backgroundColor: "#edf1ff91" }}>
             <Container>
                 <div className=' pt-5'>
                     <Link to="/" className='text-secondary text-decoration-none'>

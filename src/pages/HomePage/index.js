@@ -165,7 +165,7 @@ const DOCUMENT_FREE = [
     },
     {
         image: "./images/document_prefix-suffix.jpeg",
-        title: "A comprehensive list of prefixes, suffixes, and combining forms",
+        title: "Prefixes, suffixes, and combining forms",
         link: "https://drive.google.com/file/d/1zHqOXs5SYbghJ5zVsHUDBOa-YR0XJ8W3/view?usp=sharing"
     },
     {
@@ -220,7 +220,7 @@ const VideoSessionRightMobile = () => {
 const SUBSRIBE_MESSAGE_SUCCESS = "Cám ơn bạn đã đăng ký!! Bạn kiểm tra mail hàng tuần nhé"
 const SUBSRIBE_MESSAGE_FAIL = "Có trục trặc xảy ra. Bạn vui lòng tải lại trang và thử lần nữa nhé. Cám ơn bạn!"
 
-const SubscriptionHP = () => {
+export const SubscriptionHP = () => {
     const [data, setData] = useState({
         email: "",
         name: "bạn"

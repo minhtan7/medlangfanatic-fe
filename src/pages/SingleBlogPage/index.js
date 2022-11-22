@@ -10,6 +10,7 @@ import LoadingSpinner from '../../components/LoadingSpinner'
 import Subscribe from '../../components/Subscribe'
 import { getSingleBlog } from '../../features/blog/blogSlice'
 import { useScript } from '../../hook/useScript'
+import { SubscriptionHP } from '../HomePage'
 import "./style.css"
 
 
@@ -52,7 +53,11 @@ const SingleBlogPage = () => {
                     </Row>
                 </Container>
             )}
-            <Subscribe />
+            {/* <Subscribe /> */}
+            <div className='mt-5 pb-md-2 pt-md-5' style={{ backgroundColor: "#edf1ff91" }}>
+                <SubscriptionHP />
+            </div>
+
         </>
     )
 }

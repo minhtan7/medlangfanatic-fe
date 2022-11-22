@@ -18,6 +18,8 @@ import { ToTopArrow } from '../../components/ToTopArrow'
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
 import { useDispatch, useSelector } from 'react-redux'
 import { getSingleCourse } from '../../features/course/courseSlice'
+import MetaDecorator from '../../components/utils/MetaDecorator'
+import { slugTranslate } from '../../utility/slugTranslate'
 
 
 const slugs = {
@@ -39,18 +41,24 @@ const filterCss = (slug) => {
 
 const CoursePage = () => {
     const { slug } = useParams()
+    const [meta, setMeta] = useState({
+        description: "",
+        title: "",
+        imageUrl: "",
+        imageAlt: ""
+    })
+
     useFilterCssRoot({ slug, ...filterCss(slug) })
-    // const [course, setCourse] = useState(null)
-    // const [chapters, setChapters] = useState(null)
     const dispatch = useDispatch()
     const course = useSelector(state => state.course.currentCourse)
     useEffect(() => {
-
         dispatch(getSingleCourse({ courseId: slugs[slug.toLowerCase()] }))
+        setMeta(slugTranslate({ target: "metaData", slug }))
     }, [slug])
-    console.log(course)
+
     return Object.keys(course).length && (
         <>
+            <MetaDecorator {...meta} />
             <Hero course={course} />
             {filterCover(course.slug)}
             <Container>
