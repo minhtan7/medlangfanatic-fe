@@ -9,3 +9,7 @@
 .course-card-item .fa-li{
     left: calc(var(--fa-li-width, 2em) * -1.4);
 }
+
+.course-card .btn-sign-up-contrast{
+    width: 100%!important;
+}
