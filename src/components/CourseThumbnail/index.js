@@ -29,7 +29,8 @@ const CourseThumbnailVertical = () => {
                 <Card.Text>
                     Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
-                <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-primary-contrast btn-sign-up-contrast me-2' style={{ width: "10rem", fontWeight: "500" }}><small>Tìm hiểu thêm</small></Button>
+                <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Học thử</small></Button>
             </Card.Body>
         </Card>
     )
