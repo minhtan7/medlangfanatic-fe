@@ -455,7 +455,7 @@
 
 /* CTA-homepage */
 #cta-homepage .btn-sign-up,.btn-sign-up-contrast{
-    width: 12rem;
+    width: 12rem!important;
 }
 
 #cta-homepage .cta-hung .cta-left{
