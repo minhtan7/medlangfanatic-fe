@@ -29,11 +29,13 @@ const CourseThumbnailVertical = () => {
                 <Card.Text>
                     Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
                 </Card.Text>
-                <div className='d-md-flex'>
-                    <Button className="mb-2 mb-md-0 btn-primary-contrast btn-sign-up-contrast me-2"
+                <div
+                // className='d-md-flex'
+                >
+                    {/* <Button className="mb-2 mb-md-0 btn-primary-contrast btn-sign-up-contrast me-2"
                         onClick={() => navigate("/register-form/mavl-trial")} variant="primary">
                         <small>Học thử</small>
-                    </Button>
+                    </Button> */}
                     <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
                 </div>
             </Card.Body>
@@ -52,10 +54,12 @@ const CourseThumbnailVerticalMT = () => {
                 <Card.Text>
                     Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.
                 </Card.Text>
-                <div className='d-md-flex'>
-                    <Button className="mb-2 mb-md-0 btn-sign-up-secondary-contrast me-2"
+                <div
+                // className='d-md-flex'
+                >
+                    {/* <Button className="mb-2 mb-md-0 btn-sign-up-secondary-contrast me-2"
                         onClick={() => navigate("/register-form/medical-terminology-trial")} variant="primary"
-                        style={{ width: "10rem", fontWeight: "500" }}><small>Học thử</small></Button>
+                        style={{ width: "10rem", fontWeight: "500" }}><small>Học thử</small></Button> */}
                     <Button onClick={() => navigate("/medical-terminology")} variant="primary"
                         className='btn-sign-up btn-mt-secondary' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
                 </div>

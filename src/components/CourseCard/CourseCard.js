@@ -23,11 +23,11 @@ export const CourseCard = ({ course }) => {
                 <Card.Title style={{ textAlign: "center" }}>Chi phí khóa học:
                     <h2 style={{ color: "red", margin: "0 0 0.8rem" }}>{course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}K</h2>
                 </Card.Title>
-                <Button
+                {/* <Button
                     onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}-trial`)}
                     className='btn-sign-up-contrast mb-2' >
                     <span>Học thử!</span>
-                </Button>
+                </Button> */}
                 <Button
                     onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)}
                     variant="primary" className='btn-sign-up' >
