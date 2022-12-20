@@ -1,4 +1,5 @@
 import './App.css';
+import "./notioncss.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
@@ -13,9 +14,10 @@ import GamePage from './pages/GamePage';
 import EventPage from './pages/EventPage';
 import BlogPage from './pages/BlogPage';
 import SingleBlogPage from './pages/SingleBlogPage';
-import AllCourse from './pages/AllCourse';
+// import AllCourse from './pages/AllCourse';
 import HomePage from './pages/HomePage';
 import { InstructorPage } from './pages/InstructorPage';
+import DocumentationPage from './pages/DocumentationPage';
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
         <Route path='/blogs' element={<BlogPage />} />
         <Route path='/blogs/:slug' element={<SingleBlogPage />} />
         <Route path='/event-form' element={<EventPage />} />
+        <Route path='/documentation' element={<DocumentationPage />} />
         {/* <Route path='/:slug'
           element={<SortedRoute>
             <CoursePage />

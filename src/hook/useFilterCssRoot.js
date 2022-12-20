@@ -17,5 +17,5 @@ export const useFilterCssRoot = ({ main, mainDark, contrast, slug, contrastLight
             r.style.setProperty('--contrast', "#05feb1");
             r.style.setProperty('--contrast-light', "#05feb12e");
         }
-    }, [slug, contrast, main, mainDark])
+    }, [slug, contrast, main, mainDark, contrastLight])
 }

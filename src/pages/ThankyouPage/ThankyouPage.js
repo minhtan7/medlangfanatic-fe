@@ -2,10 +2,10 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useScript } from '../../hook/useScript'
 
-const slugs = {
-    "medical-terminology": 2026776,
-    "mavl": 1751294
-}
+// const slugs = {
+//     "medical-terminology": 2026776,
+//     "mavl": 1751294
+// }
 
 const ThankyouPage = () => {
     useScript(process.env.REACT_APP_LUCKY_ORANGE)

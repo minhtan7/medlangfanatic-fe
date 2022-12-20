@@ -1,3 +1,4 @@
+import { MLF_A_COMPREHENSIVE_LIST_OF_PREFIXES, MLF_bo_tu_vung_om_nghen, MLF_Medical_Academic_Vocabulary_List, MLF_ROOT_PREFIX_SUFFIX } from "../pages/DocumentationPage/MLF_Medical_Academic_Vocabulary_List"
 
 const slugs = {
     link: {
@@ -114,6 +115,80 @@ const slugs = {
             title: "Medical Terminology: An essential course for healthcare professional",
             imageUrl: "/images/mt-thumbnail.jpeg",
             imageAlt: "Medical Terminology: An essential course for healthcare professional"
+        }
+    },
+    exercise: {
+        "sentence-arrangement-introductory-email-1": {
+            title: "Sentence arrangement - Introductory email [1]",
+            embed: <iframe title="Sentence arrangement - Introductory email [1]" src="https://medlangfanatic.h5p.com/content/1291480456540279979/embed" width="1088" height="893" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *" aria-label="Email writing - Sentence arrangement - Introductory email"></iframe>,
+            type: "exercise",
+            display: "embed"
+        },
+        "sentence-arrangement-introductory-email-2": {
+            title: "Sentence arrangement - Introductory email [2]",
+            embed: <iframe title="Sentence arrangement - Introductory email [2]" src="https://medlangfanatic.h5p.com/content/1291480460970908039/embed" width="1088" height="893" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *" aria-label="Email writing - Sentence arrangement - Introductory email [2]"></iframe>,
+            type: "exercise",
+            display: "embed"
+
+        }
+        // <script src="https://medlangfanatic.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+    },
+    document: {
+        "bo-tu-vung-x-quang-long-nguc(Fleishner-2008)": {
+            title: "Bộ từ vựng X-quang lồng ngực (Fleishner 2008)",
+            link: "https://drive.google.com/file/d/1poqFtcStj9ZjTU6qflnlMDaKbHxEzukc/view?usp=sharing",
+            type: "document",
+            path: "?type=document&name=bo-tu-vung-x-quang-long-nguc(Fleishner-2008)",
+            display: "download"
+        },
+        "ban-ron-lam-sao-hoc-tieng-anh": {
+            title: "Bận rộn làm sao học tiếng Anh",
+            link: "https://drive.google.com/file/d/1bomzB9sYaQQ6tGMVRBaqNig3D6f4WUCD/view?usp=sharing",
+            type: "document",
+            path: "?type=document&name=ban-ron-lam-sao-hoc-tieng-anh",
+            display: "download"
+        },
+        "medical-academic-vocabulary-list": {
+            title: "Medical Academic Vocabulary List",
+            link: "https://drive.google.com/file/d/14gR4lureVsFvVQfzNkVea_y0rhfbQ2-3/view?usp=sharing",
+            type: "document",
+            path: "?type=document&name=medical-academic-vocabulary-list",
+            display: "html",
+            html: <div dangerouslySetInnerHTML={{ __html: MLF_Medical_Academic_Vocabulary_List }}></div>
+
+        },
+        "prefixes-suffixes-and-combining-forms": {
+            title: "Prefixes, suffixes, and combining forms",
+            link: "https://drive.google.com/file/d/1zHqOXs5SYbghJ5zVsHUDBOa-YR0XJ8W3/view?usp=sharing",
+            type: "document",
+            path: "?type=document&name=prefixes-suffixes-and-combining-forms",
+            display: "html",
+            html: <div dangerouslySetInnerHTML={{ __html: MLF_A_COMPREHENSIVE_LIST_OF_PREFIXES }}></div>
+
+        },
+        "root-prefixes-suffixes": {
+            title: "MLF | Root + Prefix + Suffix",
+            link: "",
+            type: "document",
+            path: "?type=document&name=root-prefixes-suffixes",
+            display: "html",
+            html: <div dangerouslySetInnerHTML={{ __html: MLF_ROOT_PREFIX_SUFFIX }}></div>
+        },
+        "hoc-cach-hoi-benh-su-bang-tieng-anh-nhu-the-nao?": {
+            title: "Học cách hỏi bệnh sử bằng tiếng Anh như thế nào?",
+            link: "https://drive.google.com/file/d/1bILvlnU3yNn2kRfDDTEwlOyjoZl0GUfM/view?usp=sharing",
+            type: "document",
+            path: "?type=document&name=bo-tu-vung-x-quang-long-nguc(Fleishner-2008)",
+            display: "download"
+        },
+        "bo-tu-vung-ve-om-nghen": {
+            title: "MLF | Bộ từ vựng về Ốm nghén",
+            link: "https://drive.google.com/file/d/1bILvlnU3yNn2kRfDDTEwlOyjoZl0GUfM/view?usp=sharing",
+            type: "document",
+            path: "?type=document&name=bo-tu-vung-ve-om-nghen",
+            display: "html",
+            html: <div dangerouslySetInnerHTML={{ __html: MLF_bo_tu_vung_om_nghen }}></div>
+
         }
     }
 }

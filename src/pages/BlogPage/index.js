@@ -18,7 +18,7 @@ const BlogPage = () => {
 
     useEffect(() => {
         dispatch(getPosts({ page, limit: 6 }))
-    }, [page])
+    }, [page, dispatch])
     return (
         <div id="blog-page" style={{ backgroundColor: "#edf1ff91" }}>
             <Container>

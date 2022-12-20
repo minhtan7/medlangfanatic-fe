@@ -1,5 +1,4 @@
 
-import { useEffect, useState } from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import { CourseHeader } from "./Header";

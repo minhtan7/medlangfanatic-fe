@@ -372,63 +372,63 @@ const blogContent = [
 
 export { instructors, courseDetail, faq, feedBack, about, blogContent }
 
-const x = [
-    {
-        "id": 670575,
-        "first_name": "BS.",
-        "last_name": "Hoàng Đức",
-        "bio": "Bác sĩ chuyên ngành Chăm sóc Giảm nhẹ/ Ung thư, Bệnh viện Ung Bướu TP.HCM\nGiảng viên tiếng Anh tại Jio Health\nHoàn thành khoá học Mastering Medical Teaching, Stanford Center for Professional Development năm 2021\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
-        "user_id": 37355227,
-        "title": "BS.",
-        "slug": "duc-hoang",
-        "avatar_url": "https://import.cdn.thinkific.com/426600/BtWoznWRvOAQsmU8ClDw_bs.duc.jpg",
-        "name": "Hoàng Đức",
+// const x = [
+//     {
+//         "id": 670575,
+//         "first_name": "BS.",
+//         "last_name": "Hoàng Đức",
+//         "bio": "Bác sĩ chuyên ngành Chăm sóc Giảm nhẹ/ Ung thư, Bệnh viện Ung Bướu TP.HCM\nGiảng viên tiếng Anh tại Jio Health\nHoàn thành khoá học Mastering Medical Teaching, Stanford Center for Professional Development năm 2021\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+//         "user_id": 37355227,
+//         "title": "BS.",
+//         "slug": "duc-hoang",
+//         "avatar_url": "https://import.cdn.thinkific.com/426600/BtWoznWRvOAQsmU8ClDw_bs.duc.jpg",
+//         "name": "Hoàng Đức",
 
-    }, {
-        "id": 670573,
-        "first_name": "BS.",
-        "last_name": "Nguyễn Trần Thanh Trúc",
-        "bio": "Bác sĩ chuyên ngành Thần kinh, mảng nghiên cứu chính liên quan đến sa sút trí tuệ\nDu học sinh bậc Thạc sĩ tại Đài Loan. Từng tham gia các chương trình trao đổi sinh viên tại Nhật và Úc.\nGiảng viên tiếng Anh tại Jio Health\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
-        "user_id": 37355227,
-        "title": "BS.",
-        "slug": "truc-tran",
-        "avatar_url": "https://import.cdn.thinkific.com/426600/l8Dfap0RPGYNRCbnRjpk_bs.truc.jpg",
-        "name": "Nguyễn Trần Thanh Trúc",
-    }, {
-        "id": 816372,
-        "first_name": "BS.",
-        "last_name": "Nguyễn Ngọc Quỳnh Trâm",
-        "bio": "Tốt nghiệp bác sĩ đa khoa hạng Summa Cum Laude với GPA 4.67/5 tại đại học Debrecen, Hungary\nCựu phó chủ tịch hội sinh viên Việt Nam tại Debrecen, Hungary",
-        "user_id": 37355227,
-        "title": "BS.",
-        "slug": "bs-nguy-n-ng-c-qu-nh-tram",
-        "avatar_url": "https://files.cdn.thinkific.com/instructors/000/816/3721659779231.small.jpg",
-        "name": "Nguyễn Ngọc Quỳnh Trâm",
-    }, {
-        "id": 670576,
-        "first_name": "Ths. BS CKI.",
-        "last_name": "Nguyễn Đình Cang",
-        "bio": "Thủ khoa khóa luận bác sĩ nội trú chuyên ngành Mắt 2022\nHọc bổng toàn phần Lancaster Course của đại học Harvard 2022\nGiảng viên Anh văn y khoa trong các chương trình hợp tác MEC-UMP (2018 - 2021) tại đại học Y dược và MEDSPACE (2021) tại đại học Y khoa Phạm Ngọc Thạch.\nGiảng viên tiếng Anh tại Jio Health.",
+//     }, {
+//         "id": 670573,
+//         "first_name": "BS.",
+//         "last_name": "Nguyễn Trần Thanh Trúc",
+//         "bio": "Bác sĩ chuyên ngành Thần kinh, mảng nghiên cứu chính liên quan đến sa sút trí tuệ\nDu học sinh bậc Thạc sĩ tại Đài Loan. Từng tham gia các chương trình trao đổi sinh viên tại Nhật và Úc.\nGiảng viên tiếng Anh tại Jio Health\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+//         "user_id": 37355227,
+//         "title": "BS.",
+//         "slug": "truc-tran",
+//         "avatar_url": "https://import.cdn.thinkific.com/426600/l8Dfap0RPGYNRCbnRjpk_bs.truc.jpg",
+//         "name": "Nguyễn Trần Thanh Trúc",
+//     }, {
+//         "id": 816372,
+//         "first_name": "BS.",
+//         "last_name": "Nguyễn Ngọc Quỳnh Trâm",
+//         "bio": "Tốt nghiệp bác sĩ đa khoa hạng Summa Cum Laude với GPA 4.67/5 tại đại học Debrecen, Hungary\nCựu phó chủ tịch hội sinh viên Việt Nam tại Debrecen, Hungary",
+//         "user_id": 37355227,
+//         "title": "BS.",
+//         "slug": "bs-nguy-n-ng-c-qu-nh-tram",
+//         "avatar_url": "https://files.cdn.thinkific.com/instructors/000/816/3721659779231.small.jpg",
+//         "name": "Nguyễn Ngọc Quỳnh Trâm",
+//     }, {
+//         "id": 670576,
+//         "first_name": "Ths. BS CKI.",
+//         "last_name": "Nguyễn Đình Cang",
+//         "bio": "Thủ khoa khóa luận bác sĩ nội trú chuyên ngành Mắt 2022\nHọc bổng toàn phần Lancaster Course của đại học Harvard 2022\nGiảng viên Anh văn y khoa trong các chương trình hợp tác MEC-UMP (2018 - 2021) tại đại học Y dược và MEDSPACE (2021) tại đại học Y khoa Phạm Ngọc Thạch.\nGiảng viên tiếng Anh tại Jio Health.",
 
-        "user_id": 37355227,
-        "title": "Ths. BS CKI.",
-        "slug": "cang-nguyen",
-        "avatar_url": "https://import.cdn.thinkific.com/426600/KJcUAmL9SH6qPps6ilfy_Cang.jpg",
+//         "user_id": 37355227,
+//         "title": "Ths. BS CKI.",
+//         "slug": "cang-nguyen",
+//         "avatar_url": "https://import.cdn.thinkific.com/426600/KJcUAmL9SH6qPps6ilfy_Cang.jpg",
 
-        "name": "Nguyễn Đình Cang",
+//         "name": "Nguyễn Đình Cang",
 
-    }, {
+//     }, {
 
-        "id": 793608,
-        "first_name": "Hiệu",
-        "last_name": "Lê",
-        "bio": "Hello",
+//         "id": 793608,
+//         "first_name": "Hiệu",
+//         "last_name": "Lê",
+//         "bio": "Hello",
 
-        "user_id": 70962760,
-        "title": "BS.",
-        "slug": "hi-u-le",
-        "avatar_url": "/assets/tenant/defaults/instructor-avatar.png",
-        "email": "lethingochieu279@gmail.com",
-        "name": "Lê Hiệu",
+//         "user_id": 70962760,
+//         "title": "BS.",
+//         "slug": "hi-u-le",
+//         "avatar_url": "/assets/tenant/defaults/instructor-avatar.png",
+//         "email": "lethingochieu279@gmail.com",
+//         "name": "Lê Hiệu",
 
-    }]
+//     }]

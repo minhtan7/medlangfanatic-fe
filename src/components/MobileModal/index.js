@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, ModalDialog } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { CourseCard } from '../CourseCard/CourseCard'
 import "./style.css"
 
