@@ -22,6 +22,10 @@
   --mt-secondary-dark: #64006e;
   --mt-contrast: #fff400;
   --mt-contrast-light:#fff400;
+  --pccs-main: #0C3B2E;
+  --pccs-mainDark: #6d9773;
+  --pccs-contrast: #ffba00;
+  --pccs-contrastLight: #bb8a52
 }
 
 
@@ -283,6 +287,18 @@ body{
 .btn-mt-secondary:hover{
   box-shadow: inset 16.5em 0 0 0 var(--mt-contrast)!important;
   color: var(--mt-secondary) !important;
+
+}
+
+.btn-pccs-main{
+  font-weight: 500!important;
+  color: var(--pccs-contrast)!important;
+  background-color: var(--pccs-main)!important;
+}
+
+.btn-pccs-main:hover{
+  box-shadow: inset 16.5em 0 0 0 var(--pccs-contrast)!important;
+  color: var(--pccs-main) !important;
 
 }
 /* .btn-mt-secondary span{

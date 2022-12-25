@@ -19,15 +19,15 @@ const CourseThumbnailHorizontal = () => {
     )
 }
 
-const CourseThumbnailVertical = () => {
+const CourseThumbnailVertical = ({ course }) => {
     const navigate = useNavigate()
     return (
-        <Card id="mt-thumbnail-vertical" className='box-shadow-card'>
-            < Card.Img variant="top" src="/images/mavl-thumbnail.svg" style={{ borderRadius: 0 }} />
+        <Card id={course.idEl} className='box-shadow-card'>
+            < Card.Img variant="top" src={course.image} style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
-                <Card.Title className='fw-bold text-main'>Medical Academic Vocabulary List</Card.Title>
+                <Card.Title className='fw-bold'>{course.title}</Card.Title>
                 <Card.Text>
-                    Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
+                    {course.content}
                 </Card.Text>
                 <div
                 // className='d-md-flex'
@@ -36,12 +36,37 @@ const CourseThumbnailVertical = () => {
                         onClick={() => navigate("/register-form/mavl-trial")} variant="primary">
                         <small>Học thử</small>
                     </Button> */}
-                    <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                    <Button onClick={() => navigate(course.path)} variant="primary"
+                        className={course.btnClass} style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
                 </div>
             </Card.Body>
         </Card>
     )
 }
+
+// const CourseThumbnailVertical = () => {
+//     const navigate = useNavigate()
+//     return (
+//         <Card id="mt-thumbnail-vertical" className='box-shadow-card'>
+//             < Card.Img variant="top" src="/images/mavl-thumbnail.svg" style={{ borderRadius: 0 }} />
+//             <Card.Body className='text-center'>
+//                 <Card.Title className='fw-bold text-main'>Medical Academic Vocabulary List</Card.Title>
+//                 <Card.Text>
+//                     Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.
+//                 </Card.Text>
+//                 <div
+//                 // className='d-md-flex'
+//                 >
+//                     {/* <Button className="mb-2 mb-md-0 btn-primary-contrast btn-sign-up-contrast me-2"
+//                         onClick={() => navigate("/register-form/mavl-trial")} variant="primary">
+//                         <small>Học thử</small>
+//                     </Button> */}
+//                     <Button onClick={() => navigate("/MAVL")} variant="primary" className='btn-sign-up ' style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+//                 </div>
+//             </Card.Body>
+//         </Card>
+//     )
+// }
 
 const CourseThumbnailVerticalMT = () => {
     const navigate = useNavigate()
