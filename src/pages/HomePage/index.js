@@ -522,7 +522,32 @@ const COURSE_LIST_ICON = [
     }
 
 ]
-
+const courseListContent = {
+    mavl: {
+        title: "Medical Academic Vocabulary List",
+        image: "/images/mavl-thumbnail.svg",
+        content: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
+        path: "/MAVL",
+        idEl: "mavl-thumbnail-vertical",
+        btnClass: "btn-sign-up",
+    },
+    "medical-terminology": {
+        title: "Medical Terminology: An essential course for healthcare professional",
+        image: "/images/mt-thumbnail.jpeg",
+        content: "Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.",
+        path: "/medical-terminology",
+        idEl: "mt-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-mt-secondary'
+    },
+    "clinical-case-presentation": {
+        title: "Presenting Clinical Case from Scratch",
+        image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
+        content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
+        path: "/clinical-case-presentation",
+        idEl: "pccs-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-pccs-main'
+    }
+}
 const CourseList = () => {
     return (
         <div id="course-list-session" className='text-center mb-4 mb-md-5 '>
@@ -540,7 +565,7 @@ const CourseList = () => {
                             </h1>
                         )
                 }
-                <small ><i>Những sản phẩm chất lượng cao của MLF sẽ là lời tri ân chân thành nhất đến với mọi người!</i></small>
+                <small><i>Những sản phẩm chất lượng cao của MLF sẽ là lời tri ân chân thành nhất đến với mọi người!</i></small>
                 <ul className='fa-ul text-12 mt-3' >
                     {COURSE_LIST_ICON.map(icon => (
                         <li key={icon.content} className="d-inline-block me-5">
@@ -548,19 +573,27 @@ const CourseList = () => {
                         </li>
 
                     ))}
-
                 </ul>
 
                 <Row xs={1} md={12} className="g-4 p-3 m-md-5 mt-md-2">
-                    <Col xs={0} md={2}></Col>
-                    <Col xs={12} md={4}>
+                    {
+                        Object.keys(courseListContent).map(c => (
+                            <Col xs={12} md={4}>
+                                <CourseThumbnailVertical course={courseListContent[c]} />
+                            </Col>
+                        )
+                        )
+                    }
+                    {/* <Col xs={12} md={4}>
                         <CourseThumbnailVertical />
                     </Col>
                     <Col xs={12} md={4}>
                         <CourseThumbnailVerticalMT />
                     </Col>
 
-                    <Col xs={0} md={2}></Col>
+                    <Col xs={12} md={4}>
+                        <CourseThumbnailVerticalMT />
+                    </Col> */}
                 </Row>
             </Container>
         </div >

@@ -12,7 +12,7 @@ import { FAQ } from '../../components/FAQ'
 
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { CourseCard } from '../../components/CourseCard/CourseCard'
-import { Cover, CoverMedicalTerminology } from '../../components/Cover/Cover'
+import { Cover, CoverMedicalTerminology, CoverPCCS } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
 // import jsxToString from 'jsx-to-string';
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
@@ -24,7 +24,8 @@ import { slugTranslate } from '../../utility/slugTranslate'
 
 const slugs = {
     "medical-terminology": 2026776,
-    "mavl": 1751294
+    "mavl": 1751294,
+    "clinical-case-presentation": 1522731
 }
 const defaultHeight = 72;
 
@@ -34,6 +35,8 @@ const filterCss = (slug) => {
             return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1", contrastLight: "#05feb12e" }
         case "medical-terminology":
             return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400", contrastLight: "#fac5ff" }
+        case "clinical-case-presentation":
+            return { main: "#0C3B2E", mainDark: "#6d9773", contrast: "#ffba00", contrastLight: "#bb8a52" }
         default:
             break;
     }
@@ -60,13 +63,13 @@ const CoursePage = () => {
         <>
             <MetaDecorator {...meta} />
             <Hero course={course} />
-            {filterCover(course.slug)}
+            {filterCover(course.slug.toLowerCase())}
             <Container>
                 <Row>
                     <Col xs={12} md={8} className="px-0 ">
                         <Features course={course} />
-                        <CourseDetailContent chapters={course.chapters} />
-                        <Instructors instructors={course.instructors[0]} />
+                        <CourseDetailContent chapters={course.chapters} slug={slug} />
+                        <Instructors instructors={course.instructors} />
                         <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />
                         <FAQ faq={course.faq} />
                     </Col>
@@ -87,6 +90,8 @@ const filterCover = (slug) => {
             return <Cover />
         case "medical-terminology":
             return <CoverMedicalTerminology />
+        case "clinical-case-presentation":
+            return <CoverPCCS />
         default:
             break;
     }

@@ -6,6 +6,8 @@ export const filterCss = (slug) => {
         case "medical-terminology":
         case "medical-terminology-trial":
             return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400" }
+        case "clinical-case-presentation":
+            return { main: "#0C3B2E", mainDark: "#6d9773", contrast: "#ffba00", contrastLight: "#bb8a52" }
         default:
             break;
     }

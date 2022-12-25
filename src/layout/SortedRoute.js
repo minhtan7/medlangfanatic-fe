@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 const slugs = {
     "mavl": 1751294,
     "medical-terminology": 2026776,
+    "clinical-case-presentation": 1522731
 }
 function SortedRoute({ children }) {
     const location = useLocation();

@@ -57,3 +57,13 @@
         text-align: justify;
     }
 }
+
+#mavl-thumbnail-vertical .card-title{
+    color: var(--main)
+}
+#mt-thumbnail-vertical .card-title{
+    color: var(--mt-secondary)
+}
+#pccs-thumbnail-vertical .card-title{
+    color: var(--pccs-main)
+}

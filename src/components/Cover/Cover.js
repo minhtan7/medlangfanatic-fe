@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import "./style.css"
 import quote from "../../asset/quote.svg"
 
@@ -46,6 +46,43 @@ export const CoverMedicalTerminology = () => {
                         <img src={quote} alt="quote sign" />
                     </span>
                 </div>
+            </div>
+        </Container>
+    )
+}
+
+export const CoverPCCS = () => {
+    return (
+        <Container id="cover-session" className='mb-5'>
+            <div className='px-md-5 px-4 border py-3' >
+                <h2 className='text-center mb-3 fw-bolder text-main'>How to present clinical cases in English?</h2>
+                <div className='position-relative'>
+                    <p className='text-justify lh-md'>
+                        Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. <br />
+                        Các bạn sẽ được ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang "cao cấp" để đạt những bước tiến xa hơn trong sự nghiệp.<br />
+                        Khóa học giới thiệu cho các bạn cấu trúc của một ca lâm sàng được trình miệng bằng tiếng Anh, và đi sâu vào phân tích cách trình bày hiệu quả cho từng phần riêng biệt. Các bạn sẽ lần lượt làm quen với nhiều loại công thức và từ vựng khác nhau, với những cấu trúc dễ học dễ áp dụng, để đạt mục tiêu đầu ra là có thể tự tin trình bày một ca lâm sàng bằng tiếng Anh. <strong>Khóa học gồm 2 phần:</strong>
+                    </p>
+                </div>
+                <Row >
+                    <Col>
+                        <a href='#course-detail-content'>
+                            <Button
+                                className='w-100 h-100 p-5 text-center bg-main text-white rounded-0 me-3 fw-bold fs-4'
+
+                            >
+                                Lý thuyết tự học trên nền tảng online
+                            </Button>
+
+                        </a>
+                    </Col>
+                    <Col >
+                        <a href="#course-detail-content">
+                            <Button className='w-100 h-100 p-5 text-center bg-main text-white rounded-0 me-3 fw-bold fs-4'>
+                                Tương tác thực hành qua Zoom
+                            </Button>
+                        </a>
+                    </Col>
+                </Row>
             </div>
         </Container>
     )
