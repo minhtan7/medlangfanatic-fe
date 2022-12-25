@@ -36,8 +36,11 @@ const CourseThumbnailVertical = ({ course }) => {
                         onClick={() => navigate("/register-form/mavl-trial")} variant="primary">
                         <small>Học thử</small>
                     </Button> */}
-                    <Button onClick={() => navigate(course.path)} variant="primary"
-                        className={course.btnClass} style={{ width: "10rem" }}><small>Tìm hiểu thêm</small></Button>
+                    <a href={course.path} target="_blank" rel="noreferrer">
+                        <Button variant="primary"
+                            className={course.btnClass} style={{ width: "10rem" }}><small>Tìm hiểu thêm</small>
+                        </Button>
+                    </a>
                 </div>
             </Card.Body>
         </Card>
