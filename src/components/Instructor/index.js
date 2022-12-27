@@ -10,13 +10,13 @@ const hungtran = {
 }
 const tramnguyen = {
     name: "Nguyễn Ngọc Quỳnh Trâm",
-    title: "BS. CKI.",
+    title: "BS. ",
     bio: `Tốt nghiệp bác sĩ đa khoa hạng Summa Cum Laude với GPA 4.67/5 tại đại học Debrecen, Hungary\nCựu phó chủ tịch hội sinh viên Việt Nam tại Debrecen, Hungary`,
     imageUrl: "/images/dr.tram.webp"
 }
 const huongtran = {
     name: "Trần Nguyễn Thanh Hương",
-    title: "BS. CKI.",
+    title: "BS. ",
     bio: "Bác sĩ, khoa Phẫu thuật tim trẻ em, Bệnh viện Đại học Y Dược TP.HCM.\nHoàn thành Step 1 và Step 2 CK USMLE\nTrưởng nhóm biên dịch sách “The End of Alzheimer\nChứng chỉ OET (Occupational English Test) - Medicine.\nChứng chỉ IELTS 8.0.\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
     imageUrl: "/images/dr.huong.png"
 }

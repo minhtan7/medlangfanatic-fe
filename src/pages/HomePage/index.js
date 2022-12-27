@@ -540,7 +540,7 @@ const courseListContent = {
         btnClass: 'btn-sign-up btn-mt-secondary'
     },
     "clinical-case-presentation": {
-        title: "Presenting Clinical Case from Scratch",
+        title: "Presenting Clinical Cases from Scratch",
         image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
         content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
         path: "/clinical-case-presentation",

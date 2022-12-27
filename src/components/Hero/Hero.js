@@ -77,8 +77,8 @@ const heroCourseName = (slug) => {
             </>
         case "clinical-case-presentation":
             return <>
-                <h1 className='title-animation anim-typewriter-first mb-3 text-contrast fw-bold' style={{ fontSize: "2.6rem" }} >PRESENTING CLINICAL CASE</h1>
-                <h1 className='title-animation anim-typewriter-second mb-3 text-contrast fw-bold' style={{ fontSize: "2.6rem" }}> FROM SCRATCH</h1>
+                <h1 className='title-animation anim-typewriter-first mb-3 text-contrast fw-bold' style={{ fontSize: "2.5rem" }} >PRESENTING CLINICAL CASES</h1>
+                <h1 className='title-animation anim-typewriter-second mb-3 text-contrast fw-bold' style={{ fontSize: "2.5rem" }}> FROM SCRATCH</h1>
             </>
         default:
             break;
