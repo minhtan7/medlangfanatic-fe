@@ -85,6 +85,63 @@ const presenting_clinical_case = [
 
     }
 ]
+const communication_with_patients_101 = [
+    {
+        id: 1,
+        contents: [
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 1: Luyện tập chào hỏi, tự giới thiệu và hỏi bệnh sử"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 2: Luyện tập hỏi bệnh sử + tiền căn"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 3: Luyện tập hỏi bệnh sử + tiền căn"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 4: Luyện tập hỏi bệnh sử + tiền căn"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 5: Luyện tập hỏi bệnh sử + tiền căn"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 6: Luyện tập phần ngôn ngữ cần cho phần khám và làm thủ thuật"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 7: Luyện tập phần ngôn ngữ cần cho phần khám và làm thủ thuật"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 8: Luyện tập tư vấn bệnh, tiên lượng và hướng điều trị"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 9: Luyện tập tư vấn bệnh, tiên lượng và hướng điều trị"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 10: Luyện tập tư vấn bệnh, tiên lượng và hướng điều trị"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 11: Luyện tập toàn buổi khám"
+            },
+            {
+                contentable_type: "Lesson",
+                name: "Buổi 12: Luyện tập toàn buổi khám"
+            },
+        ],
+        name: "Buổi học tương tác tập trung qua Zoom",
+
+    }
+]
 
 const contentIcon = {
     Lesson: <FontAwesomeIcon icon={faVideo} />,
@@ -98,13 +155,36 @@ const contentIcon = {
 }
 
 export const CourseDetailContent = ({ chapters, slug }) => {
-    console.log(chapters)
     if (slug === "clinical-case-presentation") {
         return <div id="course-detail-content" className="mb-5">
             <div className="px-3 px-md-5">
                 <h2 className='mb-4 text-main-title'>Chương trình học</h2>
                 <Accordion alwaysOpen>
                     {presenting_clinical_case.map(chapter => {
+                        // const { hours, minutes, seconds } = formatTime(chapter.duration_in_seconds)
+                        return (
+                            <Accordion.Item key={chapter.id} eventKey={chapter.id} className="accordion-item-outline">
+                                <Accordion.Header bsPrefix='style' >
+                                    <span>{chapter.name}</span>
+                                </Accordion.Header>
+                                <Accordion.Body as={"ul"} className='fa-ul'>
+                                    {chapter.contents.map(content => (
+                                        <Content key={content.id} content={content} id={content.id} />
+                                    ))}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        )
+                    })}
+                </Accordion>
+            </div>
+        </div>
+    }
+    if (slug === "communication-with-patients-101") {
+        return <div id="course-detail-content" className="mb-5">
+            <div className="px-3 px-md-5">
+                <h2 className='mb-4 text-main-title'>Chương trình học</h2>
+                <Accordion alwaysOpen>
+                    {communication_with_patients_101.map(chapter => {
                         // const { hours, minutes, seconds } = formatTime(chapter.duration_in_seconds)
                         return (
                             <Accordion.Item key={chapter.id} eventKey={chapter.id} className="accordion-item-outline">

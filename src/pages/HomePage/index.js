@@ -547,11 +547,20 @@ const courseListContent = {
         idEl: "pccs-thumbnail-vertical",
         btnClass: 'btn-sign-up btn-pccs-main'
     }
+    // ,
+    // "communication-with-patients-101": {
+    //     title: "Communication with Patients 101",
+    //     image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
+    //     content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
+    //     path: "/communication-with-patients-101",
+    //     idEl: "cwp-thumbnail-vertical",
+    //     btnClass: 'btn-sign-up btn-cwp-main'
+    // }
 }
 const CourseList = () => {
     return (
         <div id="course-list-session" className='text-center mb-4 mb-md-5 '>
-            <Container className='mt-5 mx-md-7'>
+            <Container className='mt-5'>
                 {
                     !isMobile ?
                         (
@@ -575,7 +584,7 @@ const CourseList = () => {
                     ))}
                 </ul>
 
-                <Row xs={1} md={12} className="g-4 p-3 m-md-5 mt-md-2">
+                <Row xs={1} md={12} className="g-4 mt-md-2">
                     {
                         Object.keys(courseListContent).map(c => (
                             <Col xs={12} md={4}>

@@ -25,8 +25,8 @@ const CourseThumbnailVertical = ({ course }) => {
         <Card id={course.idEl} className='box-shadow-card'>
             < Card.Img variant="top" src={course.image} style={{ borderRadius: 0 }} />
             <Card.Body className='text-center'>
-                <Card.Title className='fw-bold'>{course.title}</Card.Title>
-                <Card.Text>
+                <Card.Title className='fw-bold '>{course.title}</Card.Title>
+                <Card.Text className=''>
                     {course.content}
                 </Card.Text>
                 <div

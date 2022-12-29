@@ -12,7 +12,7 @@ import { FAQ } from '../../components/FAQ'
 
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { CourseCard } from '../../components/CourseCard/CourseCard'
-import { Cover, CoverMedicalTerminology, CoverPCCS } from '../../components/Cover/Cover'
+import { Cover, CoverCWP, CoverMedicalTerminology, CoverPCCS } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
 // import jsxToString from 'jsx-to-string';
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
@@ -25,7 +25,8 @@ import { slugTranslate } from '../../utility/slugTranslate'
 const slugs = {
     "medical-terminology": 2026776,
     "mavl": 1751294,
-    "clinical-case-presentation": 1522731
+    "clinical-case-presentation": 1522731,
+    "communication-with-patients-101": 1522730
 }
 const defaultHeight = 72;
 
@@ -37,6 +38,8 @@ const filterCss = (slug) => {
             return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400", contrastLight: "#fac5ff" }
         case "clinical-case-presentation":
             return { main: "#0C3B2E", mainDark: "#6d9773", contrast: "#ffba00", contrastLight: "#bb8a52" }
+        case "communication-with-patients-101":
+            return { main: "#5F021F", mainDark: "#440217", contrast: "#ff8906", contrastLight: "#ffc6c7" }
         default:
             break;
     }
@@ -70,8 +73,8 @@ const CoursePage = () => {
                         <Features course={course} />
                         <CourseDetailContent chapters={course.chapters} slug={slug} />
                         <Instructors instructors={course.instructors} />
-                        {slug === "clinical-case-presentation" ? null : <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />}
-                        {slug === "clinical-case-presentation" ? null : <FAQ faq={course.faq} />}
+                        {slug === "clinical-case-presentation" | slug === "communication-with-patients-101" ? null : <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />}
+                        {slug === "clinical-case-presentation" | slug === "communication-with-patients-101" ? null : <FAQ faq={course.faq} />}
                     </Col>
                     <Col xs={0} sm={0} md={4} className="d-none d-sm-none d-md-block">
                         <CourseCard course={course} />
@@ -92,6 +95,8 @@ const filterCover = (slug) => {
             return <CoverMedicalTerminology />
         case "clinical-case-presentation":
             return <CoverPCCS />
+        case "communication-with-patients-101":
+            return <CoverCWP />
         default:
             break;
     }

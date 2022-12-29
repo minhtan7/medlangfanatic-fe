@@ -25,7 +25,11 @@
   --pccs-main: #0C3B2E;
   --pccs-mainDark: #6d9773;
   --pccs-contrast: #ffba00;
-  --pccs-contrastLight: #bb8a52
+  --pccs-contrastLight: #bb8a52;
+  --cwp-main:#5F021F;
+  --cwp-mainDark:#440217;
+  --cwp-contrast:#ff8906;
+  --cwp-contrastLight:#ffc6c7
 }
 
 
@@ -299,7 +303,17 @@ body{
 .btn-pccs-main:hover{
   box-shadow: inset 16.5em 0 0 0 var(--pccs-contrast)!important;
   color: var(--pccs-main) !important;
+}
 
+.btn-cwp-main{
+  font-weight: 500!important;
+  color: var(--cwp-contrast)!important;
+  background-color: var(--cwp-main)!important;
+}
+
+.btn-cwp-main:hover{
+  box-shadow: inset 16.5em 0 0 0 var(--cwp-contrast)!important;
+  color: var(--cwp-main) !important;
 }
 /* .btn-mt-secondary span{
   display: inline-block;

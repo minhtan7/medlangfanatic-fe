@@ -30,7 +30,14 @@ export const Features = ({ course }) => {
             format: "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/HINH_THUC_HOC_ioyenk.jpg",
             time: "https://res.cloudinary.com/tanvo/image/upload/v1671900610/medlangfanatic/courses/presenting-clinical-case-from-scratch/THOI_GIAN_HOC_pczhlm.jpg",
             fiveStarts: "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/5_SAO_elyv9x.jpg"
-        }
+        },
+        "communication-with-patients-101": {
+            subject: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-object_ylhcnh.jpg",
+            format: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-hinh-thuc_fx9fbs.jpg",
+            time: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-time_lybshz.jpg",
+            fiveStarts: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-5__npp3pu.jpg"
+        },
+
     }
 
     const MAVLFeatureImage = (feature) => {
