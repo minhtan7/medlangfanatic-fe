@@ -121,13 +121,15 @@ const slugs = {
             description: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
             title: "Medical Academic Vocabulary List",
             imageUrl: "/images/mavl-thumbnail.svg",
-            imageAlt: "Medical Academic Vocabulary List"
+            imageAlt: "Medical Academic Vocabulary List",
+            link: "/mavl"
         },
         "medical-terminology": {
             description: "Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.",
             title: "Medical Terminology: An essential course for healthcare professional",
             imageUrl: "/images/mt-thumbnail.jpeg",
-            imageAlt: "Medical Terminology: An essential course for healthcare professional"
+            imageAlt: "Medical Terminology: An essential course for healthcare professional",
+            link: "/medical-terminology"
         }
     }
 }
