@@ -13,3 +13,14 @@
 .course-card .btn-sign-up-contrast{
     width: 100%!important;
 }
+
+.course-card #card-coupon{
+    transition-duration: 0.3s;
+}
+
+.course-card #card-coupon:hover{
+    position: relative;
+    z-index: 10;
+    transform: scale(2.2);
+    transition-duration: 0.3s;
+}

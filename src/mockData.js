@@ -53,11 +53,12 @@ const instructors = [
         imageUrl: "/images/dr.cang.jpg",
     },
     {
-        name: "Nguyễn Trần\nThanh Trúc",
-        bio: "Bác sĩ chuyên ngành Thần kinh, mảng nghiên cứu chính liên quan đến sa sút trí tuệ\nDu học sinh bậc Thạc sĩ tại Đài Loan. Từng tham gia các chương trình trao đổi sinh viên tại Nhật và Úc.\nGiảng viên tiếng Anh tại Jio Health\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
         title: "BS.",
         titleFull: "Bác sĩ",
-        imageUrl: "/images/dr.truc.jpg",
+        name: "Trần Nguyễn\nThanh Hương",
+        bio: "Bác sĩ, khoa Phẫu thuật tim trẻ em, Bệnh viện Đại học Y Dược TP.HCM.\nHoàn thành Step 1 và Step 2 CK USMLE\nTrưởng nhóm biên dịch sách “The End of Alzheimer\nChứng chỉ OET (Occupational English Test) - Medicine.\nChứng chỉ IELTS 8.0.\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+        imageUrl: "/images/dr.huong.png",
+
     },
     {
         title: "BS.",
@@ -66,7 +67,15 @@ const instructors = [
         bio: "Bác sĩ chuyên ngành Chăm sóc Giảm nhẹ/ Ung thư, Bệnh viện Ung Bướu TP.HCM\nGiảng viên tiếng Anh tại Jio Health\nHoàn thành khoá học Mastering Medical Teaching, Stanford Center for Professional Development năm 2021\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
         imageUrl: "/images/dr.duc.jpg",
 
-    }
+    },
+    {
+        name: "Nguyễn Trần\nThanh Trúc",
+        bio: "Bác sĩ chuyên ngành Thần kinh, mảng nghiên cứu chính liên quan đến sa sút trí tuệ\nDu học sinh bậc Thạc sĩ tại Đài Loan. Từng tham gia các chương trình trao đổi sinh viên tại Nhật và Úc.\nGiảng viên tiếng Anh tại Jio Health\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+        title: "BS.",
+        titleFull: "Bác sĩ",
+        imageUrl: "/images/dr.truc.jpg",
+    },
+
 ]
 const courseDetail = {
     description: "Khóa học giới thiệu cho các bạn cấu trúc của một ca lâm sàng được trình miệng bằng tiếng Anh, và đi sâu vào phân tích cách trình bày hiệu quả cho từng phần riêng biệt. Các bạn sẽ lần lượt làm quen với nhiều loại công thức và từ vựng khác nhau, với những cấu trúc dễ học dễ áp dụng, để đạt mục tiêu đầu ra là có thể tự tin trình bày một ca lâm sàng bằng tiếng Anh."

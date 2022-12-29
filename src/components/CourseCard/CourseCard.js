@@ -34,9 +34,28 @@ export const CourseCard = ({ course }) => {
                     <span>Đăng ký ngay</span>
                 </Button>
             </Card.Body >
-            <Card.Body>
-                <Timer targetDate={slugTranslate({ slug: course.slug, target: "targetDate" })} />
-            </Card.Body>
+            {course.slug === "clinical-case-presentation" |
+                course.slug === "communication-with-patients-101"
+                ? null : (
+                    <Card.Body>
+                        <Timer targetDate={slugTranslate({ slug: course.slug, target: "targetDate" })} />
+                    </Card.Body>
+                )}
+            {course.slug === "clinical-case-presentation" ? (
+                <Card.Body>
+                    < Card.Img variant="top" id="card-coupon"
+                        src="https://res.cloudinary.com/tanvo/image/upload/v1672176320/medlangfanatic/courses/presenting-clinical-case-from-scratch/3.500k_hx7qoc.jpg"
+                        style={{ borderRadius: 0 }} />
+                </Card.Body>
+            ) :
+                course.slug === "communication-with-patients-101" ? (
+                    <Card.Body>
+                        < Card.Img variant="top" id="card-coupon"
+                            src="https://res.cloudinary.com/tanvo/image/upload/v1672311931/medlangfanatic/courses/cwp/coupon-cwp_zzbcqe.jpg"
+                            style={{ borderRadius: 0 }} />
+                    </Card.Body>
+                ) : null}
+
             <Card.Body style={{ paddingTop: "0" }}>
                 <p style={{ color: "black", marginBottom: '0' }}>Khóa học bao gồm:</p>
                 <ListGroup variant="flush">
@@ -53,6 +72,7 @@ export const CourseCard = ({ course }) => {
                     ))}
                 </ListGroup>
             </Card.Body>
+
         </Card >) :
         (<Card className='course-card' >
             {/* <Card.Img variant="top" src="/images/case-presentation-thumbnail.webp" /> */}

@@ -11,6 +11,35 @@ export const Features = ({ course }) => {
     const handleChangleSlideBar = (index) => {
         setSlide(index)
     }
+
+    const featureObj = {
+        mavl: {
+            subject: "/images/mavl-doi_tuong.png",
+            format: "/images/mavl-hinh_thuc.png",
+            time: "/images/mavl-thoi_gian.png",
+            fiveStarts: "/images/mavl-nam_sao.png"
+        },
+        "medical-terminology": {
+            subject: "/images/mt-doi_tuong.jpg",
+            format: "/images/mt-hinh_thuc.jpg",
+            time: "/images/mt-thoi_gian.jpg",
+            fiveStarts: "/images/mt-nam_sao.jpg"
+        },
+        "clinical-case-presentation": {
+            subject: "https://res.cloudinary.com/tanvo/image/upload/v1671899425/medlangfanatic/courses/presenting-clinical-case-from-scratch/DOI_TUONG_HOC_i0m6ng.jpg",
+            format: "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/HINH_THUC_HOC_ioyenk.jpg",
+            time: "https://res.cloudinary.com/tanvo/image/upload/v1671900610/medlangfanatic/courses/presenting-clinical-case-from-scratch/THOI_GIAN_HOC_pczhlm.jpg",
+            fiveStarts: "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/5_SAO_elyv9x.jpg"
+        },
+        "communication-with-patients-101": {
+            subject: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-object_ylhcnh.jpg",
+            format: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-hinh-thuc_fx9fbs.jpg",
+            time: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-time_lybshz.jpg",
+            fiveStarts: "https://res.cloudinary.com/tanvo/image/upload/v1672313880/medlangfanatic/courses/cwp/cwp-5__npp3pu.jpg"
+        },
+
+    }
+
     const MAVLFeatureImage = (feature) => {
         let url
         switch (feature) {
@@ -45,6 +74,26 @@ export const Features = ({ course }) => {
                 break;
             case "fiveStarts":
                 url = "/images/mt-nam_sao.jpg"
+                break;
+            default:
+                break;
+        }
+        return url
+    }
+    const PCCSFeatureImage = (feature) => {
+        let url
+        switch (feature) {
+            case "subject":
+                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899425/medlangfanatic/courses/presenting-clinical-case-from-scratch/DOI_TUONG_HOC_i0m6ng.jpg"
+                break;
+            case "format":
+                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/HINH_THUC_HOC_ioyenk.jpg"
+                break;
+            case "time":
+                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/THOI_GIAN_HOC_v5qrks.jpg"
+                break;
+            case "fiveStarts":
+                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/5_SAO_elyv9x.jpg"
                 break;
             default:
                 break;
@@ -93,7 +142,8 @@ export const Features = ({ course }) => {
                 <div className="slideshow-container " key={index}>
                     <div className={` mySlides faded ${slide === index ? "d-flex flex-column  flex-lg-row" : ""}`}>
                         <Col sm={12} lg={6} className="flex-shrink-0" >
-                            <Image src={slug.toLowerCase() === "mavl" ? MAVLFeatureImage(a) : MTFeatureImage(a)} width="100%" />
+                            {/* <Image src={slug.toLowerCase() === "mavl" ? MAVLFeatureImage(a) : MTFeatureImage(a)} width="100%" /> */}
+                            <Image src={featureObj[slug.toLowerCase()][a]} width="100%" />
                         </Col>
                         <Col sm={12} lg={6} className="flex-grow-1">
                             {a.content}

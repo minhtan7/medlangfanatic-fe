@@ -12,7 +12,7 @@ import { FAQ } from '../../components/FAQ'
 
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { CourseCard } from '../../components/CourseCard/CourseCard'
-import { Cover, CoverMedicalTerminology } from '../../components/Cover/Cover'
+import { Cover, CoverCWP, CoverMedicalTerminology, CoverPCCS } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
 // import jsxToString from 'jsx-to-string';
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
@@ -24,7 +24,9 @@ import { slugTranslate } from '../../utility/slugTranslate'
 
 const slugs = {
     "medical-terminology": 2026776,
-    "mavl": 1751294
+    "mavl": 1751294,
+    "clinical-case-presentation": 1522731,
+    "communication-with-patients-101": 1522730
 }
 const defaultHeight = 72;
 
@@ -34,6 +36,10 @@ const filterCss = (slug) => {
             return { main: "#011c7e", mainDark: "#131653", contrast: "#05feb1", contrastLight: "#05feb12e" }
         case "medical-terminology":
             return { main: "#82008f", mainDark: "#64006e", contrast: "#fff400", contrastLight: "#fac5ff" }
+        case "clinical-case-presentation":
+            return { main: "#0C3B2E", mainDark: "#6d9773", contrast: "#ffba00", contrastLight: "#bb8a52" }
+        case "communication-with-patients-101":
+            return { main: "#5F021F", mainDark: "#440217", contrast: "#ff8906", contrastLight: "#ffc6c7" }
         default:
             break;
     }
@@ -60,15 +66,15 @@ const CoursePage = () => {
         <>
             <MetaDecorator {...meta} />
             <Hero course={course} />
-            {filterCover(course.slug)}
+            {filterCover(course.slug.toLowerCase())}
             <Container>
                 <Row>
                     <Col xs={12} md={8} className="px-0 ">
                         <Features course={course} />
-                        <CourseDetailContent chapters={course.chapters} />
-                        <Instructors instructors={course.instructors[0]} />
-                        <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />
-                        <FAQ faq={course.faq} />
+                        <CourseDetailContent chapters={course.chapters} slug={slug} />
+                        <Instructors instructors={course.instructors} />
+                        {slug === "clinical-case-presentation" | slug === "communication-with-patients-101" ? null : <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />}
+                        {slug === "clinical-case-presentation" | slug === "communication-with-patients-101" ? null : <FAQ faq={course.faq} />}
                     </Col>
                     <Col xs={0} sm={0} md={4} className="d-none d-sm-none d-md-block">
                         <CourseCard course={course} />
@@ -87,6 +93,10 @@ const filterCover = (slug) => {
             return <Cover />
         case "medical-terminology":
             return <CoverMedicalTerminology />
+        case "clinical-case-presentation":
+            return <CoverPCCS />
+        case "communication-with-patients-101":
+            return <CoverCWP />
         default:
             break;
     }
