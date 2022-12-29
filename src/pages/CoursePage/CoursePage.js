@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getSingleCourse } from '../../features/course/courseSlice'
 import MetaDecorator from '../../components/utils/MetaDecorator'
 import { slugTranslate } from '../../utility/slugTranslate'
+import { Helmet } from 'react-helmet'
 
 
 const slugs = {
@@ -64,6 +65,9 @@ const CoursePage = () => {
 
     return Object.keys(course).length && (
         <>
+            <Helmet>
+                <meta name='description' content={slug} />
+            </Helmet>
             <MetaDecorator {...meta} />
             <Hero course={course} />
             {filterCover(course.slug.toLowerCase())}

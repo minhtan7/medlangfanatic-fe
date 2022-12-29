@@ -17,6 +17,7 @@ import { blogContent, instructors } from '../../mockData'
 import ToastMsg from '../../components/ToastMsg.js'
 import { ToTopArrowNormalUse } from '../../components/ToTopArrow'
 import CarouselML from '../../components/Carousel/CarouselML'
+import { Helmet } from 'react-helmet-async'
 
 const fbs = [
     {
@@ -105,6 +106,9 @@ const responsivePodcast = {
 const HomePage = () => {
     return (
         <>
+            <Helmet>
+                <meta name="description" content="Home page - Med Lang Fanatic" data-rh="true" />
+            </Helmet>
             <CTA />
             {/* {isMobile ? <WhyMedLangMobile /> : <WhyMedLangWeb />} */}
 
