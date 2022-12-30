@@ -527,13 +527,21 @@ const COURSE_LIST_ICON = [
 
 ]
 const courseListContent = {
-    mavl: {
-        title: "Medical Academic Vocabulary List",
-        image: "/images/mavl-thumbnail.svg",
-        content: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
-        path: "/MAVL",
-        idEl: "mavl-thumbnail-vertical",
-        btnClass: "btn-sign-up",
+    "communication-with-patients-101": {
+        title: "Communication with Patients 101",
+        image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
+        content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
+        path: "/communication-with-patients-101",
+        idEl: "cwp-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-cwp-main'
+    },
+    "clinical-case-presentation": {
+        title: "Presenting Clinical Cases from Scratch",
+        image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
+        content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
+        path: "/clinical-case-presentation",
+        idEl: "pccs-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-pccs-main'
     },
     "medical-terminology": {
         title: "Medical Terminology: An essential course for healthcare professional",
@@ -543,23 +551,15 @@ const courseListContent = {
         idEl: "mt-thumbnail-vertical",
         btnClass: 'btn-sign-up btn-mt-secondary'
     },
-    "clinical-case-presentation": {
-        title: "Presenting Clinical Cases from Scratch",
-        image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
-        content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
-        path: "/clinical-case-presentation",
-        idEl: "pccs-thumbnail-vertical",
-        btnClass: 'btn-sign-up btn-pccs-main'
-    }
-    ,
-    "communication-with-patients-101": {
-        title: "Communication with Patients 101",
-        image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
-        content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
-        path: "/communication-with-patients-101",
-        idEl: "cwp-thumbnail-vertical",
-        btnClass: 'btn-sign-up btn-cwp-main'
-    }
+    mavl: {
+        title: "Medical Academic Vocabulary List",
+        image: "/images/mavl-thumbnail.svg",
+        content: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
+        path: "/MAVL",
+        idEl: "mavl-thumbnail-vertical",
+        btnClass: "btn-sign-up",
+    },
+
 }
 const CourseList = () => {
     return (
