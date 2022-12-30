@@ -11,6 +11,7 @@ const MetaDecorator = ({ title, description, imageUrl, imageAlt }) => (
     <Helmet>
         <title>{title}</title>
         <meta property="og:type" content="website" />
+        <link rel='canonical' href={metaDecorator.hostname + window.location.pathname + window.location.search} />
         <meta
             property="og:url"
             content={metaDecorator.hostname + window.location.pathname + window.location.search}

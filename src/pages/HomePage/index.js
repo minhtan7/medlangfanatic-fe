@@ -41,7 +41,7 @@ const fbs = [
         title: "Bác sĩ"
     },
     {
-        content: "Đầu tiên là khóa đưa ra những guide rất rõ ràng và dễ hiểu để áp dụng trong việc giao tiếp với người bệnh mà có thể áp dụng cả tiếng Việt lẫn tiếng Anh. Các guide khi tóm tắt lại thì hoàn toàn có thể áp dụng, dù em bên chuyên ngành khác bác sĩ nhưng vẫn rất hiệu quả. Thứ hai là nhờ những bài tập và bài học mà em biết được thêm nhiều những từ vựng chuyên ngành, cũng như những loại bệnh khác mà chuyên ngành của mình ít tiếp xúc. Ngoài ra, em cũng biết thêm nhiều các medicine mà em chưa biết hoặc ít biết đến. Thứ ba là khả năng giao tiếp của em đã nâng lên đáng kể, về khả năng giao tiếp với người khác nói chung, và khả năng giao tiếp với người bệnh ở khá nhiều scenerios nói riêng.",
+        content: "Đầu tiên là khóa đưa ra những guide rất rõ ràng và dễ hiểu để áp dụng trong việc giao tiếp với người bệnh mà có thể áp dụng cả tiếng Việt lẫn tiếng Anh. Các guide khi tóm tắt lại thì hoàn toàn có thể áp dụng, dù em bên chuyên ngành khác bác sĩ nhưng vẫn rất hiệu quả. Thứ hai là nhờ những bài tập và bài học mà em biết được thêm nhiều những từ vựng chuyên ngành, cũng như những loại bệnh khác mà chuyên ngành của mình ít tiếp xúc. Ngoài ra, em cũng biết thêm nhiều các medicine mà em chưa biết hoặc ít biết đến. Thứ ba là khả năng giao tiếp của em đã nâng lên đáng kể, về khả năng giao tiếp với người khác nói chung, và khả năng giao tiếp với người bệnh ở khá nhiều scenarios nói riêng.",
         name: "Hồng Diễm ",
         title: "Dược sĩ"
     },
@@ -551,15 +551,15 @@ const courseListContent = {
         idEl: "pccs-thumbnail-vertical",
         btnClass: 'btn-sign-up btn-pccs-main'
     }
-    // ,
-    // "communication-with-patients-101": {
-    //     title: "Communication with Patients 101",
-    //     image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
-    //     content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
-    //     path: "/communication-with-patients-101",
-    //     idEl: "cwp-thumbnail-vertical",
-    //     btnClass: 'btn-sign-up btn-cwp-main'
-    // }
+    ,
+    "communication-with-patients-101": {
+        title: "Communication with Patients 101",
+        image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
+        content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
+        path: "/communication-with-patients-101",
+        idEl: "cwp-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-cwp-main'
+    }
 }
 const CourseList = () => {
     return (
@@ -591,7 +591,7 @@ const CourseList = () => {
                 <Row xs={1} md={12} className="g-4 mt-md-2">
                     {
                         Object.keys(courseListContent).map(c => (
-                            <Col xs={12} md={4}>
+                            <Col xs={12} md={3}>
                                 <CourseThumbnailVertical course={courseListContent[c]} />
                             </Col>
                         )

@@ -55,8 +55,7 @@ export const CourseCard = ({ course }) => {
                             style={{ borderRadius: 0 }} />
                     </Card.Body>
                 ) : null}
-
-            <Card.Body style={{ paddingTop: "0" }}>
+            {course.slug === "communication-with-patients-101" ? null : <Card.Body style={{ paddingTop: "0" }}>
                 <p style={{ color: "black", marginBottom: '0' }}>Khóa học bao gồm:</p>
                 <ListGroup variant="flush">
                     {course.material.map((m, index) => (
@@ -70,8 +69,20 @@ export const CourseCard = ({ course }) => {
                         </ListGroup.Item>
 
                     ))}
+                    {/* {course.material.map((m, index) => (
+                        <ListGroup.Item key={index} className='course-card-item fa-ul' as="ul" >
+                            <li>
+                                <span className="fa-li" >
+                                    {filterIcon(m.icon)}
+                                </span>
+                                {m.text}
+                            </li>
+                        </ListGroup.Item>
+
+                    ))} */}
                 </ListGroup>
-            </Card.Body>
+            </Card.Body>}
+
 
         </Card >) :
         (<Card className='course-card' >

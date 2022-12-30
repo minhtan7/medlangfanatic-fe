@@ -96,26 +96,26 @@ export const CoverCWP = () => {
                 <div className='position-relative'>
                     <p className='text-justify lh-md'>
                         Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài. <br />
-                        Khóa học giới thiệu cho các bạn các cách hỏi và tư vấn cho nhiều tình huống lâm sàng và mục đích giao tiếp khác nhau. Các bạn sẽ lần lượt làm quen với nhiều loại công thức và từ vựng khác nhau, với những cấu trúc dễ học dễ áp dụng, để đạt mục tiêu đầu ra là có thể tự tin hỏi và tư vấn bệnh nhân bằng tiếng Anh. <strong>Khóa học gồm 2 phần:</strong>
+                        Khóa học giới thiệu cho các bạn các cách hỏi và tư vấn cho nhiều tình huống lâm sàng và mục đích giao tiếp khác nhau. Các bạn sẽ lần lượt làm quen với nhiều loại công thức và từ vựng khác nhau, với những cấu trúc dễ học dễ áp dụng, để đạt mục tiêu đầu ra là có thể tự tin hỏi và tư vấn bệnh nhân bằng tiếng Anh. <strong>Học viên sẽ được trang bị trước buổi thực hành ngân hàng các câu và từ vựng cần thiết để sử dụng trong nhiều tình huống giao tiếp khác nhau.</strong>
                     </p>
                 </div>
                 <Row >
+                    <Col >
+                        <a href="#course-detail-content">
+                            <Button className='w-100 h-100 p-5 text-center bg-main text-white rounded-0 me-3 fw-bold fs-4'>
+                                Tương tác thực hành qua Zoom
+                            </Button>
+                        </a>
+                    </Col>
                     <Col>
                         <a href='#course-detail-content'>
                             <Button
                                 className='w-100 h-100 p-5 text-center bg-main text-white rounded-0 me-3 fw-bold fs-4'
 
                             >
-                                Lý thuyết tự học trên nền tảng online
+                                Cùng giảng viên
                             </Button>
 
-                        </a>
-                    </Col>
-                    <Col >
-                        <a href="#course-detail-content">
-                            <Button className='w-100 h-100 p-5 text-center bg-main text-white rounded-0 me-3 fw-bold fs-4'>
-                                Tương tác thực hành qua Zoom
-                            </Button>
                         </a>
                     </Col>
                 </Row>
