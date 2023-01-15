@@ -107,7 +107,7 @@ const HomePage = () => {
     return (
         <>
             <Helmet>
-                <meta name="description" content="Khóa học tiếng Anh Y khoa trực tuyến. Cải thiện khả năng ngoại ngữ và nâng cao kỹ năng giao tiếp trong Y khoa." data-rh="true" />
+                <meta name="description" content="Med Lang Fanatic | Khóa học tiếng Anh Y khoa trực tuyến. Cải thiện khả năng ngoại ngữ và nâng cao kỹ năng giao tiếp trong Y khoa." data-rh="true" />
                 <meta name="keywords"
                     content="Tiếng anh y khoa, Khái niệm về các ngành nghề cơ bản trong y khoa,
 Từ vựng tiếng Anh chuyên ngành Y khoa tổng quát ,
@@ -343,7 +343,7 @@ const VideoSession = () => {
                 <h1 className='mb-4'>
                     <span className='text-main fw-bold'>Tài liệu</span>
                     <br />
-                    <span className='text-30'>Y khoa chọn lọc</span>
+                    <span className='text-30'>Tiếng Anh Y khoa chọn lọc</span>
                 </h1>
                 <Row>
                     <Col xs={12} md={6} className="mb-4 mb-md-0">
@@ -466,7 +466,7 @@ export const SubscriptionHP = () => {
             <Container className='h-100'>
                 <Row className='flex-column flex-md-row'>
                     <Col className='d-flex mb-2 mb-md-0'>
-                        <h2 className='my-auto mb-2 mb-md-0 '>Đăng ký nhận Tài liệu<br /> miễn phí hàng tuần!</h2>
+                        <h2 className='my-auto mb-2 mb-md-0 '>Đăng ký nhận tài liệu<br /> tiếng Anh Y khoa!</h2>
                     </Col>
                     <Col className='m-auto'>
                         <form onSubmit={handleSubmit} className="position-relative">
@@ -602,7 +602,11 @@ const PodCastHP = () => {
     return (
         <div id="podcast-session" className='mb-6 mx-md-7 mt-md-5 pt-md-5'>
             <Container className='h-100 '>
-                <h1 className='text-main fw-bold mb-4'>Podcast</h1>
+                <h1 className='text-main fw-bold mb-4'>Podcast
+                    <br />
+                    <span className='text-30'>
+                        Học từ vựng Y khoa miễn phí
+                    </span></h1>
                 <Carousel responsive={responsivePodcast}>
                     {PODCASTS.map((p, index) => (
                         <div key={index} style={{ width: "80%", margin: "auto", }}>
@@ -740,7 +744,7 @@ const COURSE_LIST_ICON = [
 ]
 const courseListContent = {
     "communication-with-patients-101": {
-        title: "Communication with Patients 101",
+        title: "Giao Tiếp Với Bệnh Nhân",
         image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
         content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
         path: "/communication-with-patients-101",
@@ -748,7 +752,7 @@ const courseListContent = {
         btnClass: 'btn-sign-up btn-cwp-main'
     },
     "clinical-case-presentation": {
-        title: "Presenting Clinical Cases from Scratch",
+        title: "Trình Ca Lâm Sàng",
         image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
         content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
         path: "/clinical-case-presentation",
@@ -756,7 +760,7 @@ const courseListContent = {
         btnClass: 'btn-sign-up btn-pccs-main'
     },
     "medical-terminology": {
-        title: "Medical Terminology: An essential course for healthcare professional",
+        title: "Thuật Ngữ Y Khoa",
         image: "/images/mt-thumbnail.jpeg",
         content: "Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.",
         path: "/medical-terminology",
@@ -764,7 +768,7 @@ const courseListContent = {
         btnClass: 'btn-sign-up btn-mt-secondary'
     },
     mavl: {
-        title: "Medical Academic Vocabulary List",
+        title: <span>Từ Vựng Học Thuật<br />Y Khoa</span>,
         image: "/images/mavl-thumbnail.svg",
         content: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
         path: "/MAVL",
@@ -781,7 +785,7 @@ const CourseList = () => {
                     !isMobile ?
                         (
                             <h1 className='fw-bold text-main mb-3'>
-                                Cải thiện khả năng ngoại ngữ<br /> và nâng cao kỹ năng giao tiếp
+                                Cải thiện khả năng ngoại ngữ<br /> và kỹ năng giao tiếp trong Y khoa.
                             </h1>
                         )
                         : (
@@ -790,7 +794,7 @@ const CourseList = () => {
                             </h1>
                         )
                 }
-                <small><i>Những sản phẩm chất lượng cao của MLF sẽ là lời tri ân chân thành nhất đến với mọi người!</i></small>
+                <small><i>Những khóa học tiếng Anh chuyên ngành Y khoa chất lượng cao của MLF sẽ là lời tri ân chân thành nhất đến với mọi người!</i></small>
                 <ul className='fa-ul text-12 mt-3' >
                     {COURSE_LIST_ICON.map(icon => (
                         <li key={icon.content} className="d-inline-block me-5">
