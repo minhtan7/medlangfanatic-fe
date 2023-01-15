@@ -17,6 +17,7 @@ import { blogContent, instructors } from '../../mockData'
 import ToastMsg from '../../components/ToastMsg.js'
 import { ToTopArrowNormalUse } from '../../components/ToTopArrow'
 import CarouselML from '../../components/Carousel/CarouselML'
+import { Helmet } from 'react-helmet-async'
 
 const fbs = [
     {
@@ -40,7 +41,7 @@ const fbs = [
         title: "Bác sĩ"
     },
     {
-        content: "Đầu tiên là khóa đưa ra những guide rất rõ ràng và dễ hiểu để áp dụng trong việc giao tiếp với người bệnh mà có thể áp dụng cả tiếng Việt lẫn tiếng Anh. Các guide khi tóm tắt lại thì hoàn toàn có thể áp dụng, dù em bên chuyên ngành khác bác sĩ nhưng vẫn rất hiệu quả. Thứ hai là nhờ những bài tập và bài học mà em biết được thêm nhiều những từ vựng chuyên ngành, cũng như những loại bệnh khác mà chuyên ngành của mình ít tiếp xúc. Ngoài ra, em cũng biết thêm nhiều các medicine mà em chưa biết hoặc ít biết đến. Thứ ba là khả năng giao tiếp của em đã nâng lên đáng kể, về khả năng giao tiếp với người khác nói chung, và khả năng giao tiếp với người bệnh ở khá nhiều scenerios nói riêng.",
+        content: "Đầu tiên là khóa đưa ra những guide rất rõ ràng và dễ hiểu để áp dụng trong việc giao tiếp với người bệnh mà có thể áp dụng cả tiếng Việt lẫn tiếng Anh. Các guide khi tóm tắt lại thì hoàn toàn có thể áp dụng, dù em bên chuyên ngành khác bác sĩ nhưng vẫn rất hiệu quả. Thứ hai là nhờ những bài tập và bài học mà em biết được thêm nhiều những từ vựng chuyên ngành, cũng như những loại bệnh khác mà chuyên ngành của mình ít tiếp xúc. Ngoài ra, em cũng biết thêm nhiều các medicine mà em chưa biết hoặc ít biết đến. Thứ ba là khả năng giao tiếp của em đã nâng lên đáng kể, về khả năng giao tiếp với người khác nói chung, và khả năng giao tiếp với người bệnh ở khá nhiều scenarios nói riêng.",
         name: "Hồng Diễm ",
         title: "Dược sĩ"
     },
@@ -105,6 +106,221 @@ const responsivePodcast = {
 const HomePage = () => {
     return (
         <>
+            <Helmet>
+                <meta name="description" content="Med Lang Fanatic | Khóa học tiếng Anh Y khoa trực tuyến. Cải thiện khả năng ngoại ngữ và nâng cao kỹ năng giao tiếp trong Y khoa." data-rh="true" />
+                <meta name="keywords"
+                    content="Tiếng anh y khoa, Khái niệm về các ngành nghề cơ bản trong y khoa,
+Từ vựng tiếng Anh chuyên ngành Y khoa tổng quát ,
+Từ vựng tiếng Anh chuyên ngành thần kinh,
+Từ vựng tiếng Anh chuyên ngành mắt,
+Từ vựng tiếng Anh chuyên ngành tai mũi họng,
+Từ vựng tiếng Anh chuyên ngành hô hấp,
+Từ vựng y khoa chuyên ngành tiêu hóa,
+Từ vựng tiếng Anh chuyên ngành da liễu ,
+Từ vựng tiếng Anh y khoa chuyên ngành xương khớp,
+Từ vựng y khoa tiếng Anh chuyên ngành nội tiết ,
+Từ vựng tiếng Anh chuyên ngành thú y,
+Một số nguồn học từ vựng tiếng Anh chuyên ngành y khoa hữu ích,
+Tài liệu tiếng Anh chuyên ngành Y khoa,
+Bài tập về từ vựng tiếng Anh chuyên ngành Y khoa,
+Một số từ tiếng anh các cơ quan bộ phận trên cơ thể,
+Tiếng anh chuyên ngành y khoa,
+Tiếng anh chuyên ngành y khoa pdf,
+Tiếng anh chuyên ngành y khoa y học cổ truyền,
+Tiếng anh chuyên ngành y khoa y học,
+Tiếng anh chuyên ngành y khoa y dịch,
+Tiếng anh chuyên ngành y khoa y dược,
+Tiếng anh chuyên ngành y khoa y tế cộng đồng,
+Tiếng anh chuyên ngành y khoa y khoa song ngữ,
+Tiếng anh y khoa pdf,
+Tiếng anh y khoa giao tiếp,
+Tiếng anh y khoa từ điển,
+Tiếng anh y khoa song ngữ,
+Tiếng anh y khoa dịch,
+Tiếng anh y khoa từ số 0,
+Tiếng anh y khoa hệ tiêu hoá,
+Tiếng anh y khoa cơ bản,
+Tiếng anh y khoa sách,
+Thuật ngữ y khoa,
+Thuật ngữ y khoa chuyên ngành Thần kinh,
+ Thuật ngữ y khoa chuyên ngành Truyền nhiễm,
+ Thuật ngữ y khoa chuyên ngành Ung thư,
+ Thuật ngữ y khoa chuyên ngành Y học cổ truyền,
+Thuật ngữ y khoa chuyên ngành Tâm Lý Học,
+ Thuật ngữ y khoa chuyên ngành ,
+Thuật ngữ y khoa chuyên ngành Chẩn đoán hình ảnh,
+Thuật ngữ y khoa chuyên ngành Chấn thương chỉnh hình,
+Thuật ngữ y khoa chuyên ngành Da liễu,
+Thuật ngữ y khoa chuyên ngành Giải phẫu bệnh,
+Thuật ngữ y khoa chuyên ngành Hồi sức cấp cứu,
+Thuật ngữ y khoa chuyên ngành Huyết học - Truyền máu,
+Thuật ngữ y khoa chuyên ngành Lão khoa,
+Thuật ngữ y khoa chuyên ngành Ngoại khoa,
+Thuật ngữ y khoa chuyên ngành Ngoại - Lồng ngực,
+Thuật ngữ y khoa chuyên ngành Ngoại - Nhi,
+Thuật ngữ y khoa chuyên ngành Nội khoa,
+Thuật ngữ y khoa chuyên ngành Tâm thần,
+Thuật ngữ y khoa chuyên ngành mắt,
+Thuật ngữ y khoa chuyên ngành phụ sản,
+Thuật ngữ y khoa chuyên ngành Y đa khoa,
+Thuật ngữ y khoa chuyên ngành Dược,
+Thuật ngữ y khoa chuyên ngành Răng Hàm Mặt,
+Thuật ngữ y khoa chuyên ngành Y học cổ truyền,
+Thuật ngữ y khoa chuyên ngành Điều dưỡng,
+Thuật ngữ y khoa chuyên ngành Vật lý trị liệu,
+Thuật ngữ y khoa chuyên ngành Y học dự phòng,
+Thuật ngữ y khoa chuyên ngành Dinh dưỡng,
+Thuật ngữ y khoa chuyên ngành Nhi Khoa,
+Thuật ngữ y khoa chuyên ngành Gây mê hồi sức,
+Từ vựng tiếng Anh chuyên ngành Y khoa tổng quát ,
+Từ vựng tiếng Anh chuyên ngành thần kinh,
+Từ vựng tiếng Anh chuyên ngành mắt,
+Từ vựng tiếng Anh chuyên ngành tai mũi họng,
+Từ vựng tiếng Anh chuyên ngành hô hấp,
+tiếng anh chuyên ngành Thần kinh,
+ tiếng anh chuyên ngành Truyền nhiễm,
+ tiếng anh chuyên ngành Ung thư,
+ tiếng anh chuyên ngành Y học cổ truyền,
+tiếng anh chuyên ngành Tâm Lý Học,
+ tiếng anh chuyên ngành ,
+tiếng anh chuyên ngành Chẩn đoán hình ảnh,
+tiếng anh chuyên ngành Chấn thương chỉnh hình,
+tiếng anh chuyên ngành Da liễu,
+tiếng anh chuyên ngành Giải phẫu bệnh,
+tiếng anh chuyên ngành Hồi sức cấp cứu,
+tiếng anh chuyên ngành Huyết học - Truyền máu,
+tiếng anh chuyên ngành Lão khoa,
+tiếng anh chuyên ngành Ngoại khoa,
+tiếng anh chuyên ngành Ngoại - Lồng ngực,
+tiếng anh chuyên ngành Ngoại - Nhi,
+tiếng anh chuyên ngành Nội khoa,
+tiếng anh chuyên ngành Tâm thần,
+tiếng anh chuyên ngành mắt,
+tiếng anh chuyên ngành phụ sản,
+tiếng anh chuyên ngành Y đa khoa,
+tiếng anh chuyên ngành Dược,
+tiếng anh chuyên ngành Răng Hàm Mặt,
+tiếng anh chuyên ngành Y học cổ truyền,
+tiếng anh chuyên ngành Điều dưỡng,
+tiếng anh chuyên ngành Vật lý trị liệu,
+tiếng anh chuyên ngành Y học dự phòng,
+tiếng anh chuyên ngành Dinh dưỡng,
+tiếng anh chuyên ngành Nhi Khoa,
+tiếng anh chuyên ngành Gây mê hồi sức,
+từ vựng chuyên ngành Thần kinh,
+ từ vựng chuyên ngành Truyền nhiễm,
+ từ vựng chuyên ngành Ung thư,
+ từ vựng chuyên ngành Y học cổ truyền,
+từ vựng chuyên ngành Tâm Lý Học,
+ từ vựng chuyên ngành ,
+từ vựng chuyên ngành Chẩn đoán hình ảnh,
+từ vựng chuyên ngành Chấn thương chỉnh hình,
+từ vựng chuyên ngành Da liễu,
+từ vựng chuyên ngành Giải phẫu bệnh,
+từ vựng chuyên ngành Hồi sức cấp cứu,
+từ vựng chuyên ngành Huyết học - Truyền máu,
+từ vựng chuyên ngành Lão khoa,
+từ vựng chuyên ngành Ngoại khoa,
+từ vựng chuyên ngành Ngoại - Lồng ngực,
+từ vựng chuyên ngành Ngoại - Nhi,
+từ vựng chuyên ngành Nội khoa,
+từ vựng chuyên ngành Tâm thần,
+từ vựng chuyên ngành mắt,
+từ vựng chuyên ngành phụ sản,
+từ vựng chuyên ngành Y đa khoa,
+từ vựng chuyên ngành Dược,
+từ vựng chuyên ngành Răng Hàm Mặt,
+từ vựng chuyên ngành Y học cổ truyền,
+từ vựng chuyên ngành Điều dưỡng,
+từ vựng chuyên ngành Vật lý trị liệu,
+từ vựng chuyên ngành Y học dự phòng,
+từ vựng chuyên ngành Dinh dưỡng,
+từ vựng chuyên ngành Nhi Khoa,
+từ vựng chuyên ngành Gây mê hồi sức,
+tiếng anh y khoa Chẩn đoán hình ảnh,
+tiếng anh y khoa Chấn thương chỉnh hình,
+tiếng anh y khoa Da liễu,
+tiếng anh y khoa Giải phẫu bệnh,
+tiếng anh y khoa Hồi sức cấp cứu,
+tiếng anh y khoa Huyết học - Truyền máu,
+tiếng anh y khoa Lão khoa,
+tiếng anh y khoa Ngoại khoa,
+tiếng anh y khoa Ngoại - Lồng ngực,
+tiếng anh y khoa Ngoại - Nhi,
+tiếng anh y khoa Nội khoa,
+tiếng anh y khoa Tâm thần,
+tiếng anh y khoa mắt,
+tiếng anh y khoa phụ sản,
+tiếng anh y khoa Y đa khoa,
+tiếng anh y khoa Dược,
+tiếng anh y khoa Răng Hàm Mặt,
+tiếng anh y khoa Y học cổ truyền,
+tiếng anh y khoa Điều dưỡng,
+tiếng anh y khoa Vật lý trị liệu,
+tiếng anh y khoa Y học dự phòng,
+tiếng anh y khoa Dinh dưỡng,
+tiếng anh y khoa Nhi Khoa,
+tiếng anh y khoa Gây mê hồi sức,
+Thần kinh,
+Truyền nhiễm,
+Ung thư,
+Y học cổ truyền,
+Tâm Lý Học,
+Chẩn đoán hình ảnh,
+Chấn thương chỉnh hình,
+Da liễu,
+Giải phẫu bệnh,
+Hồi sức cấp cứu,
+Huyết học - Truyền máu,
+Lão khoa,
+Ngoại khoa,
+Ngoại - Lồng ngực,
+Ngoại - Nhi,
+Nội khoa,
+Tâm thần,
+mắt,
+phụ sản,
+Y đa khoa,
+Dược,
+Răng Hàm Mặt,
+Y học cổ truyền,
+Điều dưỡng,
+Vật lý trị liệu,
+Y học dự phòng,
+Dinh dưỡng,
+Nhi Khoa,
+Gây mê hồi sức,
+chuyên ngành Thần kinh,
+chuyên ngành Truyền nhiễm,
+chuyên ngành Ung thư,
+chuyên ngành Y học cổ truyền,
+chuyên ngành Tâm Lý Học,
+chuyên ngành Chẩn đoán hình ảnh,
+chuyên ngành Chấn thương chỉnh hình,
+chuyên ngành Da liễu,
+chuyên ngành Giải phẫu bệnh,
+chuyên ngành Hồi sức cấp cứu,
+chuyên ngành Huyết học - Truyền máu,
+chuyên ngành Lão khoa,
+chuyên ngành Ngoại khoa,
+chuyên ngành Ngoại - Lồng ngực,
+chuyên ngành Ngoại - Nhi,
+chuyên ngành Nội khoa,
+chuyên ngành Tâm thần,
+chuyên ngành mắt,
+chuyên ngành phụ sản,
+chuyên ngành Y đa khoa,
+chuyên ngành Dược,
+chuyên ngành Răng Hàm Mặt,
+chuyên ngành Y học cổ truyền,
+chuyên ngành Điều dưỡng,
+chuyên ngành Vật lý trị liệu,
+chuyên ngành Y học dự phòng,
+chuyên ngành Dinh dưỡng,
+chuyên ngành Nhi Khoa,
+chuyên ngành Gây mê hồi sức"
+                />
+            </Helmet>
             <CTA />
             {/* {isMobile ? <WhyMedLangMobile /> : <WhyMedLangWeb />} */}
 
@@ -127,7 +343,7 @@ const VideoSession = () => {
                 <h1 className='mb-4'>
                     <span className='text-main fw-bold'>Tài liệu</span>
                     <br />
-                    <span className='text-30'>Y khoa chọn lọc</span>
+                    <span className='text-30'>Tiếng Anh Y khoa chọn lọc</span>
                 </h1>
                 <Row>
                     <Col xs={12} md={6} className="mb-4 mb-md-0">
@@ -250,7 +466,7 @@ export const SubscriptionHP = () => {
             <Container className='h-100'>
                 <Row className='flex-column flex-md-row'>
                     <Col className='d-flex mb-2 mb-md-0'>
-                        <h2 className='my-auto mb-2 mb-md-0 '>Đăng ký nhận Tài liệu<br /> miễn phí hàng tuần!</h2>
+                        <h2 className='my-auto mb-2 mb-md-0 '>Đăng ký nhận tài liệu<br /> tiếng Anh Y khoa!</h2>
                     </Col>
                     <Col className='m-auto'>
                         <form onSubmit={handleSubmit} className="position-relative">
@@ -386,7 +602,11 @@ const PodCastHP = () => {
     return (
         <div id="podcast-session" className='mb-6 mx-md-7 mt-md-5 pt-md-5'>
             <Container className='h-100 '>
-                <h1 className='text-main fw-bold mb-4'>Podcast</h1>
+                <h1 className='text-main fw-bold mb-4'>Podcast
+                    <br />
+                    <span className='text-30'>
+                        Học từ vựng Y khoa miễn phí
+                    </span></h1>
                 <Carousel responsive={responsivePodcast}>
                     {PODCASTS.map((p, index) => (
                         <div key={index} style={{ width: "80%", margin: "auto", }}>
@@ -523,39 +743,39 @@ const COURSE_LIST_ICON = [
 
 ]
 const courseListContent = {
-    mavl: {
-        title: "Medical Academic Vocabulary List",
-        image: "/images/mavl-thumbnail.svg",
-        content: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
-        path: "/MAVL",
-        idEl: "mavl-thumbnail-vertical",
-        btnClass: "btn-sign-up",
+    "communication-with-patients-101": {
+        title: "Giao Tiếp Với Bệnh Nhân",
+        image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
+        content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
+        path: "/communication-with-patients-101",
+        idEl: "cwp-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-cwp-main'
+    },
+    "clinical-case-presentation": {
+        title: "Trình Ca Lâm Sàng",
+        image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
+        content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
+        path: "/clinical-case-presentation",
+        idEl: "pccs-thumbnail-vertical",
+        btnClass: 'btn-sign-up btn-pccs-main'
     },
     "medical-terminology": {
-        title: "Medical Terminology: An essential course for healthcare professional",
+        title: "Thuật Ngữ Y Khoa",
         image: "/images/mt-thumbnail.jpeg",
         content: "Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.",
         path: "/medical-terminology",
         idEl: "mt-thumbnail-vertical",
         btnClass: 'btn-sign-up btn-mt-secondary'
     },
-    "clinical-case-presentation": {
-        title: "Presenting Clinical Cases from Scratch",
-        image: "https://res.cloudinary.com/tanvo/image/upload/v1671965829/medlangfanatic/courses/presenting-clinical-case-from-scratch/pccs-thumbnail_nei3t5.jpg",
-        content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
-        path: "/clinical-case-presentation",
-        idEl: "pccs-thumbnail-vertical",
-        btnClass: 'btn-sign-up btn-pccs-main'
-    }
-    // ,
-    // "communication-with-patients-101": {
-    //     title: "Communication with Patients 101",
-    //     image: "https://res.cloudinary.com/tanvo/image/upload/v1672313340/medlangfanatic/courses/cwp/communications_ycbuwr.jpg",
-    //     content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
-    //     path: "/communication-with-patients-101",
-    //     idEl: "cwp-thumbnail-vertical",
-    //     btnClass: 'btn-sign-up btn-cwp-main'
-    // }
+    mavl: {
+        title: <span>Từ Vựng Học Thuật<br />Y Khoa</span>,
+        image: "/images/mavl-thumbnail.svg",
+        content: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
+        path: "/MAVL",
+        idEl: "mavl-thumbnail-vertical",
+        btnClass: "btn-sign-up",
+    },
+
 }
 const CourseList = () => {
     return (
@@ -565,7 +785,7 @@ const CourseList = () => {
                     !isMobile ?
                         (
                             <h1 className='fw-bold text-main mb-3'>
-                                Cải thiện khả năng ngoại ngữ<br /> và nâng cao kỹ năng giao tiếp
+                                Cải thiện khả năng ngoại ngữ<br /> và kỹ năng giao tiếp trong Y khoa.
                             </h1>
                         )
                         : (
@@ -574,7 +794,7 @@ const CourseList = () => {
                             </h1>
                         )
                 }
-                <small><i>Những sản phẩm chất lượng cao của MLF sẽ là lời tri ân chân thành nhất đến với mọi người!</i></small>
+                <small><i>Những khóa học tiếng Anh chuyên ngành Y khoa chất lượng cao của MLF sẽ là lời tri ân chân thành nhất đến với mọi người!</i></small>
                 <ul className='fa-ul text-12 mt-3' >
                     {COURSE_LIST_ICON.map(icon => (
                         <li key={icon.content} className="d-inline-block me-5">
@@ -587,7 +807,7 @@ const CourseList = () => {
                 <Row xs={1} md={12} className="g-4 mt-md-2">
                     {
                         Object.keys(courseListContent).map(c => (
-                            <Col xs={12} md={4}>
+                            <Col xs={12} md={3}>
                                 <CourseThumbnailVertical course={courseListContent[c]} />
                             </Col>
                         )

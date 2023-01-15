@@ -94,14 +94,14 @@ const slugs = {
             bio: "BS. Nguyễn Đình Cang là bác sĩ chuyên ngành Mắt, đã có kinh nghiệm giảng dạy Anh văn y khoa tại Tổng lãnh sự quán Hoa Kỳ, tại đại học Y khoa Phạm Ngọc Thạch và tại khoa Y Đại học Y Dược TPHCM. Anh là 1 trong 2 người Việt Nam đạt học bổng toàn phần Lancaster Course của đại học Harvard vào năm 2021. Anh cũng là thủ khoa khóa luận Bác sĩ Nội trú và có kinh nghiệm phiên dịch trong nhiều hội thảo và hội nghị y khoa.",
             title: "Instructor at Med Lang Fanatic",
             name: "Nguyễn Đình Cang",
-            quote: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
-            quoteAuthor: "Pele"
+            quote: "In learning you will teach, and in teaching you will learn.",
+            quoteAuthor: "Phil Collins"
         },
         "bac-si-nguyen-ngoc-quynh-tram": {
             img: "https://medlangfanatic.com/images/dr.tram.webp",
             info: [
-                "•	Tốt nghiệp hạng Ưu tại Đại học Debrecen, Hungary với GPA toàn khóa 4.67/5",
-                "•	Nguyên phó chủ tịch Hội sinh viên Việt Nam tại Đại học Debrecen, Hungary",
+                "Tốt nghiệp hạng Ưu tại Đại học Debrecen, Hungary với GPA toàn khóa 4.67/5",
+                "Nguyên phó chủ tịch Hội sinh viên Việt Nam tại Đại học Debrecen, Hungary",
                 "Phiên dịch viên trong nhiều hội thảo và hội nghị y khoa",
                 "Học bổng Học Mãi (2017)",
             ],
@@ -113,8 +113,32 @@ const slugs = {
             bio: "BS. Nguyễn Ngọc Quỳnh Trâm từng là du học sinh tại Úc và tại Hungary. Chị tốt nghiệp hạng Ưu tại đại học Debrecen Hungary và từng giữ vị trí phó chủ tịch hội sinh viên Việt Nam. Chị cũng có kinh nghiệm viết báo và trình hội thảo khoa học khi còn là sinh viên y. Định hướng trong tương lai của BS Trâm là làm việc trong hệ thống NHS của Anh Quốc.",
             title: "Instructor at Med Lang Fanatic",
             name: "Nguyễn Ngọc Quỳnh Trâm",
-            quote: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
-            quoteAuthor: "Pele"
+            quote: "The more that you read, the more things you will know. The more that you learn, the more places you’ll go.",
+            quoteAuthor: "Dr. Seuss"
+        },
+        "bac-si-tran-nguyen-thanh-huong": {
+            img: "https://medlangfanatic.com/images/dr.huong.png",
+            info: [
+                "Bác sĩ, khoa Phẫu thuật tim trẻ em, Bệnh viện Đại học Y Dược TP.HCM.",
+                "Bác sĩ thực tập Nhi khoa tại phòng khám MD Kids Pediatrics, McKinney, Texas, USA. (2020)",
+                "Chứng nhận thi đậu kỳ thi USMLE Step 1 & Step 2 Clinical Knowledge.",
+                "Sinh viên học lâm sàng tại Bệnh viện Westmead, Sydney – Chương trình học bổng Quỹ Học Mãi, Trường Y khoa Đại học Sydney, Australia",
+                "Cựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+                'Trưởng nhóm biên dịch sách "The End of Alzheimer"',
+            ],
+            exp: [
+                "Người hướng dẫn khóa học khám bệnh bằng tiếng Anh “English communication in Medicine” – Đồng tổ chức bởi American Center – Tổng lãnh sự quán Mỹ tại TP.HCM và tổ chức Med Lang Fanatic.",
+                "Gia sư cá nhân bằng tiếng Anh cho sinh viên Y khoa và sinh viên Điều dưỡng tại Việt Nam và Mỹ.",
+                "Trưởng nhóm tình nguyện viên phiên dịch y khoa – Dự án hợp tác trao đổi chuyên môn và mổ tim từ thiện giữa tổ chức phi lợi nhuận MD1World, USA và Bệnh viên Tim Hà Nội, Việt Nam.",
+                "Chứng chỉ OET (Occupational English Test) - Medicine.",
+                "Chứng chỉ IELTS 8.0.",
+                "Chứng chỉ đào tạo liên tục – Phương pháp giảng dạy và lượng giá lâm sàng dựa trên năng lực(Đại học Y Dược TP.HCM)."
+            ],
+            bio: "BS. Nguyễn Ngọc Quỳnh Trâm từng là du học sinh tại Úc và tại Hungary. Chị tốt nghiệp hạng Ưu tại đại học Debrecen Hungary và từng giữ vị trí phó chủ tịch hội sinh viên Việt Nam. Chị cũng có kinh nghiệm viết báo và trình hội thảo khoa học khi còn là sinh viên y. Định hướng trong tương lai của BS Trâm là làm việc trong hệ thống NHS của Anh Quốc.",
+            title: "Instructor at Med Lang Fanatic",
+            name: "Nguyễn Trần Thanh Hương",
+            quote: "Bodily exercise, when compulsory, does no harm to the body; but knowledge which is acquired under compulsion obtains no hold on the mind.",
+            quoteAuthor: "Plato"
         }
     },
     metaData: {
@@ -122,13 +146,15 @@ const slugs = {
             description: "Khóa học MAVL hướng dẫn bạn phân nhóm từ vựng giúp liên tưởng, và bài tập tương tác đa dạng giúp hiểu sâu hàm nghĩa các từ vựng.",
             title: "Medical Academic Vocabulary List",
             imageUrl: "/images/mavl-thumbnail.svg",
-            imageAlt: "Medical Academic Vocabulary List"
+            imageAlt: "Medical Academic Vocabulary List",
+            link: "/mavl"
         },
         "medical-terminology": {
             description: "Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.",
             title: "Medical Terminology: An essential course for healthcare professional",
             imageUrl: "/images/mt-thumbnail.jpeg",
-            imageAlt: "Medical Terminology: An essential course for healthcare professional"
+            imageAlt: "Medical Terminology: An essential course for healthcare professional",
+            link: "/medical-terminology"
         }
     },
     exercise: {

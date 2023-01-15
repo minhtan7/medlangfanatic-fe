@@ -14,6 +14,7 @@ const Footer = () => {
                         <Col xs={12} md={4} className="mb-3">
                             <div >
                                 <h5>Theo dõi Medlangfanatic:</h5>
+                                <p><span style={{ color: "var(--contrast" }}>Nền tảng học tiếng Anh Y khoa trực tuyến</span></p>
                                 <div className='brands-group'>
                                     <a target="_blank" href='https://facebook.com/medlangfanatic' rel="noreferrer">
                                         <FontAwesomeIcon className='ms-3' size='2x' icon={faFacebook} />

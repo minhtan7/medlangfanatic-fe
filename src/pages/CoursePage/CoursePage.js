@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getSingleCourse } from '../../features/course/courseSlice'
 import MetaDecorator from '../../components/utils/MetaDecorator'
 import { slugTranslate } from '../../utility/slugTranslate'
+import { Helmet } from 'react-helmet'
 
 
 const slugs = {
@@ -64,6 +65,9 @@ const CoursePage = () => {
 
     return Object.keys(course).length && (
         <>
+            <Helmet>
+                <meta name='description' content={slug} />
+            </Helmet>
             <MetaDecorator {...meta} />
             <Hero course={course} />
             {filterCover(course.slug.toLowerCase())}
@@ -73,8 +77,8 @@ const CoursePage = () => {
                         <Features course={course} />
                         <CourseDetailContent chapters={course.chapters} slug={slug} />
                         <Instructors instructors={course.instructors} />
-                        {slug === "clinical-case-presentation" | slug === "communication-with-patients-101" ? null : <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />}
-                        {slug === "clinical-case-presentation" | slug === "communication-with-patients-101" ? null : <FAQ faq={course.faq} />}
+                        {slug === "clinical-case-presentation" ? null : <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />}
+                        {slug === "clinical-case-presentation" ? null : <FAQ faq={course.faq} />}
                     </Col>
                     <Col xs={0} sm={0} md={4} className="d-none d-sm-none d-md-block">
                         <CourseCard course={course} />

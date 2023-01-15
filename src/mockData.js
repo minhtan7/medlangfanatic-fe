@@ -70,7 +70,7 @@ const instructors = [
     },
     {
         name: "Nguyễn Trần\nThanh Trúc",
-        bio: "Bác sĩ chuyên ngành Thần kinh, mảng nghiên cứu chính liên quan đến sa sút trí tuệ\nDu học sinh bậc Thạc sĩ tại Đài Loan. Từng tham gia các chương trình trao đổi sinh viên tại Nhật và Úc.\nGiảng viên tiếng Anh tại Jio Health\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+        bio: "Bác sĩ chuyên ngành Thần kinh, mảng nghiên cứu chính liên quan đến sa sút trí tuệ\nDu học sinh bậc Tiến sĩ tại Đài Loan. Từng tham gia các chương trình trao đổi sinh viên tại Nhật và Úc.\nGiảng viên tiếng Anh tại Jio Health\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
         title: "BS.",
         titleFull: "Bác sĩ",
         imageUrl: "/images/dr.truc.jpg",
