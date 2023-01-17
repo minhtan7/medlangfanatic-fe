@@ -107,8 +107,8 @@ const HomePage = () => {
     return (
         <>
             <Helmet>
-                <meta name="description" content="Med Lang Fanatic | Khóa học tiếng Anh Y khoa trực tuyến. Cải thiện khả năng ngoại ngữ và nâng cao kỹ năng giao tiếp trong Y khoa." data-rh="true" />
-                <meta name="keywords"
+                <meta name="description" content="Med Lang Fanatic | Khóa học tiếng Anh Y khoa online. Cải thiện khả năng ngoại ngữ và nâng cao kỹ năng giao tiếp trong Y khoa." data-rh="true" />
+                {/* <meta name="keywords"
                     content="Tiếng anh y khoa, Khái niệm về các ngành nghề cơ bản trong y khoa,
 Từ vựng tiếng Anh chuyên ngành Y khoa tổng quát ,
 Từ vựng tiếng Anh chuyên ngành thần kinh,
@@ -319,7 +319,7 @@ chuyên ngành Y học dự phòng,
 chuyên ngành Dinh dưỡng,
 chuyên ngành Nhi Khoa,
 chuyên ngành Gây mê hồi sức"
-                />
+                /> */}
             </Helmet>
             <CTA />
             {/* {isMobile ? <WhyMedLangMobile /> : <WhyMedLangWeb />} */}
