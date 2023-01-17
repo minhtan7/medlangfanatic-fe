@@ -22,7 +22,7 @@ export const ShowMore = ({ defaultHeight, text, index }) => {
             setHeightMin(heightClient);
             setHeightCurrent(heightClient);
         }
-    }, [text, index, width]);
+    }, [text, index, width, defaultHeight]);
     useEffect(() => {
         if (text.length < 400) {
             setMore(!more)

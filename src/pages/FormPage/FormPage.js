@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, Spinner } from 'react-bootstrap'
-import { useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useFilterCssRoot } from '../../hook/useFilterCssRoot'
 import { useScript } from '../../hook/useScript'
 import { filterCss } from '../../utility/filterCss'

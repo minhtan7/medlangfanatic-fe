@@ -26,10 +26,10 @@ api.interceptors.response.use(
     },
     function (error) {
         error = error.response.data;
-        console.log("RESPONSE ERROR", error);
-        let errorMsg = error.message || "";
-        if (error.errors && error.errors.message)
-            errorMsg = errorMsg + ": " + error.errors.message;
+        // console.log("RESPONSE ERROR", error);
+        // let errorMsg = error.message || "";
+        // if (error.errors && error.errors.message)
+        //     errorMsg = errorMsg + ": " + error.errors.message;
 
         return Promise.reject(error);
     }

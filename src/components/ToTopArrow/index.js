@@ -29,7 +29,7 @@ export const ToTopArrowNormalUse = () => {
     return (
         <>
             <div className='position-fixed arrow-up '>
-                <a className='d-none d-md-flex border rounded-circle justify-content-center align-items-center' href='#header'>
+                <a className='d-flex border rounded-circle justify-content-center align-items-center' href='#header'>
                     <FontAwesomeIcon icon={faAngleDoubleUp} size="1x" />
                 </a>
             </div>
