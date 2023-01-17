@@ -880,9 +880,16 @@ const InstructorCardLeft = ({ instructor }) => {
                                 </li>
                             ))}
                         </ul>
-                        <div className='text-end'>
-                            <button className='custom-btn btn-read-more'><span>Đọc thêm</span></button>
-                        </div>
+                        {instructor.link && !isMobile &&
+                            <div className='d-flex justify-content-end align-items-end h-100 w-100'>
+                                <Link to={instructor.link}>
+                                    <button className='custom-btn btn-read-more'>
+                                        <span>Đọc thêm</span>
+                                    </button>
+                                </Link>
+                            </div>
+                        }
+
                     </div>
                 </div>
                 <div className="speaker-left">
@@ -932,6 +939,13 @@ const InstructorCardRight = ({ instructor }) => {
                                 </li>
                             ))}
                         </ul>
+                        {instructor.link && !isMobile &&
+                            <div className='d-flex justify-content-end align-items-end h-100 w-100'>
+                                <Link to={instructor.link}>
+                                    <button className='custom-btn btn-read-more'><span>Đọc thêm</span></button>
+                                </Link>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
