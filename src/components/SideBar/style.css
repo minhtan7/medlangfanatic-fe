@@ -93,9 +93,19 @@
   text-decoration: none;
 }
 #sidebar .sidebar-item.plain:hover{
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 #sidebar .sidebar-item.plain i{
   display: inline-block;
   width: 1.7em;
+}
+
+#sidebar .sidebar-item.plain.active{
+  background-color: var(--contrast);
+}
+
+@media only screen and (max-width:600px) {
+  #sidebar{
+    width: 100%;
+  }
 }

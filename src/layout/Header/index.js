@@ -47,7 +47,7 @@ function MainHeader() {
                         <Nav.Link className='me-3' onClick={() => navigate("/")} >Trang chủ</Nav.Link>
                         <Nav.Link className='me-3' href="/#course-list-session"  >Khóa học</Nav.Link>
                         <Nav.Link className='me-3' onClick={() => navigate("/blogs")} >Blogs</Nav.Link>
-                        <Nav.Link className='me-3' onClick={() => navigate("/documentation")} >Tài liệu</Nav.Link>
+                        {/* <Nav.Link className='me-3' onClick={() => navigate("/documentation")} >Tài liệu</Nav.Link> */}
                         <Nav.Link className='me-3' onClick={() => navigate("/game")} >Game</Nav.Link>
                         {/* <Nav.Link className='sign-up' onClick={() => navigate("/register-form")} >Đăng ký ngay</Nav.Link> */}
                     </Nav>

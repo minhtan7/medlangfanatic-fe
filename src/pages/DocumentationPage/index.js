@@ -9,22 +9,24 @@ import { useScript } from '../../hook/useScript'
 import { slugTranslate } from '../../utility/slugTranslate'
 import { SubscriptionHP } from '../HomePage'
 import { ToTopArrowNormalUse } from '../../components/ToTopArrow'
+import ViewDoc from '../../components/ViewDoc'
 
 
 const getRender = (frame) => {
+    console.log(frame)
     if (!frame) {
         return <WelcomeDoc />
     }
     if (frame.type === "document") {
         if (frame.display === 'download') {
-            return <button>View</button>
+            return <ViewDoc link={frame.link} />
         } else if (frame.display === 'html') {
             return (<div id="notion">
                 {frame.html}
             </div>)
         }
     } else if (frame.type === "exercise" && frame.display === "embed") {
-        return <iframe title="Sentence arrangement - Introductory email" src="https://medlangfanatic.h5p.com/content/1291480456540279979/embed" width="100%" height="984" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *" aria-label="Email writing - Sentence arrangement - Introductory email"></iframe>
+        return frame.embed
     }
     return <WelcomeDoc />
 }
@@ -41,7 +43,6 @@ const DocumentationPage = () => {
             setFrame(slugTranslate({ target: type, slug }))
         }
     }, [location.search, slug, type])
-
     return (
         <>
 
@@ -59,6 +60,7 @@ const DocumentationPage = () => {
                             <SideBar />
                         </Col>
                         <Col md={9} >
+                            <h1 className='mb-md-5 my-4 text-center'>{frame ? frame.title : null}</h1>
                             {getRender(frame)}
                         </Col>
                     </Row>

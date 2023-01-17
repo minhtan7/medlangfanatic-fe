@@ -869,7 +869,7 @@ const InstructorCardLeft = ({ instructor }) => {
         <>
             <div className="new-speaker my-2">
                 <div className="speaker-right">
-                    <div>
+                    <div className='d-flex flex-column justify-content-between h-100'>
                         <ul className="speaker-topic mb-0 fa-ul">
                             {instructor.bio.split("\n").map((b, idx) => (
                                 <li key={idx}>
@@ -880,6 +880,9 @@ const InstructorCardLeft = ({ instructor }) => {
                                 </li>
                             ))}
                         </ul>
+                        <div className='text-end'>
+                            <button className='custom-btn btn-read-more'><span>Đọc thêm</span></button>
+                        </div>
                     </div>
                 </div>
                 <div className="speaker-left">
