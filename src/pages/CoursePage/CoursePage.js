@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import api from '../../apiService'
 import "./style.css"
 
 import { Hero } from '../../components/Hero/Hero'
@@ -11,7 +10,7 @@ import { Features } from '../../components/Feature'
 import { FAQ } from '../../components/FAQ'
 
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import { CourseCard } from '../../components/CourseCard/CourseCard'
+import { CourseCard, RecruitBtn } from '../../components/CourseCard/CourseCard'
 import { Cover, CoverCWP, CoverMedicalTerminology, CoverPCCS } from '../../components/Cover/Cover'
 import { ToTopArrow } from '../../components/ToTopArrow'
 // import jsxToString from 'jsx-to-string';
@@ -77,7 +76,7 @@ const CoursePage = () => {
                         <Features course={course} />
                         <CourseDetailContent chapters={course.chapters} slug={slug} />
                         <Instructors instructors={course.instructors} />
-                        {slug === "clinical-case-presentation" ? null : <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />}
+                        <StudentFeedback defaultHeight={defaultHeight} feedBack={course.review} />
                         {slug === "clinical-case-presentation" ? null : <FAQ faq={course.faq} />}
                     </Col>
                     <Col xs={0} sm={0} md={4} className="d-none d-sm-none d-md-block">
@@ -126,7 +125,12 @@ export const CTA = ({ slug }) => {
                             <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-                            <Button onClick={() => navigate(`/register-form/${slug.toLowerCase()}`)} variant="primary" className='btn-sign-up py-2' ><span>Đăng ký ngay</span></Button>
+                            <Button
+                                onClick={() => navigate(`/register-form/${slug.toLowerCase()}`)} variant="primary"
+                                className='btn-sign-up py-2 mb-3'
+                            ><span>Đăng ký ngay</span>
+                            </Button>
+                            <RecruitBtn />
                         </div>
                     </Col>
                     <Col className='d-none d-md-block'></Col>
@@ -135,6 +139,7 @@ export const CTA = ({ slug }) => {
         </div>
     )
 }
+
 
 
 export default CoursePage

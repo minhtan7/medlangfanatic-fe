@@ -2,19 +2,18 @@
     position: relative;
 }
 #hero .hidden-logo{
-    /* position: absolute; */
+    position: absolute;
     opacity: 0.1;
-    width: 100vw;
-    height: 100%;
-    overflow: hidden;
+    /* width: 100vw; */
+    height: 350px;
+    /* overflow: hidden; */
+    left:-7%;
+    bottom:0
 }
 #hero .hidden-logo img{
     position: absolute;
     left: 0;
     width: 71rem;
-    height: auto;
-    bottom: -70%;
-    left: -7%;
 }
 
 #hero .hero-image{
@@ -79,7 +78,7 @@
         font-size: 0.9rem;
     }
     #hero .hidden-logo{
-        overflow: hidden;
+        /* overflow: hidden; */
         /* width: 24rem; */
     }
     #hero .hidden-logo img{

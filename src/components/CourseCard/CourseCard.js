@@ -28,11 +28,13 @@ export const CourseCard = ({ course }) => {
                     className='btn-sign-up-contrast mb-2' >
                     <span>Học thử!</span>
                 </Button> */}
+
                 <Button
                     onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)}
-                    variant="primary" className='btn-sign-up' >
+                    variant="primary" className='btn-sign-up mb-3' >
                     <span>Đăng ký ngay</span>
                 </Button>
+                <RecruitBtn />
             </Card.Body >
             {course.slug === "clinical-case-presentation" |
                 course.slug === "communication-with-patients-101"
@@ -140,4 +142,24 @@ const filterIcon = (icon) => {
         default:
             return <FontAwesomeIcon icon={faT} />
     }
+}
+export const RecruitBtn = ({ cursor, course }) => {
+    const navigate = useNavigate()
+    const handleClick = () => {
+        if (course)
+            navigate(`/register-form/${course.slug.toLowerCase()}`)
+    }
+
+    return (
+        <div className="text-center">
+            <button
+                className="recruit-btn-card" style={{ cursor: cursor ? "pointer" : "unset" }}
+                onClick={handleClick}
+            >
+                <div class="left"></div>
+                Đang mở đăng ký
+                <div class="right"></div>
+            </button>
+        </div >
+    )
 }

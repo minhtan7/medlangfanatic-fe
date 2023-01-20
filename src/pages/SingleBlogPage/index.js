@@ -11,6 +11,7 @@ import { getSingleBlog } from '../../features/blog/blogSlice'
 import { useScript } from '../../hook/useScript'
 import { SubscriptionHP } from '../HomePage'
 import "./style.css"
+import { slugTranslate } from '../../utility/slugTranslate'
 
 
 const SingleBlogPage = () => {
@@ -22,7 +23,7 @@ const SingleBlogPage = () => {
     const { singleBlogPage: blog, isLoading } = useSelector(state => state.blog)
     useEffect(() => {
         dispatch(getSingleBlog({ slug }))
-    }, [slug])
+    }, [slug, dispatch])
 
     // const blog = blogContent.filter(b => b._id === parseInt(id))[0]
     return (
@@ -90,7 +91,7 @@ const BlogContent = ({ blog }) => {
                 <div>
                     {blog.topic.map((t, index) => (
                         <small key={index}>
-                            {t.name.toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
+                            {slugTranslate({ target: "categories", slug: t.name }).toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
                         </small>
                     ))}
                 </div>

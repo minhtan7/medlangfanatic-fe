@@ -14,7 +14,7 @@ export const StudentFeedback = ({ defaultHeight, feedBack }) => {
                 {feedBack.map((f, index) => (
                     <div className="slideshow-container" key={f.reviewerName}>
                         <div className={`mySlides faded ${slide === index ? "slide-active" : ""}`}  >
-                            <ShowMore defaultHeight={defaultHeight} text={f.content} index={index} />
+                            <ShowMore slide={slide} defaultHeight={defaultHeight} text={f.content} index={index} />
                             <span className='slide-quote'>
                                 {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
                                 <img src={quote} alt="quote sign" />

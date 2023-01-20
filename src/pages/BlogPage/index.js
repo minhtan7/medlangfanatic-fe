@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import LoadingSpinner from '../../components/LoadingSpinner'
 import PaginationBar from '../../components/Pagination'
 import BlogCard from '../../features/blog/BlogCard'
@@ -14,9 +14,12 @@ import "./style.css"
 const BlogPage = () => {
     const dispatch = useDispatch();
     const { currentPageBlogs: { posts: blogs, totalPage }, isLoading } = useSelector(state => state.blog)
-    const [page, setPage] = useState(1)
-
+    // const [page, setPage] = useState(1)
+    const location = useLocation()
+    const searchParams = new URLSearchParams(location.search);
+    const page = searchParams.get("page") || 1
     useEffect(() => {
+        // setPage(pageQuerry)
         dispatch(getPosts({ page, limit: 6 }))
     }, [page, dispatch])
     return (
@@ -38,7 +41,7 @@ const BlogPage = () => {
                     ))}
                     <hr />
                 </Row>
-                <PaginationBar page={page} setPage={setPage} totalPage={totalPage} />
+                <PaginationBar page={page} totalPage={totalPage} />
             </Container>
         </div>
     )

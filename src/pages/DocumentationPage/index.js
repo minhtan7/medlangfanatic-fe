@@ -19,7 +19,7 @@ const getRender = (frame) => {
     }
     if (frame.type === "document") {
         if (frame.display === 'download') {
-            return <ViewDoc link={frame.link} />
+            return <ViewDoc frame={frame} />
         } else if (frame.display === 'html') {
             return (<div id="notion">
                 {frame.html}
@@ -60,7 +60,7 @@ const DocumentationPage = () => {
                             <SideBar />
                         </Col>
                         <Col md={9} >
-                            <h1 className='mb-md-5 my-4 text-center'>{frame ? frame.title : null}</h1>
+                            <h1 className='mb-md-3 my-4 text-center'>{frame ? frame.title : null}</h1>
                             {getRender(frame)}
                         </Col>
                     </Row>

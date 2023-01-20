@@ -1,4 +1,4 @@
-import { faCheck, faCheckCircle, faCircle, faCircleDot } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -41,7 +41,7 @@ export const InstructorPage = () => {
                             <p className='mb-4' style={{ color: "#6c6c6c" }}>{instructor.title}</p>
                             {/* <hr /> */}
                             {/* <h4 className='mb-5'>Biography</h4> */}
-                            <p style={{ lineHeight: '1.7' }} className=" text-justify">{instructor.bio}</p>
+                            {instructor.bio && <p style={{ lineHeight: '1.7' }} className=" text-justify">{instructor.bio}</p>}
                             <hr className='mt-4' />
                             <h4 className='mb-4 text-center text-md-start text-main'>Thông tin sơ lược</h4>
                             <ul className='fa-ul'>

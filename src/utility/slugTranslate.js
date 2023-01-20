@@ -134,7 +134,7 @@ const slugs = {
                 "Chứng chỉ IELTS 8.0.",
                 "Chứng chỉ đào tạo liên tục – Phương pháp giảng dạy và lượng giá lâm sàng dựa trên năng lực(Đại học Y Dược TP.HCM)."
             ],
-            bio: "BS. Nguyễn Ngọc Quỳnh Trâm từng là du học sinh tại Úc và tại Hungary. Chị tốt nghiệp hạng Ưu tại đại học Debrecen Hungary và từng giữ vị trí phó chủ tịch hội sinh viên Việt Nam. Chị cũng có kinh nghiệm viết báo và trình hội thảo khoa học khi còn là sinh viên y. Định hướng trong tương lai của BS Trâm là làm việc trong hệ thống NHS của Anh Quốc.",
+            // bio: "BS. Nguyễn Ngọc Quỳnh Trâm từng là du học sinh tại Úc và tại Hungary. Chị tốt nghiệp hạng Ưu tại đại học Debrecen Hungary và từng giữ vị trí phó chủ tịch hội sinh viên Việt Nam. Chị cũng có kinh nghiệm viết báo và trình hội thảo khoa học khi còn là sinh viên y. Định hướng trong tương lai của BS Trâm là làm việc trong hệ thống NHS của Anh Quốc.",
             title: "Instructor at Med Lang Fanatic",
             name: "Nguyễn Trần Thanh Hương",
             quote: "Bodily exercise, when compulsory, does no harm to the body; but knowledge which is acquired under compulsion obtains no hold on the mind.",
@@ -249,14 +249,16 @@ const slugs = {
             link: "https://drive.google.com/file/d/1poqFtcStj9ZjTU6qflnlMDaKbHxEzukc/view?usp=sharing",
             type: "document",
             path: "?type=document&name=bo-tu-vung-x-quang-long-nguc",
-            display: "download"
+            display: "download",
+            image: "https://res.cloudinary.com/tanvo/image/upload/v1674049290/medlangfanatic/tu-vung-x-quang-nguc_o4njwr.jpg"
         },
         "ban-ron-lam-sao-hoc-tieng-anh": {
             title: "Bận rộn làm sao học tiếng Anh",
             link: "https://drive.google.com/file/d/1bomzB9sYaQQ6tGMVRBaqNig3D6f4WUCD/view?usp=sharing",
             type: "document",
             path: "?type=document&name=ban-ron-lam-sao-hoc-tieng-anh",
-            display: "download"
+            display: "download",
+            image: "https://res.cloudinary.com/tanvo/image/upload/v1674049648/medlangfanatic/ban-ron-lam-sao-hoc-tieng-anh_tttmoj.jpg"
         },
         "medical-academic-vocabulary-list": {
             title: "Medical Academic Vocabulary List",
@@ -289,7 +291,8 @@ const slugs = {
             link: "https://drive.google.com/file/d/1bILvlnU3yNn2kRfDDTEwlOyjoZl0GUfM/view?usp=sharing",
             type: "document",
             path: "?type=document&name=hoc-cach-hoi-benh-su-bang-tieng-anh-nhu-the-nao?",
-            display: "download"
+            display: "download",
+            image: "https://res.cloudinary.com/tanvo/image/upload/v1674049932/medlangfanatic/hoc-cach-hoi-benh-su-bang-tieng-anh-nhu-the-nao_l074zo.jpg"
         },
         "bo-tu-vung-ve-om-nghen": {
             title: "MLF | Bộ từ vựng về Ốm nghén",
@@ -300,6 +303,16 @@ const slugs = {
             html: <div dangerouslySetInnerHTML={{ __html: MLF_bo_tu_vung_om_nghen }}></div>
 
         }
+    },
+    categories: {
+        tips: "tips học tiếng Anh Y Khoa",
+        "learning.how.to.learn": "phương pháp học",
+        "medical english": "tiếng Anh y khoa",
+        "medical vocabulary": "từ vựng Anh Văn Y khoa",
+        jargon: "biệt ngữ Y khoa",
+        speaking: "nói tiếng Anh Y khoa",
+        communication: "giao tiếp tiếng Anh Y khoa",
+        listening: "nghe tiếng Anh Y khoa"
     }
 }
 

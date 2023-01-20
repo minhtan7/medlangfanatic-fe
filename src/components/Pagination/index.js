@@ -3,10 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button } from "react-bootstrap";
 import "./style.css"
+import { useNavigate } from "react-router-dom";
 
 const PaginationBar = ({ page, setPage, totalPage }) => {
+    const navigate = useNavigate()
     const handleChangePage = (num) => {
-        setPage(page + num)
+        // setPage(page + num)
+        navigate(`/blogs?page=${parseInt(page) + num}`)
+
     }
     return (
         <div className="text-end me-5 py-3">

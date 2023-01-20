@@ -1,8 +1,6 @@
 import React from 'react'
 import { CourseThumbnailHorizontal } from '../../components/CourseThumbnail'
-
 import { useScript } from '../../hook/useScript'
-import { CTA } from '../CoursePage/CoursePage'
 
 const GamePage = () => {
     useScript("https://medlangfanatic.h5p.com/js/h5p-resizer.js")
