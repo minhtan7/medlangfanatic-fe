@@ -20,7 +20,6 @@ const CourseThumbnailHorizontal = () => {
 }
 
 const CourseThumbnailVertical = ({ course }) => {
-    const navigate = useNavigate()
     return (
         <Card id={course.idEl} className='box-shadow-card'>
             < Card.Img variant="top" src={course.image} style={{ borderRadius: 0 }} />
@@ -38,9 +37,17 @@ const CourseThumbnailVertical = ({ course }) => {
                     </Button> */}
                     <a href={course.path} target="_blank" rel="noreferrer">
                         <Button variant="primary"
-                            className={course.btnClass} style={{ width: "10rem" }}><small>Tìm hiểu thêm</small>
+                            className={`mb-2 ${course.btnClass}`} style={{ width: "10rem" }}><small>Tìm hiểu thêm</small>
                         </Button>
                     </a>
+                    {course.recruit &&
+                        <a href={course.path} target="_blank" rel="noreferrer">
+                            <Button variant="primary"
+                                className={`recruit-btn ${course.btnClass}`} style={{ width: "11rem" }}>
+                                <small>Đang mở đăng ký</small>
+                                <span></span>
+                            </Button>
+                        </a>}
                 </div>
             </Card.Body>
         </Card>

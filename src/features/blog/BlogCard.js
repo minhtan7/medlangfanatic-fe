@@ -1,6 +1,7 @@
 import dayjs from "dayjs"
 import { Card } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
+import { slugTranslate } from "../../utility/slugTranslate"
 
 const BlogCard = ({ blog, length = 200 }) => {
     const navigate = useNavigate()
@@ -18,7 +19,7 @@ const BlogCard = ({ blog, length = 200 }) => {
                 <Card.Text>
                     {blog.topic.length && blog.topic.map((t, index) => {
                         return <span key={index} style={{ fontSize: "0.8rem" }}>
-                            {t.name.toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
+                            {slugTranslate({ target: "categories", slug: t.name }).toUpperCase()} {index === blog.topic.length - 1 ? "" : "| "}
                         </span>
                     })}
                 </Card.Text>

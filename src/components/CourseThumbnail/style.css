@@ -67,3 +67,55 @@
 #pccs-thumbnail-vertical .card-title{
     color: var(--pccs-main)
 }
+
+.recruit-btn{
+    position: relative;
+    padding: 4px 0px;
+}
+.recruit-btn > span {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    border: 2px solid white;
+    /* background-color: var(--main); */
+    color: white;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(31%, -50%);
+}
+
+.recruit-btn > span:after {
+    content: "";
+    position: absolute;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: auto;
+    right: unset;
+    opacity: 1;
+    font-size: unset;
+    top: unset;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-45deg) translate(-10%,-80%)
+}
+#mavl-thumbnail-vertical .recruit-btn > span{
+    background-color:var(--main) ;
+}
+
+#mt-thumbnail-vertical .recruit-btn > span{
+    background-color:var(--mt-secondary) ;
+}
+
+#pccs-thumbnail-vertical .recruit-btn > span{
+    /* color: var(--pccs-main); */
+    background-color: var(--pccs-main);
+}
+
+#cwp-thumbnail-vertical .recruit-btn > span{
+    background-color: var(--cwp-main);
+}

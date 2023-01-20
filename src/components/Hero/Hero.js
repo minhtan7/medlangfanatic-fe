@@ -4,11 +4,12 @@ import React from 'react'
 import { Col, Container, Placeholder, Row } from 'react-bootstrap'
 import { slugTranslate } from '../../utility/slugTranslate'
 import "./style.css"
+import { RecruitBtn } from '../CourseCard/CourseCard'
 
 export const Hero = ({ course }) => {
 
     return <div id="hero" className='mb-5 bg-main position-relative overflow-hidden' style={{ color: "white", padding: "3rem 0 29px" }}>
-        {course ? (<Container >
+        {course ? (<Container className='position-relative' style={{ zIndex: 1 }}>
             <Row >
                 <Col xs={12} md={6} className="px-2 px-md-3 m-auto overflow-hidden" style={{ paddingTop: "4rem" }}>
                     {heroCourseName(course.slug)}
@@ -22,6 +23,7 @@ export const Hero = ({ course }) => {
                             </li>
                         ))}
                     </ul>
+                    <RecruitBtn cursor={true} course={course} />
 
                 </Col>
                 <Col md={6} className="d-none d-md-block">

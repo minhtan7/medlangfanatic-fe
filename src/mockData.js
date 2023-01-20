@@ -59,8 +59,9 @@ const instructors = [
         title: "BS.",
         titleFull: "Bác sĩ",
         name: "Trần Nguyễn\nThanh Hương",
-        bio: "Bác sĩ, khoa Phẫu thuật tim trẻ em, Bệnh viện Đại học Y Dược TP.HCM.\nHoàn thành Step 1 và Step 2 CK USMLE\nTrưởng nhóm biên dịch sách “The End of Alzheimer\nChứng chỉ OET (Occupational English Test) - Medicine.\nChứng chỉ IELTS 8.0.\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
+        bio: "Bác sĩ, khoa Phẫu thuật tim trẻ em, Bệnh viện Đại học Y Dược TP.HCM.\nHoàn thành Step 1 và Step 2 CK USMLE\nTrưởng nhóm biên dịch sách “The End of Alzheimer\nChứng chỉ OET (Occupational English Test) - Medicine.\nCựu Chủ nhiệm CLB tiếng Anh H.E.I. tại Đại học Y Dược TPHCM",
         imageUrl: "/images/dr.huong.png",
+        link: "/instructors/bac-si-tran-nguyen-thanh-huong"
 
     },
     {

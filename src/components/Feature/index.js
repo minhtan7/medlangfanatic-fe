@@ -40,66 +40,6 @@ export const Features = ({ course }) => {
 
     }
 
-    const MAVLFeatureImage = (feature) => {
-        let url
-        switch (feature) {
-            case "subject":
-                url = "/images/mavl-doi_tuong.png"
-                break;
-            case "format":
-                url = "/images/mavl-hinh_thuc.png"
-                break;
-            case "time":
-                url = "/images/mavl-thoi_gian.png"
-                break;
-            case "fiveStarts":
-                url = "/images/mavl-nam_sao.png"
-                break;
-            default:
-                break;
-        }
-        return url
-    }
-    const MTFeatureImage = (feature) => {
-        let url
-        switch (feature) {
-            case "subject":
-                url = "/images/mt-doi_tuong.jpg"
-                break;
-            case "format":
-                url = "/images/mt-hinh_thuc.jpg"
-                break;
-            case "time":
-                url = "/images/mt-thoi_gian.jpg"
-                break;
-            case "fiveStarts":
-                url = "/images/mt-nam_sao.jpg"
-                break;
-            default:
-                break;
-        }
-        return url
-    }
-    const PCCSFeatureImage = (feature) => {
-        let url
-        switch (feature) {
-            case "subject":
-                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899425/medlangfanatic/courses/presenting-clinical-case-from-scratch/DOI_TUONG_HOC_i0m6ng.jpg"
-                break;
-            case "format":
-                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/HINH_THUC_HOC_ioyenk.jpg"
-                break;
-            case "time":
-                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/THOI_GIAN_HOC_v5qrks.jpg"
-                break;
-            case "fiveStarts":
-                url = "https://res.cloudinary.com/tanvo/image/upload/v1671899426/medlangfanatic/courses/presenting-clinical-case-from-scratch/5_SAO_elyv9x.jpg"
-                break;
-            default:
-                break;
-        }
-        return url
-    }
     const featureTab = (tab) => {
         switch (tab) {
             case "subject":

@@ -1,9 +1,9 @@
 import { faCertificate, faCheck, faCircleCheck, faPenRuler, faSchoolCircleCheck, faWifiStrong } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
-import { CourseThumbnailVertical, CourseThumbnailVerticalMT } from '../../components/CourseThumbnail'
+import { CourseThumbnailVertical } from '../../components/CourseThumbnail'
 // import ReactCardCarousel from "react-card-carousel";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -13,11 +13,14 @@ import { isMobile } from 'react-device-detect';
 
 import "./style.css"
 import BlogCard from '../../features/blog/BlogCard'
-import { blogContent, instructors } from '../../mockData'
+import { instructors } from '../../mockData'
 import ToastMsg from '../../components/ToastMsg.js'
 import { ToTopArrowNormalUse } from '../../components/ToTopArrow'
 import CarouselML from '../../components/Carousel/CarouselML'
 import { Helmet } from 'react-helmet-async'
+import apiService from '../../app/apiService'
+import { BASE_URL } from '../../app/config'
+import { ShowMore } from '../../utility/ShowMore'
 
 const fbs = [
     {
@@ -36,6 +39,16 @@ const fbs = [
         title: "Sinh viên"
     },
     {
+        content: `Dạ với em thì mỗi instructor đều để lại cho em 1 nét riêng rất tích cực, mà nếu phải kể thì em cũng kể được những điểm em ấn tượng với từng người luôn ạ :>
+Anh Hưng trong buổi học em thấy là người khá trầm tính nhưng những góp ý và nhận xét của anh luôn rất đắt giá, sâu sắc, kiểu mỗi comment của anh đều chứa đầy kiến thức và cả những kinh nghiệm thực tế của anh luôn ạ. 
+Anh Đức thì luôn vui vẻ kiểu luôn mang lại năng lượng tích cực cho mọi người trong các buổi học, buổi học có anh luôn cảm thấy rất thoải mái và vui vẻ và anh cũng có góp ý giúp em sửa đổi rất nhiều trong buổi practice của em.
+Anh Cang có cách tiếp cận bài học rất hay trong những buổi anh host, anh để 1 phần của bài học của thinkific vào buổi practice để mọi người cùng nhau rút ra bài học để luyện tập và cả phần quizz và minigame của anh cũng rất thú vị ạ.
+Chị Trúc luôn có những exercises đầu buổi học từ các nguồn trên mạng để mọi người cùng tham gia làm và trong breakout room của chị thì chị luôn góp ý rất nhiều và chi tiết, ngoài ra chị còn nhiệt tình đóng vai để các bạn có thể luyện tập nhiều hơn.Những role play có chị tham gia đều là những tình huống rất thực tế, bệnh nhân hỏi rất kỹ chứ không phải bệnh nhân dễ dãi như mọi người đóng vai, và chị cũng hỗ trợ hết mình để mọi người hoàn thành phần role play của mình.Em rất tiếc trong những buổi chị host chính là những bài khá khó liên quan đến specialty, workup, treatment, drug..đều là những phần rất khó với em vì bản thân phần này ở Tiếng Việt em mới học tiếp cận chẩn đoán bệnh nhân, chưa được đi lâm sàng nhiều nên em chưa có nhiều khái niệm trên thực tế về thăm khám, thực hiện cận lâm sàng, điều trị nên em gặp khá nhiều khó khăn khi chuẩn bị bài ạ: (với những buổi này đều dính vào thời gian cuối năm gần tết em vướng lịch học lịch thi rất nhiều ở trường.Nhưng em có note lại đầy đủ, em sẽ cố gắng áp dụng khi em nắm được những kiến thức chuyên ngành cần thiết cho những phần này ạ.
+Em rất ngưỡng mộ những gì các anh chị đã làm trong khóa học này, từ những kiến thức trong bài học đến kinh nghiệm cá nhân, cách các anh chị bố trí thiết kế bài giảng và truyền tải đến cho các thành viên trong khóa học, tất cả đều rất khoa học và hiệu quả.Em có khá nhiều dự định để trau dồi thêm về clinical knowledge và clinical skill và cũng để phát triển bản thân trong tương lai.Em cảm thấy những gì mà anh chị mang đến cho mọi người và cộng đồng đều rất đáng ngưỡng mộ và trân trọng ạ, hi vọng em sẽ có cơ hội được tham gia thêm các hoạt động sau này của các anh chị để được học hỏi và đóng góp cho những hoạt động rất bổ ích này ạ.Cảm ơn mọi người rất nhiều<33`,
+        name: "Trần Minh Quang Thuận",
+        title: "Sinh viên"
+    },
+    {
         content: "Có rất nhiều điều bổ ích từ khoá học này như về phương diện ngôn ngữ thì khoá học đã giúp mình khá nhiều trong việc sử dụng Tiếng Anh trong giao tiếp, những cụm từ và cách nói mà hay sử dụng cũng như về phương diện chuyên ngành thì khoá học đã giúp đỡ rất bổ ích từ việc trao đổi với bệnh nhân, những điều tưởng chừng như đơn giản nhưng khi giao tiếp bằng tiếng Anh thì hoá ra lại cực kì khó.",
         name: "Tiến Lê",
         title: "Bác sĩ"
@@ -45,6 +58,12 @@ const fbs = [
         name: "Hồng Diễm ",
         title: "Dược sĩ"
     },
+    {
+        content: "Anh Hưng, anh Cang em đã có cơ hội tiếp xúc từ trước và thấy hai anh rất dễ gần, làm việc rất logic và luôn thông cảm, hài hoà với khó khăn của mọi người. Chị Trúc thì luôn khơi gợi, mở rộng bài học, thực hành trên các resources đa dạng khiến em rất hứng thú tìm hiểu thêm các nội dung mới ngoài bài học Thinkific! Anh Đức thì rất hay cười (và ngại) và đưa ra những nhận xét rất dễ thương, hài hước 😋 Mỗi anh chị đều có một phong cách đưng lớp khác nhau nhưng luôn cố gắng mang lại phần hướng dẫn gãy gọn, rõ ràng và khuyến khích người học nhất có thể ạ!",
+        name: "Nguyễn Thị Bình",
+        title: "Sinh viên"
+    }
+    ,
     {
         content: "Thầy share một lượng kiến thức và kinh nghiệm rất lớn cho học viên, điều đó khiến mình có nhiều cách để cải thiện Tiếng Anh chuyên ngành của mình hơn.",
         name: "Thanh Thảo",
@@ -344,6 +363,7 @@ const VideoSession = () => {
                     <span className='text-main fw-bold'>Tài liệu</span>
                     <br />
                     <span className='text-30'>Tiếng Anh Y khoa chọn lọc</span>
+                    {/* <Link to="/documentation" className='visit-blog d-none d-md-block'><i>Xem thêm Tài Liệu</i></Link> */}
                 </h1>
                 <Row>
                     <Col xs={12} md={6} className="mb-4 mb-md-0">
@@ -598,15 +618,15 @@ const PODCASTS = [
 ]
 
 const PodCastHP = () => {
-    const navigate = useNavigate()
     return (
         <div id="podcast-session" className='mb-6 mx-md-7 mt-md-5 pt-md-5'>
             <Container className='h-100 '>
                 <h1 className='text-main fw-bold mb-4'>Podcast
                     <br />
-                    <span className='text-30'>
+                    <span className='text-30 fw-normal' style={{ color: "black" }}>
                         Học từ vựng Y khoa miễn phí
-                    </span></h1>
+                    </span>
+                </h1>
                 <Carousel responsive={responsivePodcast}>
                     {PODCASTS.map((p, index) => (
                         <div key={index} style={{ width: "80%", margin: "auto", }}>
@@ -624,6 +644,16 @@ const PodCastHP = () => {
 
 const BlogSession = () => {
     const navigate = useNavigate()
+    const [blogs, setBlogs] = useState([])
+
+    useEffect(() => {
+        const getBlogs = async () => {
+            const res = await apiService.get(`${BASE_URL}/posts`)
+            setBlogs(res.data.posts)
+        }
+        getBlogs()
+    }, [])
+
     return (
         <div id="blog-session" className='mb-4 mb-md-5'>
             <div className='mx-md-7'>
@@ -637,7 +667,7 @@ const BlogSession = () => {
                         <Link to="/blogs" className='visit-blog d-none d-md-block'><i>Xem thêm blogs</i></Link>
                     </h1>
                     <Carousel responsive={responsive}>
-                        {blogContent.map(blog => (
+                        {blogs.map(blog => (
                             // <div style={{ padding: "1rem 2rem" }}>
                             <div key={blog._id} style={{ marginRight: "3rem", paddingBottom: "1rem" }}>
                                 <BlogCard blog={blog} length="100" />
@@ -651,13 +681,12 @@ const BlogSession = () => {
 }
 
 const FeedBackCard = () => {
-
+    const defaultHeight = 280
     return (
         <>
-
             <div className="container-style">
                 <CarouselML autoplay={true} autoplay_speed={50000}>
-                    {fbs.map(fb => (
+                    {fbs.map((fb, index) => (
                         <Card className="card-style" key={fb.name}>
                             {/* <Card.Img variant="top" src="/images/student_icon.svg"
                                 style={{ width: "90px", margin: "auto" }} className='doctor-icon' /> */}
@@ -668,8 +697,8 @@ const FeedBackCard = () => {
                                     <small style={{ fontSize: "15px", textTransform: "lowercase" }}>- {fb.title} -</small>
                                 </Card.Title>
                                 <Card.Text className='text-black position-relative'>
-
-                                    {fb.content}
+                                    <ShowMore defaultHeight={defaultHeight} index={index} text={fb.content} />
+                                    {/* {fb.content} */}
                                     <span className='slide-quote' style={{ zIndex: 1, top: "1rem", left: "1.5rem", opacity: "0.7" }}>
                                         {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
                                         <img src={quote} alt="quote sign" />
@@ -749,7 +778,8 @@ const courseListContent = {
         content: "Khóa học hướng đến các bạn sinh viên y đã đi lâm sàng, hoặc các bác sĩ đã ra trường. Các bạn sẽ được trang bị những câu giao tiếp cơ bản nhất để có thể tự tin hỏi bệnh, khám, và tư vấn cho các bệnh nhân người nước ngoài.",
         path: "/communication-with-patients-101",
         idEl: "cwp-thumbnail-vertical",
-        btnClass: 'btn-sign-up btn-cwp-main'
+        btnClass: 'btn-sign-up btn-cwp-main',
+        recruit: true
     },
     "clinical-case-presentation": {
         title: "Trình Ca Lâm Sàng",
@@ -757,7 +787,8 @@ const courseListContent = {
         content: "Khóa học cho bạn trải nghiệm ngắm nghía cách trình bệnh án hiệu quả bằng tiếng Anh dưới góc độ ngôn ngữ học, và tự chuẩn bị cho mình một hành trang 'cao cấp' để đạt những bước tiến xa hơn trong sự nghiệp.",
         path: "/clinical-case-presentation",
         idEl: "pccs-thumbnail-vertical",
-        btnClass: 'btn-sign-up btn-pccs-main'
+        btnClass: 'btn-sign-up btn-pccs-main',
+        recruit: true
     },
     "medical-terminology": {
         title: "Thuật Ngữ Y Khoa",
@@ -765,7 +796,8 @@ const courseListContent = {
         content: "Medical Terminology: An essential course for healthcare professional: xây dựng vững chắc căn bản thuật ngữ y khoa tiếng Anh sau 60 giờ học đúng lộ trình.",
         path: "/medical-terminology",
         idEl: "mt-thumbnail-vertical",
-        btnClass: 'btn-sign-up btn-mt-secondary'
+        btnClass: 'btn-sign-up btn-mt-secondary',
+        recruit: true
     },
     mavl: {
         title: <span>Từ Vựng Học Thuật<br />Y Khoa</span>,
@@ -774,6 +806,7 @@ const courseListContent = {
         path: "/MAVL",
         idEl: "mavl-thumbnail-vertical",
         btnClass: "btn-sign-up",
+        recruit: true
     },
 
 }
@@ -940,7 +973,7 @@ const InstructorCardRight = ({ instructor }) => {
                             ))}
                         </ul>
                         {instructor.link && !isMobile &&
-                            <div className='d-flex justify-content-end align-items-end h-100 w-100'>
+                            <div className='d-flex justify-content-end align-items-end w-100' style={{ height: "3rem" }}>
                                 <Link to={instructor.link}>
                                     <button className='custom-btn btn-read-more'><span>Đọc thêm</span></button>
                                 </Link>
@@ -954,7 +987,6 @@ const InstructorCardRight = ({ instructor }) => {
 }
 
 export const CTA = () => {
-    const navigate = useNavigate()
     return (
         <div id="cta-homepage" style={{ height: "514px" }} className="mb-5 mt-5 mx-md-7">
             <Container className='h-100'>
@@ -1061,9 +1093,6 @@ const WhyMedLangWeb = () => {
     )
 }
 
-const WHY_TAB = [
-    {}
-]
 const WhyMedLangMobile = () => {
     const [slide, setSlide] = useState(0)
 
