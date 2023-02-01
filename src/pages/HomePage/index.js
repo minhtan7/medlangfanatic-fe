@@ -788,7 +788,7 @@ const courseListContent = {
         path: "/clinical-case-presentation",
         idEl: "pccs-thumbnail-vertical",
         btnClass: 'btn-sign-up btn-pccs-main',
-        recruit: true
+        recruit: false
     },
     "medical-terminology": {
         title: "Thuật Ngữ Y Khoa",
