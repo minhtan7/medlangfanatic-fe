@@ -34,7 +34,9 @@ export const CourseCard = ({ course }) => {
                     variant="primary" className='btn-sign-up mb-3' >
                     <span>Đăng ký ngay</span>
                 </Button>
-                <RecruitBtn />
+                {course.slug === "mavl" && <RecruitBtn cursor={true} course={course} />}
+                {course.slug === "medical-terminology" && <RecruitBtn cursor={true} course={course} />}
+                {course.slug === "communication-with-patients-101" && <RecruitBtn cursor={true} course={course} />}
             </Card.Body >
             {course.slug === "clinical-case-presentation" |
                 course.slug === "communication-with-patients-101"

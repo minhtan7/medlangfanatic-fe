@@ -7,7 +7,7 @@ import "./style.css"
 import { RecruitBtn } from '../CourseCard/CourseCard'
 
 export const Hero = ({ course }) => {
-
+    console.log(course)
     return <div id="hero" className='mb-5 bg-main position-relative overflow-hidden' style={{ color: "white", padding: "3rem 0 29px" }}>
         {course ? (<Container className='position-relative' style={{ zIndex: 1 }}>
             <Row >
@@ -23,7 +23,10 @@ export const Hero = ({ course }) => {
                             </li>
                         ))}
                     </ul>
-                    <RecruitBtn cursor={true} course={course} />
+                    {course.slug === "mavl" && <RecruitBtn cursor={true} course={course} />}
+                    {course.slug === "medical-terminology" && <RecruitBtn cursor={true} course={course} />}
+                    {course.slug === "communication-with-patients-101" && <RecruitBtn cursor={true} course={course} />}
+
 
                 </Col>
                 <Col md={6} className="d-none d-md-block">

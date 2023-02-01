@@ -84,7 +84,7 @@ const CoursePage = () => {
                     </Col>
                 </Row>
             </Container>
-            <CTA slug={course.slug} />
+            <CTA course={course} />
             <ToTopArrow course={course} />
         </>
     )
@@ -105,7 +105,7 @@ const filterCover = (slug) => {
     }
 }
 
-export const CTA = ({ slug }) => {
+export const CTA = ({ course }) => {
     const navigate = useNavigate()
     // const ex = (
     //     <div className=''>
@@ -126,11 +126,13 @@ export const CTA = ({ slug }) => {
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
                             <Button
-                                onClick={() => navigate(`/register-form/${slug.toLowerCase()}`)} variant="primary"
+                                onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)} variant="primary"
                                 className='btn-sign-up py-2 mb-3'
                             ><span>Đăng ký ngay</span>
                             </Button>
-                            <RecruitBtn />
+                            {course.slug === "mavl" && <RecruitBtn cursor={true} course={course} />}
+                            {course.slug === "medical-terminology" && <RecruitBtn cursor={true} course={course} />}
+                            {course.slug === "communication-with-patients-101" && <RecruitBtn cursor={true} course={course} />}
                         </div>
                     </Col>
                     <Col className='d-none d-md-block'></Col>
