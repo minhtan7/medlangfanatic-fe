@@ -29,11 +29,20 @@ export const CourseCard = ({ course }) => {
                     <span>Học thử!</span>
                 </Button> */}
 
-                <Button
-                    onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)}
-                    variant="primary" className='btn-sign-up mb-3' >
-                    <span>Đăng ký ngay</span>
-                </Button>
+
+                {course.slug === "clinical-case-presentation" ?
+                    (<Button
+                        variant="primary" className='btn-sign-up mb-3' >
+                        <span>Đã đủ học viên</span>
+                    </Button>)
+                    :
+                    (<Button
+                        onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)}
+                        variant="primary" className='btn-sign-up mb-3' >
+                        <span>Đăng ký ngay</span>
+                    </Button>)
+                }
+
                 {course.slug === "mavl" && <RecruitBtn cursor={true} course={course} />}
                 {course.slug === "medical-terminology" && <RecruitBtn cursor={true} course={course} />}
                 {course.slug === "communication-with-patients-101" && <RecruitBtn cursor={true} course={course} />}

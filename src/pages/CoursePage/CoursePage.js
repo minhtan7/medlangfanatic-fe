@@ -125,11 +125,25 @@ export const CTA = ({ course }) => {
                             <h1 className='fw-bold text-main mb-0'>Khóa học Tiếng Anh</h1>
                             <h1 className='fw-bold text-main'>Y khoa Trực Tuyến</h1>
                             <h4 className='fw-light text-main mb-5'>Dare to get out of the box!</h4>
-                            <Button
-                                onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)} variant="primary"
-                                className='btn-sign-up py-2 mb-3'
-                            ><span>Đăng ký ngay</span>
-                            </Button>
+                            {course.slug === "clinical-case-presentation" ?
+                                (<Button
+                                    variant="primary"
+                                    className='btn-sign-up py-2 mb-3'
+                                ><span>
+                                        Đã đủ học viên
+                                    </span>
+                                </Button>)
+                                :
+                                (<Button
+                                    onClick={() => navigate(`/register-form/${course.slug.toLowerCase()}`)} variant="primary"
+                                    className='btn-sign-up py-2 mb-3'
+                                ><span>
+                                        Đăng ký ngay
+                                    </span>
+                                </Button>)
+                            }
+
+
                             {course.slug === "mavl" && <RecruitBtn cursor={true} course={course} />}
                             {course.slug === "medical-terminology" && <RecruitBtn cursor={true} course={course} />}
                             {course.slug === "communication-with-patients-101" && <RecruitBtn cursor={true} course={course} />}
